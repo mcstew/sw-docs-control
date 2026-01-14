@@ -1,0 +1,32 @@
+{
+  "name": "doc-orchestration-system",
+  "version": "0.1.0",
+  "description": "AI-powered documentation orchestration and audit system",
+  "type": "module",
+  "scripts": {
+    "import": "node scripts/import-from-notion.js",
+    "import:helpkit": "node scripts/import-from-helpkit.js",
+    "export": "node scripts/export-for-agents.js",
+    "sync:to-featurebase": "node scripts/sync-to-featurebase.js",
+    "sync:from-featurebase": "node scripts/sync-from-featurebase.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.33.0",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^17.2.3",
+    "gray-matter": "^4.0.3",
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "turndown": "^7.1.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.2.0",
+    "typescript": "^5.0.0"
+  }
+}
