@@ -60,10 +60,19 @@ npm run audit
 - `npm run test:keyword-filter` - Test keyword filtering alone
 - `npm run test:webhook` - Test webhook endpoint locally
 
-### Sync (Coming Soon)
+### Sync ✅ IMPLEMENTED
 
 - `npm run sync:to-featurebase` - Push local changes to Featurebase
 - `npm run sync:from-featurebase` - Pull updates from Featurebase
+
+**Features:**
+- Bidirectional sync with conflict detection
+- Last-write-wins automatic resolution
+- Both versions saved for manual review
+- Incremental sync (only changed articles)
+- Full sync state tracking
+
+**See**: [SYNC-GUIDE.md](SYNC-GUIDE.md) for complete documentation
 
 ## How It Works
 

@@ -86,56 +86,132 @@ Results:
 
 ---
 
-## 🔄 Phase 2: Bidirectional Featurebase Sync (IN PROGRESS)
+## ✅ Phase 2: Bidirectional Featurebase Sync (COMPLETE)
 
 **Goal**: Build two-way sync between local git repository and Featurebase help center.
 
-### Scope
+### Completed Features
 
 **Sync To Featurebase** (`npm run sync:to-featurebase`):
-- Push local markdown changes to Featurebase articles
-- Update article content via Featurebase API
-- Handle metadata (title, slug, category, etc.)
-- Track sync history and conflicts
+- ✅ Push local markdown changes to Featurebase articles
+- ✅ Update article content via Featurebase API
+- ✅ Handle metadata (title, slug, category, etc.)
+- ✅ Track sync history and conflicts
+- ✅ Create new articles if they don't exist remotely
+- ✅ Skip unchanged articles (hash-based detection)
 
 **Sync From Featurebase** (`npm run sync:from-featurebase`):
-- Pull latest articles from Featurebase
-- Convert to local markdown format
-- Update git repository
-- Detect changes made in Featurebase
+- ✅ Pull latest articles from Featurebase
+- ✅ Convert HTML to markdown format
+- ✅ Create new local files for new articles
+- ✅ Update existing local files
+- ✅ Detect changes made in Featurebase
 
-### Architecture Decisions Needed
+### Architecture Decisions Made
 
-1. **Conflict Resolution**
-   - What happens when both local and remote are modified?
-   - Last-write-wins? Manual merge? Flag for review?
+**ADR-005: Bidirectional Sync Strategy**
+- Chosen: Bidirectional with conflict detection (not single source of truth)
+- Both local and remote are equal peers
 
-2. **Source of Truth**
-   - Is Featurebase the primary source?
-   - Or is git the primary source?
-   - Or are they equal peers?
+**ADR-006: Conflict Resolution**
+- Last-write-wins based on timestamps
+- Both versions saved to `docs-source/conflicts/`
+- User can manually merge if needed
+- All conflicts logged in sync state
 
-3. **Sync Frequency**
-   - Manual only? Automatic on commit? Scheduled?
-   - Should webhook trigger sync from Featurebase?
+**ADR-007: Sync Tracking**
+- Track sync state in `docs-source/sync-state.json`
+- Store content hashes for change detection
+- Record sync history per article
+- Log all conflicts with timestamps
 
-4. **Change Detection**
-   - How to detect what changed?
-   - Use git diff? Featurebase timestamps? Both?
+**ADR-008: ID Mapping**
+- Use Featurebase article ID in filename
+- Pattern: `article-title-{featurebase-id}/article.md`
+- No separate mapping database needed
 
-### Files to Create
+### Files Created
 
-- [ ] `lib/featurebase-sync.js` - Core sync logic
-- [ ] `scripts/sync-to-featurebase.js` - Push script
-- [ ] `scripts/sync-from-featurebase.js` - Pull script
-- [ ] `lib/conflict-resolver.js` - Conflict handling
-- [ ] `SYNC-GUIDE.md` - Documentation
+- ✅ `lib/featurebase-sync.js` - Core sync logic (370 lines)
+- ✅ `scripts/sync-to-featurebase.js` - Push script (240 lines)
+- ✅ `scripts/sync-from-featurebase.js` - Pull script (235 lines)
+- ✅ `SYNC-GUIDE.md` - Complete documentation (590 lines)
+- ✅ `SYNC-ARCHITECTURE.md` - Design document (490 lines)
 
-### Dependencies
+### How It Works
 
-- `lib/featurebase-client.js` ✅ (already exists)
-- Featurebase API documentation
-- Strategy for conflict resolution
+**Push Workflow:**
+```
+Local markdown files
+        ↓
+Scan and detect changes (SHA-256 hash)
+        ↓
+Compare with remote Featurebase
+        ↓
+Conflict detection (timestamp comparison)
+        ↓
+Push changed articles
+        ↓
+Update sync state
+```
+
+**Pull Workflow:**
+```
+Featurebase articles
+        ↓
+Fetch via API
+        ↓
+Compare with local files
+        ↓
+Conflict detection (timestamp comparison)
+        ↓
+Create/update local markdown
+        ↓
+Update sync state
+```
+
+**Conflict Resolution:**
+```
+Both sides changed
+        ↓
+Compare timestamps
+        ↓
+Use newer version (last-write-wins)
+        ↓
+Save both versions to conflicts/
+        ↓
+Log conflict in sync state
+        ↓
+User can manually merge later
+```
+
+### Testing Status
+
+- ⏸️ **Not yet tested** with production data
+- ✅ Code complete and ready for testing
+- 🔜 Need to test with sample articles
+
+### Next Steps
+
+1. **Test with sample article**:
+   ```bash
+   # Create test article locally
+   # Run: npm run sync:to-featurebase
+   # Verify on Featurebase
+   # Edit on Featurebase
+   # Run: npm run sync:from-featurebase
+   # Verify conflict detection
+   ```
+
+2. **Full sync test**:
+   ```bash
+   npm run sync:from-featurebase  # Pull all articles
+   ```
+
+3. **Production deployment**:
+   - Test conflict scenarios
+   - Verify no data loss
+   - Document any edge cases
 
 ---
 
@@ -195,8 +271,8 @@ Results:
 
 ### Phase Completion
 
-- ✅ **Phase 1**: Webhook Deployment - **100%**
-- 🔄 **Phase 2**: Bidirectional Sync - **0%** (starting now)
+- ✅ **Phase 1**: Webhook Deployment - **100%** (complete)
+- ✅ **Phase 2**: Bidirectional Sync - **100%** (complete, needs testing)
 - ⏸️ **Phase 3**: Web UI - **0%** (future)
 
 ### System Components Status
@@ -207,9 +283,9 @@ Results:
 | Full-Scroll Export | ✅ Complete | AI training format |
 | Two-Stage Audit | ✅ Complete | Keyword + Claude AI |
 | Webhook Endpoint | ✅ Complete | Live on Vercel |
-| Root URL Info Page | 🔄 Ready | Pending deployment |
-| Featurebase Sync To | ⏸️ Planned | Phase 2 |
-| Featurebase Sync From | ⏸️ Planned | Phase 2 |
+| Root URL Info Page | ✅ Complete | Deployed to production |
+| Featurebase Sync To | ✅ Complete | Ready for testing |
+| Featurebase Sync From | ✅ Complete | Ready for testing |
 | GitHub Issue Creation | ✅ Complete | Optional integration |
 | Web UI Dashboard | ⏸️ Planned | Phase 3 |
 | Review Interface | ⏸️ Planned | Phase 3 |
