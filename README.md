@@ -136,7 +136,7 @@ The webhook is **live on Vercel** and ready to receive Featurebase changelog web
 
 **Production Webhook URL:**
 ```
-https://doc-orchestration-system.vercel.app/api/webhooks/changelog
+https://sw-docs-control.vercel.app/api/webhooks/changelog
 ```
 
 **Next Steps:**
@@ -150,7 +150,7 @@ https://doc-orchestration-system.vercel.app/api/webhooks/changelog
 npm run test:webhook
 
 # Test production webhook
-curl -X POST https://doc-orchestration-system.vercel.app/api/webhooks/changelog \
+curl -X POST https://sw-docs-control.vercel.app/api/webhooks/changelog \
   -H "Content-Type: application/json" \
   -d '{"id":"test","title":"Test","content":"Test content","publishedAt":"2026-01-15T12:00:00Z","url":"https://example.com","tags":[]}'
 ```

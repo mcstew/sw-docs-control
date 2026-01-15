@@ -22,7 +22,7 @@ We needed to decide:
 ### Decision
 
 **Current State (Phase 1):**
-- Root URL (`https://doc-orchestration-system.vercel.app`) → 404 (expected)
+- Root URL (`https://sw-docs-control.vercel.app`) → 404 (expected)
 - Webhook endpoint (`/api/webhooks/changelog`) → Active, POST-only
 - No web UI yet
 
@@ -65,7 +65,7 @@ This is the **working webhook** that Featurebase will call.
 Since GET requests return 405, you must use POST to test:
 
 ```bash
-curl -X POST https://doc-orchestration-system.vercel.app/api/webhooks/changelog \
+curl -X POST https://sw-docs-control.vercel.app/api/webhooks/changelog \
   -H "Content-Type: application/json" \
   -d '{
     "id": "test-123",

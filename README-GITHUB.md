@@ -4,11 +4,9 @@ AI-powered documentation control system for Sudowrite. Automatically detects doc
 
 ## 🌐 Production Deployment
 
-**Vercel Webhook**: https://doc-orchestration-system.vercel.app/api/webhooks/changelog
+**Vercel Webhook**: https://sw-docs-control.vercel.app/api/webhooks/changelog
 
-> ⚠️ **Note**: The Vercel deployment URL still uses the old project name. This needs to be manually updated in the Vercel dashboard if desired.
-
-**Root URL**: https://doc-orchestration-system.vercel.app/
+**Root URL**: https://sw-docs-control.vercel.app/
 
 Shows system status, webhook documentation, and health checks.
 
@@ -212,8 +210,8 @@ To test the sync workflow:
 ## 🔗 Links
 
 - **GitHub Repo**: https://github.com/mcstew/sw-docs-control
-- **Vercel Deployment**: https://doc-orchestration-system.vercel.app
-- **Webhook Endpoint**: https://doc-orchestration-system.vercel.app/api/webhooks/changelog
+- **Vercel Deployment**: https://sw-docs-control.vercel.app
+- **Webhook Endpoint**: https://sw-docs-control.vercel.app/api/webhooks/changelog
 
 ## 📝 License
 

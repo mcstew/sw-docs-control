@@ -29,7 +29,7 @@ Building an AI-powered documentation orchestration system for Sudowrite that aut
    - Created `scripts/test-webhook.js` for local testing
    - Added `npm run test:webhook` command
    - Tested locally - webhook receives and processes correctly
-   - Deployed to production at https://doc-orchestration-system.vercel.app
+   - Deployed to production at https://sw-docs-control.vercel.app
    - Tested live endpoint - working correctly
 
 4. **Root URL Info Page** ✅ (Pending Deployment)
@@ -48,8 +48,8 @@ Building an AI-powered documentation orchestration system for Sudowrite that aut
 
 ### Production URLs
 
-- **Webhook Endpoint**: https://doc-orchestration-system.vercel.app/api/webhooks/changelog ✅
-- **Root URL**: https://doc-orchestration-system.vercel.app (shows 404, will show info page after next deploy)
+- **Webhook Endpoint**: https://sw-docs-control.vercel.app/api/webhooks/changelog ✅
+- **Root URL**: https://sw-docs-control.vercel.app (shows 404, will show info page after next deploy)
 
 ### How It Works
 

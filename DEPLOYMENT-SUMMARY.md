@@ -14,8 +14,8 @@
 - Confirmed async audit triggering works
 
 ### 3. Production Deployment
-- Deployed to Vercel: **https://doc-orchestration-system.vercel.app**
-- Webhook endpoint: **https://doc-orchestration-system.vercel.app/api/webhooks/changelog**
+- Deployed to Vercel: **https://sw-docs-control.vercel.app**
+- Webhook endpoint: **https://sw-docs-control.vercel.app/api/webhooks/changelog**
 - Added environment variables:
   - `FEATUREBASE_API_KEY`
   - `FEATUREBASE_HELP_CENTER_ID`
@@ -32,7 +32,7 @@
 
 **Production URL:**
 ```
-https://doc-orchestration-system.vercel.app/api/webhooks/changelog
+https://sw-docs-control.vercel.app/api/webhooks/changelog
 ```
 
 **Expected Payload:**
@@ -60,7 +60,7 @@ https://doc-orchestration-system.vercel.app/api/webhooks/changelog
 
 Test the live webhook:
 ```bash
-curl -X POST https://doc-orchestration-system.vercel.app/api/webhooks/changelog \
+curl -X POST https://sw-docs-control.vercel.app/api/webhooks/changelog \
   -H "Content-Type: application/json" \
   -d '{
     "id": "test-123",
@@ -76,7 +76,7 @@ curl -X POST https://doc-orchestration-system.vercel.app/api/webhooks/changelog 
 
 **View logs:**
 ```bash
-vercel logs https://doc-orchestration-system.vercel.app
+vercel logs https://sw-docs-control.vercel.app
 ```
 
 **Vercel Dashboard:**

@@ -6,7 +6,7 @@ Now that your webhook is deployed to Vercel, you need to configure Featurebase t
 
 **Production Webhook URL:**
 ```
-https://doc-orchestration-system.vercel.app/api/webhooks/changelog
+https://sw-docs-control.vercel.app/api/webhooks/changelog
 ```
 
 ## Configure Featurebase Webhook
@@ -23,7 +23,7 @@ Create a new webhook with these settings:
 
 **Basic Settings:**
 - **Name**: Documentation Audit Webhook
-- **URL**: `https://doc-orchestration-system.vercel.app/api/webhooks/changelog`
+- **URL**: `https://sw-docs-control.vercel.app/api/webhooks/changelog`
 - **Method**: `POST`
 - **Content-Type**: `application/json`
 
@@ -75,7 +75,7 @@ After setting up the webhook, you can verify it's working by:
 1. **Publishing a test changelog** in Featurebase
 2. **Check Vercel logs** to see if the webhook was received:
    ```bash
-   vercel logs https://doc-orchestration-system.vercel.app
+   vercel logs https://sw-docs-control.vercel.app
    ```
 3. **Check audit logs** in your repository (if you have them synced)
 
@@ -103,7 +103,7 @@ After setting up the webhook, you can verify it's working by:
 You can manually trigger the webhook anytime:
 
 ```bash
-curl -X POST https://doc-orchestration-system.vercel.app/api/webhooks/changelog \
+curl -X POST https://sw-docs-control.vercel.app/api/webhooks/changelog \
   -H "Content-Type: application/json" \
   -d '{
     "id": "manual-test-789",
@@ -129,7 +129,7 @@ curl -X POST https://doc-orchestration-system.vercel.app/api/webhooks/changelog 
 
 **Check Vercel logs:**
 ```bash
-vercel logs https://doc-orchestration-system.vercel.app
+vercel logs https://sw-docs-control.vercel.app
 ```
 
 **Common issues:**
@@ -175,7 +175,7 @@ Currently, the webhook is public and accepts any POST request. For production, c
 
 **Command Line:**
 ```bash
-vercel logs https://doc-orchestration-system.vercel.app
+vercel logs https://sw-docs-control.vercel.app
 ```
 
 ### Set Up Alerts (Optional)

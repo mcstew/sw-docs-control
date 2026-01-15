@@ -4,8 +4,8 @@
 
 ### ✅ Phase 1 Completed: Webhook Deployment
 - **Date**: 2026-01-15
-- **Production URL**: https://doc-orchestration-system.vercel.app
-- **Webhook Endpoint**: https://doc-orchestration-system.vercel.app/api/webhooks/changelog
+- **Production URL**: https://sw-docs-control.vercel.app
+- **Webhook Endpoint**: https://sw-docs-control.vercel.app/api/webhooks/changelog
 - **Status**: Live and operational
 
 ### 🔄 In Progress: Root URL Info Page
@@ -57,7 +57,7 @@ When the `.vercel` directory is not present (it's in `.gitignore`), the Vercel C
 
 ## What the Root URL Will Show
 
-Once deployed, visiting `https://doc-orchestration-system.vercel.app/` will return JSON with:
+Once deployed, visiting `https://sw-docs-control.vercel.app/` will return JSON with:
 
 ```json
 {
@@ -66,7 +66,7 @@ Once deployed, visiting `https://doc-orchestration-system.vercel.app/` will retu
   "status": "operational",
   "endpoints": {
     "webhook": {
-      "url": "https://doc-orchestration-system.vercel.app/api/webhooks/changelog",
+      "url": "https://sw-docs-control.vercel.app/api/webhooks/changelog",
       "method": "POST",
       "description": "..."
     }
@@ -161,12 +161,12 @@ Once new deployment is live:
 ## Production URLs
 
 **Current (Working):**
-- Webhook: https://doc-orchestration-system.vercel.app/api/webhooks/changelog ✅
+- Webhook: https://sw-docs-control.vercel.app/api/webhooks/changelog ✅
 
 **Pending Deployment:**
-- Root: https://doc-orchestration-system.vercel.app/ (will show info page)
+- Root: https://sw-docs-control.vercel.app/ (will show info page)
 
 **Future:**
-- Dashboard: https://doc-orchestration-system.vercel.app/
-- Review: https://doc-orchestration-system.vercel.app/review/[auditId]
-- API: https://doc-orchestration-system.vercel.app/api/* (existing)
+- Dashboard: https://sw-docs-control.vercel.app/
+- Review: https://sw-docs-control.vercel.app/review/[auditId]
+- API: https://sw-docs-control.vercel.app/api/* (existing)
