@@ -16,7 +16,7 @@
     "test:keyword-filter": "node scripts/test-keyword-filter.js",
     "test:webhook": "node scripts/test-webhook.js",
     "sync:to-featurebase": "node scripts/sync-to-featurebase.js",
-    "sync:from-featurebase": "node scripts/sync-from-featurebase.js",
+    "sync:from-featurebase": "node scripts/sync-from-featurebase-v2.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
