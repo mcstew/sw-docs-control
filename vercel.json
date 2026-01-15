@@ -8,6 +8,10 @@
   ],
   "routes": [
     {
+      "src": "/",
+      "dest": "/api/index.js"
+    },
+    {
       "src": "/api/webhooks/changelog",
       "dest": "/api/webhooks/changelog.js"
     }
