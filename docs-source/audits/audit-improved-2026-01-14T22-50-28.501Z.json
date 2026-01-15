@@ -1,0 +1,54 @@
+{
+  "version": "improved",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-01-14T22:50:28.501Z",
+  "changelog": {
+    "id": "manual-1768431018483",
+    "title": "Manual Audit",
+    "content": "\nWe've just released a major update to the Story Bible feature!\n\n## What's New\n\n- **Enhanced Character Profiles**: You can now add custom fields to character profiles, including physical descriptions, motivations, and relationships\n- **Scene Context**: Story Bible now automatically pulls in context from your current scene to provide more relevant suggestions\n- **Export Functionality**: Export your Story Bible as PDF or markdown for offline reference\n\n## Breaking Changes\n\n- The old \"Character Notes\" feature has been replaced with the new Character Profiles\n- Story Bible now requires 50 credits per generation instead of 30 credits\n\n## How to Use\n\nAccess the updated Story Bible from the sidebar. Your existing character notes will be automatically migrated to the new format.\n",
+    "publishedAt": "2026-01-14T22:50:18.483Z",
+    "url": null,
+    "tags": []
+  },
+  "result": {
+    "affected_articles": [
+      {
+        "article_title": "How many credits do features use?",
+        "article_slug": "how-many-credits-do-features-use",
+        "confidence": "high",
+        "contradiction": "Docs state Story Bible uses 30 credits per generation, but changelog announces it now requires 50 credits per generation",
+        "existing_passage": "Story Bible now requires 50 credits per generation instead of 30 credits",
+        "corrected_text": "This passage is actually already correct in the docs - it already states 50 credits. However, the article body does not mention Story Bible credit costs at all, which is a gap. The changelog's breaking change about credit cost increase should be reflected in the main article content.",
+        "change_type": "update"
+      },
+      {
+        "article_title": "What is Story Bible",
+        "article_slug": "what-is-story-bible",
+        "confidence": "medium",
+        "contradiction": "Changelog announces 'Enhanced Character Profiles' with custom fields as a new feature, but existing docs describe Characters section without mentioning this as new functionality or custom field capability",
+        "existing_passage": "The Characters section is described in the documentation but does not explicitly call out the new 'Enhanced Character Profiles' feature or custom field additions as recent updates",
+        "corrected_text": "The Characters section documentation should be updated to highlight the new Enhanced Character Profiles feature that allows users to add custom fields including physical descriptions, motivations, and relationships",
+        "change_type": "update"
+      },
+      {
+        "article_title": "Characters",
+        "article_slug": "characters",
+        "confidence": "medium",
+        "contradiction": "Changelog announces 'Enhanced Character Profiles' with ability to add custom fields, but the existing Characters article does not mention custom field capability at the character level (only at the default trait level for all characters)",
+        "existing_passage": "The article describes trait customization at the default level but does not explicitly document the ability to add custom fields to individual character profiles as described in the changelog",
+        "corrected_text": "Add documentation explaining that users can now add custom fields to individual character profiles, including physical descriptions, motivations, and relationships, in addition to the existing default trait customization",
+        "change_type": "update"
+      },
+      {
+        "article_title": "What is Story Bible",
+        "article_slug": "what-is-story-bible",
+        "confidence": "medium",
+        "contradiction": "Changelog announces 'Export Functionality' for Story Bible as PDF or markdown, but existing docs only mention CSV exports for specific sections (Characters, Worldbuilding, Outline)",
+        "existing_passage": "The documentation describes exporting Characters, Worldbuilding, and Outline as CSV files, but does not mention the new PDF or markdown export options for the entire Story Bible",
+        "corrected_text": "Add documentation about the new Story Bible export functionality that allows exporting as PDF or markdown for offline reference, in addition to the existing CSV exports for individual sections",
+        "change_type": "update"
+      }
+    ],
+    "summary": "Four medium-to-high confidence issues identified: (1) Story Bible credit cost is mentioned in changelog as a breaking change but the main article body doesn't discuss Story Bible credit usage; (2-3) Enhanced Character Profiles with custom fields is announced as new but not documented in existing Character-related articles; (4) New PDF/markdown export functionality for Story Bible is not mentioned in existing export documentation. The 'Character Notes' deprecation mentioned in changelog appears to already be reflected in docs (only 'Character Profiles' mentioned). Scene Context feature is not contradicted by docs (docs don't mention it, so no false claim to correct)."
+  }
+}

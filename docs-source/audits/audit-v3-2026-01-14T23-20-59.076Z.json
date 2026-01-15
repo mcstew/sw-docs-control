@@ -1,0 +1,138 @@
+{
+  "version": "v3-two-stage",
+  "model": "claude-haiku-4-5",
+  "timestamp": "2026-01-14T23:20:59.076Z",
+  "changelog": {
+    "id": "manual-1768432848261",
+    "title": "Manual Audit",
+    "content": "\nBigger, Better Rewrite\n\nWe just updated the Rewrite feature so that it can be used on up to 9,000 words. We also changed the model powering it. Rewrite now uses Muse, so you get the highest quality rewrites possible. Happy writing!\n",
+    "publishedAt": "2026-01-14T23:20:48.261Z",
+    "url": null,
+    "tags": []
+  },
+  "stage1_filter": {
+    "keywords": [
+      "bigger",
+      "better rewrite\n\nwe",
+      "rewrite",
+      "we",
+      "muse",
+      "happy",
+      "9000",
+      "write",
+      "model",
+      "feature",
+      "update",
+      "changed"
+    ],
+    "articlesScanned": 99,
+    "articlesFiltered": 20,
+    "topArticles": [
+      {
+        "title": "Sudowrite Muse",
+        "slug": "sudowrite-muse",
+        "score": 78
+      },
+      {
+        "title": "Which AI model should I use?",
+        "slug": "which-ai-model-should-i-use",
+        "score": 70
+      },
+      {
+        "title": "Prose Modes & Models",
+        "slug": "prose-modes-models",
+        "score": 62
+      },
+      {
+        "title": "How many credits do features use?",
+        "slug": "how-many-credits-do-features-use",
+        "score": 60
+      },
+      {
+        "title": "Rewrite",
+        "slug": "rewrite",
+        "score": 60
+      },
+      {
+        "title": "Glossary",
+        "slug": "glossary",
+        "score": 52
+      },
+      {
+        "title": "Web App vs. Mobile App Differences",
+        "slug": "web-app-vs-mobile-app-differences",
+        "score": 52
+      },
+      {
+        "title": "Features",
+        "slug": "features",
+        "score": 46
+      },
+      {
+        "title": "Quick Start",
+        "slug": "quick-start",
+        "score": 46
+      },
+      {
+        "title": "My Voice (Beta)",
+        "slug": "my-voice-beta",
+        "score": 44
+      }
+    ]
+  },
+  "stage2_audit": {
+    "affected_articles": [
+      {
+        "article_title": "Rewrite",
+        "article_slug": "rewrite",
+        "confidence": "high",
+        "contradiction": "Docs do not specify word limit for Rewrite feature, but changelog announces it now supports up to 9,000 words. Docs in other articles mention 6,000 word limit.",
+        "existing_passage": "The mobile app's Rewrite allows you to transform any selected text with AI assistance.",
+        "corrected_text": "The mobile app's Rewrite allows you to transform any selected text (up to 9,000 words) with AI assistance.",
+        "change_type": "update",
+        "edit_url": "https://do.featurebase.app/help-center/okvvzwjutywdznic/articles/rewrite/edit"
+      },
+      {
+        "article_title": "My Voice (Beta)",
+        "article_slug": "my-voice-beta",
+        "confidence": "high",
+        "contradiction": "Docs state My Voice can handle selections up to 4,000 words, but this is a different feature from Rewrite. However, the changelog's Rewrite update to 9,000 words should be reflected in the Rewrite article specifically.",
+        "existing_passage": "You can select **short snippets** or **large sections** (up to **4,000 words**).",
+        "corrected_text": "This passage is about My Voice, not Rewrite, so it remains accurate. No change needed here.",
+        "change_type": "none",
+        "edit_url": "https://do.featurebase.app/help-center/okvvzwjutywdznic/articles/my-voice-beta/edit"
+      },
+      {
+        "article_title": "Selection Menu",
+        "article_slug": "selection-menu",
+        "confidence": "medium",
+        "contradiction": "Docs mention Rewrite is accessible via Selection Menu but do not specify the word limit. Given the changelog updates Rewrite to 9,000 words, this should be clarified if the Selection Menu Rewrite has the same limit.",
+        "existing_passage": "**Rewrite** - which we've already covered—Expand, and Visualize.",
+        "corrected_text": "No specific correction needed unless the Selection Menu Rewrite has a different limit than the toolbar Rewrite. The existing text is not technically wrong, just incomplete.",
+        "change_type": "none",
+        "edit_url": "https://do.featurebase.app/help-center/okvvzwjutywdznic/articles/selection-menu/edit"
+      },
+      {
+        "article_title": "Sudowrite Muse",
+        "article_slug": "sudowrite-muse",
+        "confidence": "high",
+        "contradiction": "Changelog states 'Rewrite now uses Muse' but docs do not mention Muse powering the Rewrite feature. The article lists where Muse is available but does not include Rewrite.",
+        "existing_passage": "Muse is available in Draft, Write, and Expand. It also powers Synopsis generation in the Story Bible.",
+        "corrected_text": "Muse is available in Draft, Write, Expand, and Rewrite. It also powers Synopsis generation in the Story Bible.",
+        "change_type": "update",
+        "edit_url": "https://do.featurebase.app/help-center/okvvzwjutywdznic/articles/sudowrite-muse/edit"
+      },
+      {
+        "article_title": "Which AI model should I use?",
+        "article_slug": "which-ai-model-should-i-use",
+        "confidence": "high",
+        "contradiction": "Changelog states 'Rewrite now uses Muse' but this comprehensive model guide does not mention Muse powering Rewrite. The Muse section describes its capabilities but does not list Rewrite as one of the features it powers.",
+        "existing_passage": "Muse is Sudowrite's flagship proprietary model, purpose-built just for fiction. It was trained by writers for writers, unlike general AI models that try to \"do everything.\" This focus allows Muse to achieve a higher level of story quality and nuance.",
+        "corrected_text": "Add to the Muse section: 'Muse powers the Rewrite feature, enabling high-quality text transformations up to 9,000 words.' Or update the Best Use Cases to include Rewrite.",
+        "change_type": "update",
+        "edit_url": "https://do.featurebase.app/help-center/okvvzwjutywdznic/articles/which-ai-model-should-i-use/edit"
+      }
+    ],
+    "summary": "The changelog announces two key updates to Rewrite: (1) word limit increased to 9,000 words, and (2) now powered by Muse model. Documentation contradictions found: The Rewrite article lacks the new 9,000-word limit specification. The Sudowrite Muse article and Which AI model guide do not list Rewrite as a feature powered by Muse. These omissions should be corrected to reflect the changelog updates."
+  }
+}
