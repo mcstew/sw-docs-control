@@ -1,9 +1,35 @@
+# Dependencies
 node_modules/
+
+# Next.js
 .next/
-.env
-.env.local
-.vercel
-*.log
-.DS_Store
 dist/
 build/
+
+# Environment variables (NEVER COMMIT THESE)
+.env
+.env.local
+.env*.local
+
+# Vercel
+.vercel
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sync conflicts (optional - may want to track these)
+# docs-source/conflicts/
+
+# Large exports (optional)
+# notion-export/
