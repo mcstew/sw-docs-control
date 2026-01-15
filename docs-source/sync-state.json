@@ -1,0 +1,86 @@
+{
+  "last_sync": "2026-01-15T22:49:59.866Z",
+  "articles": {
+    "2487986": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/2487986-can-i-use-sudowrite-in-other-languages-2487986/article.md",
+      "remote_id": "2487986",
+      "last_synced_at": "2026-01-15T22:49:59.866Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "2943388": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/2943388-what-accessibility-options-are-available-2943388/article.md",
+      "remote_id": "2943388",
+      "last_synced_at": "2026-01-15T22:49:59.861Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "4567979": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/4567979-intellectual-property-and-ownership-4567979/article.md",
+      "remote_id": "4567979",
+      "last_synced_at": "2026-01-15T22:49:59.855Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "4862190": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/4862190-is-there-a-mobile-app-4862190/article.md",
+      "remote_id": "4862190",
+      "last_synced_at": "2026-01-15T22:49:59.864Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "5578433": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/5578433-can-i-hide-information-from-the-ai-5578433/article.md",
+      "remote_id": "5578433",
+      "last_synced_at": "2026-01-15T22:49:59.857Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "5765112": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/5765112-terms-and-conditions-5765112/article.md",
+      "remote_id": "5765112",
+      "last_synced_at": "2026-01-15T22:49:59.853Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "6704145": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/6704145-contact-us-6704145/article.md",
+      "remote_id": "6704145",
+      "last_synced_at": "2026-01-15T22:49:59.845Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "7573110": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/7573110-where-do-i-submit-feedback-or-feature-requests-7573110/article.md",
+      "remote_id": "7573110",
+      "last_synced_at": "2026-01-15T22:49:59.863Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "8944320": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/8944320-privacy-policy-8944320/article.md",
+      "remote_id": "8944320",
+      "last_synced_at": "2026-01-15T22:49:59.851Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    },
+    "0904575": {
+      "local_path": "/Users/michael/Desktop/Claude Code/sw-docs-control/docs-source/articles/0904575-does-sudowrite-have-a-status-page-0904575/article.md",
+      "remote_id": "0904575",
+      "last_synced_at": "2026-01-15T22:49:59.859Z",
+      "last_synced_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sync_direction": "pull",
+      "status": "synced"
+    }
+  },
+  "conflicts": []
+}
