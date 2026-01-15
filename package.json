@@ -1,7 +1,7 @@
 {
-  "name": "doc-orchestration-system",
+  "name": "sw-docs-control",
   "version": "0.1.0",
-  "description": "AI-powered documentation orchestration and audit system",
+  "description": "AI-powered documentation control system for Sudowrite",
   "type": "module",
   "scripts": {
     "import": "node scripts/import-from-notion.js",
