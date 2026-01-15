@@ -28,8 +28,13 @@ Thumbs.db
 *.swp
 *.swo
 
-# Sync conflicts (optional - may want to track these)
-# docs-source/conflicts/
+# Sync state and conflicts (internal tracking)
+sudowrite-documentation/.sync-state.json
+sudowrite-documentation/.conflicts/
 
-# Large exports (optional)
-# notion-export/
+# Generated index (can be regenerated)
+sudowrite-documentation/INDEX.md
+
+# Old structure (to be removed after migration)
+docs-source/
+notion-export/
