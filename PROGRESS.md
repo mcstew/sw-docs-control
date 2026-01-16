@@ -86,9 +86,15 @@ Results:
 
 ---
 
-## ✅ Phase 2: Bidirectional Featurebase Sync (COMPLETE)
+## ✅ Phase 2: Bidirectional Featurebase Sync (COMPLETE - CRITICAL FIXES APPLIED)
 
 **Goal**: Build two-way sync between local git repository and Featurebase help center.
+
+**Status Update (Jan 15, 2026)**: 🔥 **MAJOR FIXES COMPLETED**
+- Fixed critical bug: Was only syncing 10 articles, now syncs all 71
+- Fixed critical bug: Articles had no content, now extracts full HTML body
+- Organized structure: Files now organized by collection folders
+- Verified: All 71 articles synced with 480KB of content
 
 ### Completed Features
 
@@ -99,13 +105,17 @@ Results:
 - ✅ Track sync history and conflicts
 - ✅ Create new articles if they don't exist remotely
 - ✅ Skip unchanged articles (hash-based detection)
+- ⚠️ **NOTE**: May need updates to work with new collection folder structure
 
-**Sync From Featurebase** (`npm run sync:from-featurebase`):
-- ✅ Pull latest articles from Featurebase
-- ✅ Convert HTML to markdown format
+**Sync From Featurebase V2** (`npm run sync:from-featurebase`):
+- ✅ Pull ALL 71 articles from Featurebase (with `limit: 100`)
+- ✅ Extract HTML body content and convert to markdown
+- ✅ Organize by collection structure (12 collection folders)
+- ✅ Use clean, readable filenames (write.md, characters.md, etc.)
 - ✅ Create new local files for new articles
 - ✅ Update existing local files
 - ✅ Detect changes made in Featurebase
+- ✅ Tested and verified working with production data
 
 ### Architecture Decisions Made
 
@@ -187,31 +197,83 @@ User can manually merge later
 
 ### Testing Status
 
-- ⏸️ **Not yet tested** with production data
-- ✅ Code complete and ready for testing
-- 🔜 Need to test with sample articles
+- ✅ **TESTED** with production data on Jan 15, 2026
+- ✅ Full sync completed successfully
+- ✅ All 71 articles synced with content
+- ✅ Collection structure verified
+- ✅ Content extraction tested and working
+- ✅ Committed and pushed to GitHub
+
+### Current State (Jan 15, 2026)
+
+**GitHub Repository**: https://github.com/mcstew/sw-docs-control
+- Latest commit: `7f8d55c` - "Fix Featurebase sync: Pull ALL articles with full content"
+- 66 files changed, 4,315 insertions
+- All documentation now on GitHub with proper structure
+
+**Local Structure**:
+```
+sudowrite-documentation/
+├── classes/          (1 article)
+├── community/        (3 articles)
+├── credits/          (5 articles)
+├── features/         (14 articles) ⭐
+├── introduction/     (2 articles)
+├── plugins/          (4 articles)
+├── story-bible/      (10 articles) ⭐
+├── story-smarts/     (6 articles)
+├── sudowrite-manual/ (4 articles)
+├── sudowrite-plans/  (5 articles)
+├── workflows/        (5 articles)
+└── your-account/     (2 articles)
+```
+
+### Critical Issues Fixed
+
+**Issue 1: Only 10 Articles Syncing**
+- **Problem**: API missing `limit` parameter, defaulted to 10
+- **Solution**: Added `limit: 100` to API call
+- **Result**: Now syncs all 71 articles
+
+**Issue 2: No Content in Articles**
+- **Problem**: Looking for `content` field, but Featurebase uses `body` (HTML)
+- **Solution**: Created `extractArticleContent()` to extract body and convert HTML→Markdown
+- **Result**: All articles now have full content (480KB total)
+
+**Issue 3: No Collection Organization**
+- **Problem**: Flat file structure, hard to navigate
+- **Solution**: Organized into collection folders matching Featurebase structure
+- **Result**: 12 collection folders with clean filenames
 
 ### Next Steps
 
-1. **Test with sample article**:
-   ```bash
-   # Create test article locally
-   # Run: npm run sync:to-featurebase
-   # Verify on Featurebase
-   # Edit on Featurebase
-   # Run: npm run sync:from-featurebase
-   # Verify conflict detection
-   ```
+**Immediate (Before Next Session)**:
+1. ✅ Document what was fixed (see SYNC-FIX-NOTES.md)
+2. ✅ Update PROGRESS.md with current state
+3. ⏸️ Ready for testing bidirectional workflow
 
-2. **Full sync test**:
-   ```bash
-   npm run sync:from-featurebase  # Pull all articles
-   ```
+**Testing Needed**:
+1. **Test Edit in Featurebase → Sync to Local**:
+   - Edit an article in Featurebase UI
+   - Run `npm run sync:from-featurebase`
+   - Verify changes appear locally
+   - Commit to GitHub
 
-3. **Production deployment**:
-   - Test conflict scenarios
-   - Verify no data loss
-   - Document any edge cases
+2. **Test Edit Locally → Sync to Featurebase**:
+   - Edit a local markdown file
+   - Run `npm run sync:to-featurebase` (may need updates)
+   - Verify changes appear in Featurebase UI
+
+3. **Test Conflict Resolution**:
+   - Edit same article in both places
+   - Run sync and verify conflict detection works
+   - Check `.conflicts/` folder for backups
+
+**Improvements Needed**:
+- [ ] Update `sync-to-featurebase.js` to work with collection folders
+- [ ] Test full bidirectional workflow end-to-end
+- [ ] Add cursor-based pagination for 100+ articles (if needed)
+- [ ] Handle image downloads (optional - CDN URLs work fine)
 
 ---
 
@@ -345,15 +407,26 @@ User can manually merge later
 
 ## 🎯 Current Focus
 
-**Now**: Starting Phase 2 - Bidirectional Featurebase Sync
+**Status**: Phase 2 Complete - Critical Fixes Applied (Jan 15, 2026)
 
-**Next Actions**:
-1. Review existing `lib/featurebase-client.js`
-2. Design sync architecture and conflict resolution strategy
-3. Implement sync-to-featurebase
-4. Implement sync-from-featurebase
-5. Test with sample articles
-6. Document sync workflow
+**What Just Happened**:
+1. ✅ Fixed sync to pull ALL 71 articles (not just 10)
+2. ✅ Fixed content extraction from HTML body field
+3. ✅ Organized into collection folder structure
+4. ✅ Verified all content synced properly (480KB)
+5. ✅ Committed and pushed to GitHub
+
+**Next Session Actions**:
+1. Test editing article in Featurebase → sync to local → verify changes
+2. Test editing local article → sync to Featurebase → verify changes
+3. Update `sync-to-featurebase.js` if needed for collection folders
+4. Test conflict resolution with simultaneous edits
+5. Document any edge cases or improvements needed
+
+**Session Paused**: All progress documented in:
+- `SYNC-FIX-NOTES.md` - Detailed session notes with all fixes
+- `PROGRESS.md` - Updated project status (this file)
+- GitHub commit `7f8d55c` - All changes pushed
 
 ---
 
