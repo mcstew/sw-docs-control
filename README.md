@@ -64,6 +64,7 @@ npm run audit
 
 - `npm run sync:to-featurebase` - Push local changes to Featurebase
 - `npm run sync:from-featurebase` - Pull updates from Featurebase
+- `npm run generate:rollups` - Generate AI knowledge files (llms.txt + docs-rollup.md)
 
 **Features:**
 - Bidirectional sync with conflict detection
@@ -71,8 +72,30 @@ npm run audit
 - Both versions saved for manual review
 - Incremental sync (only changed articles)
 - Full sync state tracking
+- Auto-generates AI knowledge files after sync
 
 **See**: [SYNC-GUIDE.md](SYNC-GUIDE.md) for complete documentation
+
+### AI Knowledge Files ✅ NEW
+
+Two formats for AI training and knowledge sources:
+
+**llms.txt** (156 lines)
+- Structured index following [llmstxt.org](https://llmstxt.org/) standard
+- Organized by collection/subcollection hierarchy
+- Includes article URLs and descriptions
+- Perfect for AI discovery and navigation
+- Designed for web serving at `/llms.txt`
+
+**docs-rollup.md** (4,155 lines)
+- Complete documentation in single file
+- All 78 articles with full content
+- Organized by collection hierarchy
+- Includes metadata (IDs, slugs, timestamps)
+- Perfect for AI training and context loading
+- Single-file knowledge base for upload to AI tools
+
+Both files auto-regenerate after any sync operation and are committed to git.
 
 ## How It Works
 
