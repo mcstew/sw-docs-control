@@ -186,5 +186,3 @@ Key details down here is a way to get the Write button to remember something imp
 I’d mentioned in the last video that there’s technically a fourth simple way to get started—and that’s using the write button in a totally blank document. Write will write something… basically whatever the AI wants to write… it’s sort of fun as a story starter, but definitely not the most practical.
 
 That pretty much covers the Write button. Let us know what questions you have in the comments, and stay tuned for next time when we discuss Rewrite.
-
-pineapple
