@@ -4,8 +4,8 @@ slug: 3568979-ambassadors
 category: '8291256'
 collection_name: Community
 featurebase_id: '3568979'
-last_updated: '2025-09-04T16:26:04.030Z'
-synced_at: '2026-01-15T23:11:00.843Z'
+last_updated: '2026-01-21T18:23:02.977Z'
+synced_at: '2026-01-21T19:06:16.179Z'
 source: featurebase
 ---
 Sudowrite’s Ambassador program is a way for our most active and passionate authors to shape, support, and grow our community alongside us. If you’re already one of the more active voices in the community and feel like you have exciting ideas for the future of Sudowrite, this may be for you!
@@ -29,9 +29,11 @@ In short, Sudowrite’s best and brightest! Ambassadors contribute to our produc
 
 Sudowrite Ambassadors are invited on a quarterly basis, and active Ambassadors will be re-invited each quarter as long as they remain active and in good standing.
 
+* * *
+
 ## Perks
 
-Being an Ambassador is an incredible way to give back to the Sudowrite community—so here are a few ways we give back to Ambassadors:
+Being an Ambassador is an incredible way to give back to the Sudowrite community—so here are a few ways _we_ give back to Ambassadors:
 
 -   Free monthly Professional plan!
     
@@ -46,10 +48,12 @@ Being an Ambassador is an incredible way to give back to the Sudowrite community
 
 Most Ambassadors ultimately participate because they're passionate about Sudowrite and want to help others succeed. The perks are a nice bonus—we think they’re well deserved!—but the _real_ reward is being an integral part of our vibrant community and shaping the future of Sudowrite.
 
+* * *
+
 ## How do I become an Ambassador?
 
 We love your ambition! The first step to becoming an Ambassador is simply being an active member of community—either in our Discord server, or out there in the world. Next, you should have a clear idea for how exactly you’d like to get involved, whether that’s producing content, answering questions, or something else.
 
-📌While it’s not a strict requirement, we’re generally looking for folks who have been a member of our Discord community for 6+ months.
+📌 While it’s not a strict requirement, we’re generally looking for folks who have been a member of our Discord community for 6+ months.
 
 When you’re ready to apply, you can [**fill out this Ambassador application form**](https://airtable.com/appzYmPFcz9Wxzn0X/shrmqE2y2snfRhd5N). We review all applicants on a quarterly cycle, at the beginning of February, May, August, and November.

@@ -4,19 +4,21 @@ slug: 8443420-selection-menu
 category: '5442133'
 collection_name: Features
 featurebase_id: '8443420'
-last_updated: '2025-09-03T17:43:17.545Z'
-synced_at: '2026-01-15T23:11:00.957Z'
+last_updated: '2026-01-21T16:23:59.319Z'
+synced_at: '2026-01-21T19:06:16.463Z'
 source: featurebase
 ---
 # Selection Menu
 
 One of the most powerful tools on Sudowrite is hidden until you highlight something—and it’s called the Selection Menu.
 
-This smart menu will appear, hovering over your document, once you’ve selected text. It will change based on what exactly you’ve highlighted. For example, highlight a _single_ word and you’ll have the option to use Describe, open Quick Edit, or select from Related Words. Meanwhile, choose a longer selection of text and you’ll get options such as Rewrite, Expand, or Visualize as well.
+This smart menu will appear, hovering over your document, once you’ve selected text. It will change based on what exactly you’ve highlighted. For example, highlight a _single_ word and you’ll have the option to use Comment, Describe, open Quick Edit, or select from Related Words. Meanwhile, choose a longer selection of text and you’ll get options such as Comment, Rewrite, Expand, or Visualize as well.
 
 In some cases the Selection Menu is a quicker and easier way to access the toolbar tools—like Rewrite or Describe. But in other cases, the Selection Menu is the primary (or exclusive) way to access a feature. The features that are primarily accessed via the Selection Menu are:
 
 **Related Words** - This feature is a smart thesaurus. A handful of related words will appear in the Selection Menu when you’ve selected a single word, but you also have the option to expand and view a full Related Words word cloud.
+
+**Comment** - Annotate your work, leaving a comment on a highlighted passage.
 
 **Expand** - Take a selection of text and make it longer and more detailed.
 
@@ -39,5 +41,7 @@ With a single word selected, you also have the option to either Describe or Quic
 But first… notice how when you highlight a full paragraph, the Selection Menu changes. Joining Describe and Quick Edit are Rewrite—which we’ve already covered—Expand, and Visualize.
 
 Clicking Visualize will generate an image inspired by your selected prose. Just like all of Sudowrite’s other AI features, the results of Visualize will show up in a card in the History column on the right.
+
+q
 
 Meanwhile, Expand will take a selection of text and make it longer while adding some new details. As you can see with my selection here, I had a very brief paragraph where someone left the orchard for home, and after Expanding this it has slowed the action into a more methodical and detailed journey.

@@ -4,15 +4,15 @@ slug: 5511026-what-is-sudowrite
 category: '7475072'
 collection_name: Introduction
 featurebase_id: '5511026'
-last_updated: '2026-01-12T14:45:24.405Z'
-synced_at: '2026-01-15T23:11:01.071Z'
+last_updated: '2026-01-21T15:01:24.234Z'
+synced_at: '2026-01-21T19:06:16.682Z'
 source: featurebase
 ---
-Sudowrite is an AI toolkit for novelists that will help you plan, write, edit, and organize your work. It can offer suggestions, enhance prose, facilitate brainstorming and much, much more.
+Sudowrite is an AI toolkit for novelists that will help you plan, write, edit, and organize your work. It can offer suggestions, enhance prose, facilitate brainstorming and much, much more. You can focus on the parts of the writing process that you love, and get help from the AI with everything else.
 
-Actually, you know what? Just watch this:
+When getting started on Sudowrite, you can spin up a Story Bible from your notes, or use the Import tools to bring in a work-in-progress or finished book (in case you’d like to write the sequel). Here’s a video that quickly runs down some of what Sudowrite is capable of.
 
-> What does Sudowrite do transcript
+📓 What does Sudowrite do transcript
 
 While the visuals in the video above are _sort of_ essential, a transcript is available by expanding this toggle.
 
@@ -32,4 +32,4 @@ Finally, use Rewrite to dial in your voice—or Quick Edit to transform your pro
 
 When you’re done, you can even find Plugins that will help you write a query letter—so you can line up an agent to help you sell your masterpiece.
 
-Planning, writing, revising, editing… No matter where you could use support in your writing process, Sudowrite is there for you. Try it today for free at [sudowrite.com](http://sudowrite.com/)
+Planning, writing, revising, editing… No matter where you could use support in your writing process, Sudowrite is there for you. Try it today for free at [sudowrite.com](http://sudowrite.com)

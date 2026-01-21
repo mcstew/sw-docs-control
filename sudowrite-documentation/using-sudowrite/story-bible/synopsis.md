@@ -4,17 +4,15 @@ slug: 0063553-synopsis
 category: '9773420'
 collection_name: Story Bible
 featurebase_id: '0063553'
-last_updated: '2025-09-03T18:20:03.447Z'
-synced_at: '2026-01-15T23:11:00.910Z'
+last_updated: '2026-01-21T17:16:52.590Z'
+synced_at: '2026-01-21T19:06:16.334Z'
 source: featurebase
 ---
-# Synopsis
-
 Synopsis establishes the characters, their goals, the central conflict, how your story begins and how it ends. It also conveys your story's tone, themes, and unique elements.
 
-**To tell Story Bible to create your Synopsis, click the Generate button.**
+**To tell Story Bible to create your Synopsis, just click the Generate button.**
 
-If your Braindump is missing crucial elements, Story Bible will fill in the blanks to create the Synopsis here. So be sure to include anything of vital importance to your story in the Braindump!
+If your Braindump is missing crucial elements, Story Bible will have to get more creative in order to fill in the blanks in your Synopsis. So be sure to include anything of vital importance to your story in the Braindump!
 
 ### Improving your Synopsis
 
@@ -30,23 +28,21 @@ Do this by editing the text of your Synopsis directly in the text box.
 1.  **Use AI to rewrite your Synopsis.**
     
 
-You’ll see a “Rewrite Synopsis” box beneath the main Synopsis text box. Use this space to offer the AI some guidance on rewriting your synopsis, the same way you might give a junior writer feedback.
+When your cursor is in the Synopsis field, you’ll see a “Rewrite” button below the text. Click it to offer the AI some instructions on rewriting your Synopsis, the same way you might give a junior writer feedback.
 
-**QUICK TIP**
+Once you’ve typed the changes you want made, just click the **Go** button.
 
-![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6cb45b069893d4fb8adc/0198f190-48b4-7a19-8fcc-bc7988207667/b64u-MDE5OGYxOTAtNDg0Ni03MmRkLThjMmEtNjgzOTNlNTJmYTRi.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=c617edd233d94ea0c10163fc8479b695f0ef6be983029cb2d7958ce84582f412)
+🕓 **QUICK TIP**
 
-Use the Clock icon to access this section’s History and see past versions of your Synopsis.
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6cb45b069893d4fb8adc/019be18e-847d-7e21-b126-5c4f01a16159/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=a675909a50567403f0107c07ae6f737c537aba7066797523d561baf907e6bbc0)
 
-Once you’ve typed the changes you want made, just click the **Rewrite** button.
+✏️ **Rewrite Examples**
 
-> **Rewrite Examples**
-> 
-> -   _Add more tension in the beginning of the story_
->     
-> -   _Make the antagonist more likable_
->     
-> -   _Change the ending to be sad_
->     
+-   _Add more tension in the beginning of the story_
+    
+-   _Make the antagonist more likable_
+    
+-   _Change the ending to be sad_ </aside>
+    
 
 The generation of Synopsis is informed by both Braindump and Genre. The Synopsis influences the generation of Characters, Worldbuilding, Outline, and Scenes. As mentioned previously, in the event the Synopsis field is empty, the fields that rely on Synopsis would instead defer to the Braindump.

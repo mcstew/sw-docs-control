@@ -4,8 +4,8 @@ slug: 4486684-community-guidelines
 category: '8291256'
 collection_name: Community
 featurebase_id: '4486684'
-last_updated: '2025-09-04T16:25:16.107Z'
-synced_at: '2026-01-15T23:11:00.849Z'
+last_updated: '2026-01-21T18:21:34.040Z'
+synced_at: '2026-01-21T19:06:16.186Z'
 source: featurebase
 ---
 The [**Sudowrite Discord community**](https://discord.gg/sudowrite) is a place for authors and writers working with AI to hang out, share ideas, and learn from one another. There are people from all over the world and people of all ages in our community. Every day they’re experimenting and making discoveries that push the boundaries of just what you can do with AI—and the written word.
@@ -26,13 +26,13 @@ Below you’ll find an overview of the rules by which we govern the Sudowrite co
 
 To keep our community a warm and welcoming space, Staff members will enforce the rules below through moderation. While we expect that everyone will play by the rules, be advised that we may take action (ranging from warnings to bans) in the event that you don’t.
 
-1️⃣ Be kind and respectful - Help us cultivate a welcoming environment. Operate with good intent, and assume positive intent from others. When offering feedback, make it constructive.
+1️⃣ **Be kind and respectful** - Help us cultivate a welcoming environment. Operate with good intent, and assume positive intent from others. When offering feedback, make it constructive.
 
-2️⃣ Promote positive interactions - We prioritize the safety and well-being of our community members. Hatred, bigotry, and harassment are all expressly prohibited here. Troll-like behavior and other forms of abuse may also result in your expulsion from the community.
+2️⃣ **Promote positive interactions** - We prioritize the safety and well-being of our community members. Hatred, bigotry, and harassment are all expressly prohibited here. Troll-like behavior and other forms of abuse may also result in your expulsion from the community.
 
-3️⃣ Respect the space - Keep the channels on topic. Also, we welcome self-promotion as it relates to your work with Sudowrite—for example, videos, blogs or podcasts documenting your use. But self-promotion isn't cool when it means using this space for extractive, commercial, or unrelated reasons. That said, there’s a celebrations channel for a reason—celebrate your wins, or link to your freshly published books! (If you find yourself unsure, just ask Michael or any staff member.)
+3️⃣ **Respect the space** - Keep the channels on topic. Also, we welcome self-promotion as it relates to your work with Sudowrite—for example, videos, blogs or podcasts documenting your use. But self-promotion isn't cool when it means using this space for extractive, commercial, or unrelated reasons. That said, there’s a celebrations channel for a reason—celebrate your wins, or link to your freshly published books! (If you find yourself unsure, just ask Michael or any staff member.)
 
-4️⃣ Help keep things safe - If you see something against the rules or something that makes you (or another community member) feel unsafe, please notify a staff member. And if you see something that isn’t against the letter of the rules, but feels against the spirit, please let us know.
+4️⃣ **Help keep things safe** - If you see something against the rules or something that makes you (or another community member) feel unsafe, please notify a staff member. And if you see something that isn’t against the letter of the rules, but feels against the _spirit_, please let us know.
 
 **Expectations of Behavior**
 
@@ -42,6 +42,6 @@ We encourage you attend and participate in these events, but we do have some bas
 
 **📗 Share the floor** - We want you to get your questions answered in any session you attend, but we also ask that you be aware of the space you take. That way, other attendees have the time and opportunity to have their questions answered as well.
 
-**📙 Bring mindfulness and respect** - You’re joining a shared space, and we ask you to conduct yourself accordingly. This includes turning your camera off if you’re indisposed, and maintaining composure in the chat.
+**📙 Bring mindfulness and respect** - You’re joining a shared space, and we ask you to conduct yourself accordingly. This includes muting yourself or turning your camera off proactively or when asked, and maintaining composure in the chat.
 
 **📕 Listen to teacher** - Different instructors may have different rules for their sessions—raised hands only, queue up questions in the chat, etc.—depending on the format, topic, and attendance. We expect that, in those situations, you will defer to your instructor’s preferences.

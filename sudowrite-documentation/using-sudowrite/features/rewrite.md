@@ -4,10 +4,12 @@ slug: 0618507-rewrite
 category: '5442133'
 collection_name: Features
 featurebase_id: 0618507
-last_updated: '2025-09-03T17:43:17.545Z'
-synced_at: '2026-01-15T23:11:00.986Z'
+last_updated: '2026-01-21T16:02:30.593Z'
+synced_at: '2026-01-21T19:06:16.536Z'
 source: featurebase
 ---
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6a5567df40e13a8b270b/019be149-0add-7626-93b8-62364966934f/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=63d8a6b5d488dd402009118e07b90f155c1379ea6a6eddb8e831a6d88199127a)
+
 # Rewrite
 
 Sometimes you dig the idea you’ve got down, but it’d be helpful to see a few alternative ways to phrase it. Other times, you know you need to be more succinct, more upbeat, or more descriptive. Rewrite can help with all of these!
@@ -26,7 +28,7 @@ To use Rewrite: Highlight some text—up to 6,000 words at once—and click “R
     
 -   **More Intense:** Allows the AI to amp things up, improving the level of detail and pacing to create a more vivid reading experience.
     
--   **Customize…:** If you select Customize, you can prompt the Rewrite command with any sort of rewrite approach you’d like. It’s a super open-ended tool, and there are practically unlimited ways to use it. Here are some that our users have found helpful:
+-   **Customize…:** If you select Customize, you can prompt the Rewrite command with any sort of rewrite approach you’d like. It’s a super open-ended tools, and there are practically unlimited ways to use it. Here are some that our users have found helpful:
     
     -   "be more ominous"
         
@@ -47,9 +49,9 @@ To use Rewrite: Highlight some text—up to 6,000 words at once—and click “R
     -   "be in third person with name James"
         
 
-Note that longer rewrites, such as when you’ve selected a full chapter of prose, can take a minute to process.
+While Rewrite works exclusively on the passage you’ve selected, the AI will actually look at your Story Bible’s Synopsis when rewriting shorter (600 words or fewer) passages. This gives it broader context so that its constrained Rewrite is still faithful to the story you’re trying to tell. Longer Rewrites do not use Synopsis.
 
-**Rewrite transcript**
+📓 **Rewrite transcript**
 
 While the visuals in the video above are _sort of_ essential, a transcript of the Rewrite video above is available by expanding this toggle.
 

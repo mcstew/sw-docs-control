@@ -4,10 +4,12 @@ slug: 0953803-what-are-plugins
 category: '2165317'
 collection_name: Plugins
 featurebase_id: 0953803
-last_updated: '2026-01-21T01:53:02.748Z'
-synced_at: '2026-01-21T01:59:49.342Z'
+last_updated: '2026-01-21T18:00:47.652Z'
+synced_at: '2026-01-21T19:06:16.233Z'
 source: featurebase
 ---
+## What are Plugins?
+
 Sudowrite Plugins allow you to create powerful, custom AI functions for anyone on Sudowrite to use. Here’s a brief video introduction to Plugins.
 
 ## What are Plugins?
@@ -18,7 +20,7 @@ Plugins work similarly. If there’s ever a tool you need that doesn’t appear 
 
 ## What can Plugins do?
 
-Basically anything an author might want to do… but saying “anything you want” is not very instructive! Instead, it may be helpful to know the three major functions a Plugin might serve:
+Basically _anything_ an author might want to do… but saying “anything you want” is not very instructive! Instead, it may be helpful to know the three major functions a Plugin might serve:
 
 **Writing** - Plugins can generate text according to your instructions.
 

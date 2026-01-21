@@ -4,21 +4,23 @@ slug: 2549305-prose-modes-and-models
 category: '5442133'
 collection_name: Features
 featurebase_id: '2549305'
-last_updated: '2025-09-03T17:43:17.545Z'
-synced_at: '2026-01-15T23:11:00.953Z'
+last_updated: '2026-01-21T16:34:58.952Z'
+synced_at: '2026-01-21T19:06:16.454Z'
 source: featurebase
 ---
 Sudowrite allows you to select from a wide range of Prose Modes and AI models. Choosing different models effectively changes the AI performing the work, impacting output style, creativity, precision, and credit usage.
 
 ### What are Prose Modes?
 
-Prose Modes are carefully curated model suites designed specifically for fiction writing, each featuring a primary AI model enhanced by supportive configurations for optimal performance. You can use Sudowrite without ever toggling your Prose Mode, but experimenting with different modes allows you to discover variations in output. Prose Modes can be selected in both your Write settings and the Draft tool. (Other features currently do not support switching Prose Modes.)
+Prose Modes are carefully curated model suites designed specifically for fiction writing, each featuring a base AI model that has been optimized for use in Sudowrite. You can use Sudowrite without ever changing your Prose Mode, but experimenting with different modes allows you to discover variations in output voice.
+
+Prose Modes can be selected in both your Write button Settings and the Draft tool. (Other Sudowrite features currently do not support switching Prose Modes.)
 
 Selecting a different Prose Mode directly impacts the AI models used, influencing credit usage and the style and content of generated text.
 
-Current Prose Modes include:
+### Current Prose Modes
 
--   **Muse** - Sudowrite's flagship fiction model, purpose-built for creative storytelling
+-   **Muse** - The latest version of Sudowrite's flagship fiction model, Muse 1.5, is purpose-built for creative storytelling
     
 -   **Excellent** - Powered by Claude 3.7 Sonnet, balancing creativity with precise instruction-following
     
@@ -27,64 +29,94 @@ Current Prose Modes include:
 
 Retired, but still usable Prose Modes:
 
--   **Most Accurate** - Based on GPT-4
-    
--   **Balanced** - Based on GPT-4 Turbo
+-   **Fastest** - Based on GPT-3.5 Turbo
     
 -   **Unfiltered** - Based on Goliath 120B
     
--   **Best Prose (v2)** - Based on Claude 3 Opus
+-   **Most Accurate** - Based on GPT-4
     
--   **Best Prose (v1)** - Based on Claude 2.0
-    
--   **Fastest** - Based on GPT-3.5 Turbo
+-   **Muse 1** - A snapshot of the very first version of Muse
     
 
-### What are Experimental models?
+### What are the Experimental models?
 
-In addition to Prose Modes, Sudowrite offers a variety of specific AI models accessible via Write settings and the Draft tool. These Experimental models have not been extensively optimized for specific writing styles or tasks but offer granular control for specialized scenarios.
+In addition to Prose Modes, Sudowrite offers a variety of specific AI models accessible via Write settings and the Draft tool. These Experimental models have not been extensively optimized for specific writing styles or tasks but you may find that you like their voice, or they may have other benefits (such as speed or cost).
 
 Experimental models currently include:
 
--   **GPT-4.1** (Full, Mini, Nano)
+-   **OpenAI**
     
--   **GPT-4o** (Full, Mini)
+    -   GPT-4o
+        
+    -   GPT-4o Mini
+        
+    -   GPT-4.1 (Full, Mini, Nano)
+        
+    -   GPT-5 (Full, Mini, Nano)
+        
+-   **Anthropic (Claude)**
     
--   **Claude 3 Opus**
+    -   Claude 3.0 Haiku
+        
+    -   Claude 3.5 Haiku
+        
+    -   Claude 3.7 Sonnet
+        
+    -   Claude 4 Sonnet
+        
+    -   Claude 4.5 Sonnet
+        
+    -   Claude 4 Opus
+        
+    -   Claude 4.1 Opus
+        
+    -   Claude 4.5 Opus
+        
+    -   Claude 4.5 Haiku
+        
+-   **Google (Gemini)**
     
--   **Claude 3 Sonnet**
+    -   Gemini Pro 2.5
+        
+    -   Gemini 2.5 Flash Thinking
+        
+    -   Gemini 3 Pro
+        
+    -   Gemini 3 Flash
+        
+-   **DeepSeek**
     
--   **Claude 3 Haiku**
+    -   DeepSeek V3
+        
+    -   DeepSeek V3.1
+        
+    -   DeepSeek R1
+        
+-   **Other**
     
--   **Claude 3.5 Sonnet**
-    
--   **DeepSeek V3**
-    
--   **DeepSeek R1**
-    
--   **Goliath 120B**
-    
--   **Mythomax 13B**
-    
--   **Mistral Medium**
-    
--   **Mixtral 7B Instruct**
-    
--   **Mistral 7B Open Orca**
-    
--   **Mistral OpenHermes 7B**
-    
--   **Gemini Pro**
-    
+    -   Grok 4
+        
+    -   Kimi K2
+        
+    -   Mistral Large 2
+        
 
 Each AI model offers unique strengths, voices, and capabilities. We encourage authors to experiment broadly to identify the AI that best aligns with their individual writing needs and creative goals.
 
 ### So are the Experimental models “raw” models?
 
-Sort of. Keep in mind that Sudowrite has background prompting powering its features, and background functions (such as Saliency Engine) may influence what is ultimately seen by those models. Think of it like this:
+Sort of! Keep in mind that Sudowrite has background prompting powering its features, and background functions running (such as Saliency Engine) may influence what is ultimately received/seen by those models. Think of it like this:
 
-Prose Modes = Optimized, Experimental Models = Raw\*, Plugins = Raw
+Prose Modes = Optimized
 
-The only ways to use a truly “raw” AI model on Sudowrite is to build an Advanced Plugin using that model. Elsewhere we are doing some (or a lot!) of work to make sure things work great.
+Experimental Models = Raw\*
+
+Plugins = Raw
+
+The only ways to use a truly “raw” AI model on Sudowrite is to build a Plugin using that AI model. Elsewhere on Sudowrite we are doing some (or a lot!) of work to make sure things work great.
+
+* * *
 
 Not sure which Prose Mode or AI model is best for your needs? We have a handy breakdown available here:
+
+[Which AI model should I use?](https://www.notion.so/Which-AI-model-should-I-use-ecc5add0574d4209becf7363d0fff934?pvs=21)

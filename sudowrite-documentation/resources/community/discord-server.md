@@ -4,11 +4,11 @@ slug: 7032025-discord-server
 category: '8291256'
 collection_name: Community
 featurebase_id: '7032025'
-last_updated: '2025-09-04T16:25:16.107Z'
-synced_at: '2026-01-15T23:11:00.853Z'
+last_updated: '2026-01-21T18:20:46.743Z'
+synced_at: '2026-01-21T19:06:16.194Z'
 source: featurebase
 ---
-Sudowrite has a community Discord server available, where you can connect with other curious and friendly, forward-thinking authors.
+Sudowrite has a community Discord server available. You can join the server to get your questions answered and connect with other curious and friendly, forward-thinking authors.
 
 **👉** [**Join the community Discord server here now: https://discord.gg/sudowrite**](https://discord.gg/sudowrite)
 

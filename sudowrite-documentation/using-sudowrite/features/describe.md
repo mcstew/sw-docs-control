@@ -4,21 +4,23 @@ slug: 5156739-describe
 category: '5442133'
 collection_name: Features
 featurebase_id: '5156739'
-last_updated: '2025-09-03T17:43:17.545Z'
-synced_at: '2026-01-15T23:11:00.983Z'
+last_updated: '2026-01-21T16:09:06.564Z'
+synced_at: '2026-01-21T19:06:16.526Z'
 source: featurebase
 ---
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6a71647f8c5b22973cb5/019be14f-e3bd-7b5b-bf58-a375d618ee9f/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=4039f5bfcdf0971aa23ce7d7c8a486edad8cd3b3b3b2767ab73ca8e4425168b7)
+
 # Describe
 
-Feeling stuck on the details? Describe is a way to very quickly get inspired with some super detailed descriptions of… whatever it is you highlighted. Describe will provide responses broken out by the five senses (Sight, Sound, Touch, Taste, and Smell) as well as a couple of metaphors. Like other features, you’ll find the results in the History column on the right.
+Feeling stuck on the details? Describe is a way to very quickly get inspired with some super detailed sensory descriptions of… whatever it is you highlighted. Describe will provide responses broken out by the five senses (Sight, Sound, Touch, Taste, and Smell), as well as a couple of metaphors. Like other features, you’ll find the results in the History column on the right.
 
-To use it, highlight a specific word or phrase and click Describe. It often works best when highlighting a short-to-medium length phrase within a paragraph. But it can also work at the paragraph level if you’d like descriptions for a broader set of objects in your scene. Writing a Young Adult novel set in a High School? You might not be thinking about how the smells from the gymnasium intrude on your hallway scenes, but Describe will.
+To use it, highlight a specific word or phrase and click Describe. It often works best when highlighting a short-to-medium length phrase within a paragraph. It can also work at the paragraph level, if you’d like descriptions for a broader set of objects in your scene. Writing a Young Adult novel set in a High School? You might not be thinking about how the smells from the locker room intrude on your hallway scenes, but Describe will.
 
-Maybe after that you don’t ever want to know what something smells like. In that case, click the 🔽 toggle on the Describe button to select the senses you’d like Describe to respond with when you use it. Turn as many on or off as you like.
+And hey, maybe after that you don’t ever want to know what something smells like! In that case, click the dropdown 🔽 toggle to the right of the Describe button to disable or enable sensory descriptions you’d like Describe to respond with when you use it. Turn as many on or off as you like. (You always need at least one sense enabled though!)
 
-_Note: Describe looks at the paragraph where the highlighted phrase resides, as well as up to 200 words prior to the selection._
+_Note: Describe looks at the paragraph where the highlighted phrase resides, as well as up to 200 words prior to the selection for context._
 
-**Describe transcript**
+📓 **Describe transcript**
 
 While the visuals in the video above are _sort of_ essential, a transcript of the Describe video above is available by expanding this toggle.
 

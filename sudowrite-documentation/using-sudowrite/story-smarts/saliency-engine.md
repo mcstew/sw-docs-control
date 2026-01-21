@@ -4,17 +4,17 @@ slug: 6295151-saliency-engine
 category: '5566496'
 collection_name: Story Smarts
 featurebase_id: '6295151'
-last_updated: '2025-09-03T18:33:02.782Z'
-synced_at: '2026-01-15T23:11:00.886Z'
+last_updated: '2026-01-21T17:38:58.552Z'
+synced_at: '2026-01-21T19:06:16.260Z'
 source: featurebase
 ---
-# Saliency Engine
+## Saliency Engine
 
 The first thing to know about Saliency Engine is that you won’t find a button or field for it anywhere in Sudowrite. **It’s running behind the scenes to help the AI stay focused on what’s relevant.**
 
 You may have hundreds of Characters or Worldbuilding Elements in your Story Bible, but it’s rare that all of those will be relevant when you want to generate the prose for a specific beat. Saliency Engine reviews the task at hand, as well as all of the story information you’ve provided, in order to expose the most relevant information to the AI for prose generation purposes.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e2123b373be38049bd4/0198aec6-9f74-7eef-a562-a6a38331a00b/b64u-MDE5OGFlYzYtOWY3NC03ZWVmLWE1NjItYTZhMmRmOTExMzc0.gif?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=a6a41028033218afe1976b2a5290ed059bc9a89ae621b3b381c87770abb7cc7d)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e2123b373be38049bd4/019be1a1-0f3c-7f76-8893-1db9644a8349/b64u-aW1hZ2UuZ2lm.gif?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=54c9ef274ca41a1ade8d7d3ce0e66542872fdcabd63905d7701a4f187d5060b6)
 
 Saliency Engine will **make sense of mountains of story context** in an instant, keeping anything you generate on track. That means, for example, if your shifter is in wolf form, the AI _won't_ reference the pleated khakis they might typically wear to work.
 
@@ -30,11 +30,11 @@ If you’ve added a character that doesn’t appear until later in your story, a
 
 **When the visibility of a Character, Worldbuilding element, or trait is toggled off, Sudowrite’s AI will ignore it altogether.**
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e2123b373be38049bd4/0198aec6-9bad-742c-bdc5-af62845d8f42/b64u-MDE5OGFlYzYtOWI5NS03ZGY3LWJkMGUtMzIxMjY4MWQyOTAy.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=5e7bdd7f1291933577a68e17c138e89191c9a67571ba76382deeecbcc603fd3d)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e2123b373be38049bd4/019be1a1-a1fc-754d-a803-34a7c5f12215/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=a97eb17cb41e3113332809598c7492fd9e00e12750111b8b7ca73328ade78786)
 
 Alternatively, lets say you want to include a Motive trait on the Character card for the murderer in your mystery. Saliency Engine _may_ consider a motive relevant to a scene, leading to an AI generation that spills the beans prematurely. To hide the Motive from Sudowrite, toggle the visibility setting within the Motive trait field from the eyeball icon in the upper right.
 
-![Click the eyeball icon from within the trait field to toggle that trait’s visibility. When the icon is set to a struck-through eye, the trait is hidden and Sudowrite will ignore it.](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e2123b373be38049bd4/0198aec6-9bed-74e7-a358-6d23d2625956/b64u-MDE5OGFlYzYtOWJiOC03YWE0LWFlNTktZDY5ZThlMmNmNjQ2.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=b9f5269b77716c3cc70663928f54607d3c05184b4333f513da851d8ef2731ea3)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e2123b373be38049bd4/019be1a1-f8f0-76db-ba79-806c3b65a516/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=7458e57228b6b82704cf3cb7c0ba3b85b76e63f6bd58c9cd17006740e81cb210)
 
 Click the eyeball icon from within the trait field to toggle that trait’s visibility. When the icon is set to a struck-through eye, the trait is hidden and Sudowrite will ignore it.
 
@@ -42,20 +42,21 @@ All Character and Worldbuilding cards and their traits are visible to the AI by 
 
 You can toggle the visibility settings as often as necessary.
 
-> Remember that hiding a Character, Worldbuilding element, or trait from Sudowrite will hide it from all AI features. That means features like Chat, Write, and even Plugins will think it doesn’t exist (because they can’t see it).
+⚠️Remember that hiding a Character, Worldbuilding element, or trait from Sudowrite will hide it from all AI features. That means features like Chat, Write, and even Plugins will think it doesn’t exist (because they can’t see it).
 
-### How does Saliency Engine work with Plugins?
+### How Does Saliency Engine Work With Plugins?
 
 Some plugins are designed to use your Story Bible data. In those cases, Saliency Engine may or may not be used, depending entirely on how the creator built that plugin.
 
 -   If the creator chose to use the `{{ characters }}` or `{{ worldbuilding }}` variables, the Saliency Engine will kick in when necessary.
     
-
 -   If the creator chose to use the `{{ characters_raw }}` or `{{ worldbuilding_raw }}` variables, the full context of those fields will be passed along into the AI in their entirety. The Saliency Engine will make no attempt to parse the data for relevant context.
     
-    -   Note: In most cases, the `raw` version will give the AI _way_ more context. This can either degrade or improve the results, depending on both the plugin configuration and the context passed through as a result… but it will almost always make the Plugin use more credits.
+    -   Note: In most cases, the `*_*raw` version will give the AI _way_ more context. This can either degrade or improve the results, depending on both the plugin configuration and the context passed through as a result… but it will almost always make the Plugin use more credits.
+        
+    -   **Hidden characters or traits will never be visible to the AI**, even if a Plugin is using the a `_raw` variable.
         
 
-> Be Advised: Credit cost is always calculated based on input, output, and the model selected. If a user with hundreds of Characters or Worldbuilding Elements uses a Plugin that includes the `raw` version of a variable, a great deal of context will be passed through to the AI. **This could consume a ton of credits!**
+🚧 **Be Advised:** Credit cost is always calculated based on input, output, and the model selected. If a user with hundreds of Characters or Worldbuilding Elements uses a Plugin that includes the `_raw` version of a variable, a great deal of context will be passed through to the AI. **This could consume a ton of credits!**
 
 All Plugins that predate the Saliency Engine use the standard `{{ characters }}` variable, and so will use Saliency Engine by default.

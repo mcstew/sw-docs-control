@@ -4,41 +4,43 @@ slug: 1251175-series-support
 category: '5442133'
 collection_name: Features
 featurebase_id: '1251175'
-last_updated: '2025-09-03T17:43:17.545Z'
-synced_at: '2026-01-15T23:11:00.950Z'
+last_updated: '2026-01-21T16:42:02.441Z'
+synced_at: '2026-01-21T19:06:16.430Z'
 source: featurebase
 ---
-Whether you currently write a book series or you aspire to, you can take advantage of **Series** support in Sudowrite to share important information between projects. Projects created or moved into a **Series Folder** will share Characters, Worldbuilding, and Outline visibility so that your books’ shared universe, character arcs, and plot lines remain consistent.
+Whether you currently write a book series or you aspire to, you can take advantage of **Series** support in Sudowrite to share important information between projects. Projects created in or moved into a **Series Folder** will share Characters, Worldbuilding, and Outline visibility so that your books’ shared universe, character arcs, and plot lines remain consistent.
 
-## Create a Series
+### Create a Series
 
 Create a new Series in Sudowrite by clicking the **\+ New** button in the upper lefthand corner of the homepage and selecting **Series** from the dropdown menu. This will create a project folder with a special Series icon and label. Name it as you would with any other folder.
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/0198aebb-d0c6-722e-a953-d2dc6f69dc06/b64u-MDE5OGFlYmItY2VmNi03ZDU2LWFjYTctNmI0ZDhhNGY0MzJk.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=df9cd3c37eb18800ab6e65f194dafaea284ba7a211f330685792bef39be04601)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/019be16a-d2f6-7fd9-910d-fc60ede921e5/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=02cd0aec4cc13e700dd8506c95ec0ffe89e783311ddc231fe3ad8fd51073261b)
 
 Series folders can be created either on the main homepage or within another folder.
 
-> Series will only share Story Bible data between projects in the same hierarchy—meaning if you create a sub-folder inside of a Series folder with additional projects, the data from those projects will not be visible to the projects one level up in the primary Series folder.
+☝Series will only share Story Bible data between projects in the same hierarchy—meaning if you create a sub-folder inside of a Series folder with additional projects, the data from those projects will not be visible to the projects one level up in the primary Series folder.
 
 ## How Series Works
 
 ### Characters and Worldbuilding
 
-**Projects within a Series share Characters and Worldbuilding elements.** That means that if I create characters Jane, John, and Jerry in Book 1, I’ll still be able to see and edit those characters in Book 2. Further, changes made to Characters and Worldbuilding elements will be reflected across all books in that Series Folder. This is not just for your reference either; Sudowrite’s AI also has access to all of your Characters and Worldbuilding elements in a Series. Plus, it will remember (and show you!) which book your characters were originally created in.
+**Projects within a Series share Characters and Worldbuilding elements.** That means that if I create characters Jane, John, and Jerry in Book 1, I’ll still be able to see and edit those characters in Book 2 just so long as both Projects (Book 1 and Book 2) are in the same Series folder.
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/0198aebb-cf01-7e72-b249-44176c868622/b64u-MDE5OGFlYmItY2U3MC03YzIyLWJlNzktODhlNDI3N2YxZDdi.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=4ab4fad599cac60f034f6c0c334ad2af6037051a465080290821e2435e23fc62)
+Further, changes made to Characters and Worldbuilding elements will be reflected across all books in that Series Folder. This is not just for your reference either; Sudowrite’s AI also has access to all of your Characters and Worldbuilding elements in a Series. Plus, it will remember (and show you!) which book your characters were originally created in.
 
-**Best Practices**
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/019be16c-254a-7ee3-a4f5-6173f8cded53/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=ce7a491a8f9e039d27ee6ac2f483a242932ce8ea6cefd51beaef367eab05e09f)
+
+### **Best Practices**
 
 Because Sudowrite’s AI has access to all of your Characters and Worldbuilding elements in a Series, it’s a good idea to keep them up to date for whichever volume you’re currently working on. For example, if I have a character Liam who is the protagonist of Book 1, but more of a supporting character in Book 2, I can change his type to reflect whichever Book I am working on.
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/0198aebb-d085-7cbd-9b4f-5fd8276363d9/b64u-MDE5OGFlYmItY2VlNi03ZTZiLWJmN2UtYTA3MjE5ZTMwYzhk.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=9fbc2241a93a037649c339cc8d697099476134762bfdc1c5b0beac601d439f55)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/019be16c-8102-7729-bf08-41af988ae508/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=6db88b185688e98a6e3203dc0091d167e5ea975b98067dae8ae99d707d5a5c9f)
 
 If you have characters that only appear in one book, and you don’t want them showing up in others, it may be a good idea to “hide” them from the AI when working on a volume in which they do not play a part. Toggle the eyeball icon that appears when hovering over a Character or Worldbuilding card, and that card is hidden from Sudowrite entirely. (You can always change it back.)
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/0198aebb-d58a-72d8-93de-18e9010d1675/b64u-MDE5OGFlYmItZDNkNy03MWFhLWFkZWMtMzdhZjYzYjBmYTMz.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=8fbe4f059942e314e39457ab18f6d1af2cd8bae4be2eefafa5d69bc0686dcf92)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/019be16d-340b-79df-a796-0349bafce978/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=743a6d6381a08bcc156b064395ed6cdb686bcdaeeef00022e10b6de6f5fafd5d)
 
-For more complex character arcs or development of Worldbuilding elements, it may be beneficial to create multiple versions of a card—one for each book, or at least for dramatic milestones—and simply hide/show the most relevant version as your work progresses across a series. Alternatively, you can have a single canonical character card or worldbuilding element that is shared and used across the series, updating it as you go, or using the visibility settings on individual traits.
+For more complex character arcs or development of Worldbuilding elements, it may be beneficial to create multiple versions of a card—one for each book, or at least for dramatic milestones—and simply hide/show the most relevant version as your work progresses across a series. Alternatively, you can have a single canonical Character card or Worldbuilding element that is shared and used across the series, updating it as you go, or using the visibility settings on individual traits.
 
 ### Outlines
 
@@ -46,7 +48,7 @@ Projects in a Series automatically use Sudowrite’s Outline Unlimited. The stru
 
 To access Outlines from different projects, use the dropdown menu in the Outline header section of Story Bible to select the outline you wish to view.
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/0198aebb-d508-7cf5-98fd-eeb8f56298d7/b64u-MDE5OGFlYmItZDNmNS03NTQxLWE4MmMtZjgxZTQ4YzY0ZDJm.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=89ff8117552ceaca3e89b419d1a537fec128407dad6621e2ec7b5db1d05bb3be)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/019be16d-8ed7-7279-91c5-c161537ac274/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=d756ea0c7e20d674f30659469e9721e619c283de69620c4212ef5aa4009aa4dc)
 
 When viewing an Outline from a different project than the currently open project, **you can both make edits and generations with that Outline**. These changes will persist and be reflected in that project’s Outline moving forward.
 
@@ -58,11 +60,11 @@ Once you have created your Series Folder, there are a couple of ways to add a pr
 
 -   Drag and drop an existing project on the homepage into the Series Folder
     
--   Use the **••• menu** and select **Move to…** to select the Series Folder from a list of available folders, and move it over
+-   Use the **More (•••) menu** and select **Move to…** to select the Series Folder from a list of available folders, and move it over
     
 -   Creating a new Project using the **\+ New** button when you’re inside of a Series Folder will create a blank project that instantly has access to shared Series information
     
--   Importing a project with the **Import** button from within a Series Folder automatically adds that project to the series, and any Characters or Worldbuilding elements that are detected as part of the import process will be shared across the series.
+-   Importing a project with the **Import Novel** button from within a Series Folder automatically adds that project to the series, and any Characters or Worldbuilding elements that are detected as part of the import process will be shared across the series.
     
 
 When you add an existing project to a Series Folder:
@@ -80,19 +82,19 @@ When you add an existing project to a Series Folder:
 -   Sudowrite will add the project to your **Series Timeline**
     
 
-## Series Timeline
+### Series Timeline
 
 Every Series Folder has a collapsible Series Timeline section at the top. As projects are added to the Series Folder, they will always be added to the “end” of the Series Timeline. (You can always grab the little handles beside the project title to drag it into its proper sequence.) Sudowrite uses this sequence information to assemble a timeline based on your project outlines, which will be used in subsequent generations inside of the series.
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/0198aebb-d53c-7fc5-bc13-b2c784f6764b/b64u-MDE5OGFlYmItZDNjNy03ODE5LThjNjUtMGI1YTZhNzc4Yzgx.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=e41be3768b19bd3c766c78ec7d798fb60d0e3c1844cc618a0d9c2585f885d338)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/019be16e-1dc2-7072-865a-c1326eec78ef/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=4be6f504e1b085682efafa78851ea7787d351ad8572ff49a414a9d624f0c095a)
 
 You should only have to set this order once. Sudowrite will remember this order when generating content thereafter.
 
-## Removing a Project from a Series
+### Removing a Project from a Series
 
 To remove a project from a Series simply move it out of the Series Folder, using the ••• menu and selecting the Move to… option. Alternatively, just drag the project up to the word Home (or the preferred folder name) in the File Path that appears above the series title.
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/0198aebb-d970-7e1a-b0fa-b257b08dec41/b64u-MDE5OGFlYmItZDhkNi03NzY1LWE1MTItMTVmYmU4ZDNmMzY3.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=95eff87e5cfe086b427239423fe93a1606a4645617aa91fa24699a6e46c249f4)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b3fa9e01a9ad78c9518/019be16e-6002-77a1-b7d8-dece67514ca4/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=c4a5bd98d6041f74946239f5ff21c8df7de3ef70b7d603d8182bc90bc9bbed04)
 
 When a project is removed from a Series, it loses real-time access to the shared Story Bible information… but we want to make sure that you don’t lose any hard work you’ve done, either in that Project or the rest of the series. So removing a project from a series works like this:
 
@@ -107,4 +109,6 @@ When a project is removed from a Series, it loses real-time access to the shared
 -   The removed project will also be removed from the Series Timeline.
     
 
-**Warning!** Because projects retain shared Characters and Worldbuilding elements when removed from a Series, you should avoid moving those projects back into the same Series. **Adding a Project to a series automatically adds all Characters and Worldbuilding elements within that project to the Series without regard for duplicates**—that means moving a project out and back into a Series Folder can create a whole mess of duplicates. Yikes.
+🚨**Warning!** Because projects retain shared Characters and Worldbuilding elements even when removed from a Series, you should avoid moving those projects _back_ into the same Series.
+
+While identically-matched Characters and Worldbuilding elements will not be re-added, even nominally changed cards _would_ be re-added—which could potentially create a confusing mess of near-duplicates.

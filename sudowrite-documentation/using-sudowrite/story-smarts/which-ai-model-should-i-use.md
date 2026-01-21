@@ -4,15 +4,15 @@ slug: 4046065-which-ai-model-should-i-use
 category: '5566496'
 collection_name: Story Smarts
 featurebase_id: '4046065'
-last_updated: '2025-09-03T18:34:21.158Z'
-synced_at: '2026-01-15T23:11:00.880Z'
+last_updated: '2026-01-21T18:30:49.074Z'
+synced_at: '2026-01-21T19:06:16.244Z'
 source: featurebase
 ---
 # Prose Modes and AI Models
 
-Authors can use Sudowrite without ever changing the default settings, but it’s still helpful to know that Sudowrite does offer a variety of Prose Modes and AI models to suit different purposes.
+Authors can use Sudowrite without ever changing the default settings, but it's still helpful to know that Sudowrite does offer a variety of Prose Modes and AI models to suit different purposes.
 
-Prose Modes are AI model suites specific to Sudowrite, designed specifically for fiction writing. These modes let you experience different output styles at varying costs, each offering unique balances of creativity, control, content filtering, and credit usage. We’ll dive in below on the Prose Modes and AI models available on Sudowrite.
+Prose Modes are AI model suites specific to Sudowrite, designed specifically for fiction writing. These modes let you experience different output styles at varying costs, each offering unique balances of creativity, control, content filtering, and credit usage. We'll dive in below on the Prose Modes and AI models available on Sudowrite.
 
 ## Muse — Sudowrite's Fiction Model
 
@@ -28,7 +28,7 @@ Muse is Sudowrite's flagship proprietary model, purpose-built just for fiction. 
 
 **Best Use Cases:** Ideal for high-quality fiction prose, especially creative, character-driven writing. Excels in impactful scenes, character interactions, and climactic moments. Perfect for unfiltered content including mature themes. Outputs often require less editing than other models.
 
-**Weaknesses:** Not optimized for non-fiction or highly structured tasks. Definitely voice-y, and perhaps not to everyone’s taste. May occasionally produce unexpectedly edgy content. Available exclusively within Sudowrite's ecosystem.
+**Weaknesses:** Not optimized for non-fiction or highly structured tasks. Definitely voice-y, and perhaps not to everyone's taste. May occasionally produce unexpectedly edgy content. Available exclusively within Sudowrite's ecosystem.
 
 ## Excellent — Claude 3.7 Sonnet
 
@@ -60,63 +60,207 @@ Basic uses the lightweight and economical GPT-4o Mini as its backbone. This mode
 
 **Best Use Cases:** Excels at speed-writing, brainstorming, quick drafting, and plot development. Ideal for connective scenes, experimentation, and utility tasks (summarizing, listing ideas). A dependable workhorse for getting words on the page efficiently.
 
-**Weaknesses:** Lacks sophisticated elements like metaphors or emotional subtext. Complex or character-rich scenes may feel flat. May fall back on cliches or tropes in cases. Best used for basics with plans to enhance later.
+**Weaknesses:** Lacks sophisticated elements like metaphors or emotional subtext. Complex or character-rich scenes may feel flat. May fall back on clichés or tropes. Best used for basics with plans to enhance later.
 
-# Advanced AI Models
+* * *
 
-Sudowrite's Advanced selector offers AI models beyond the main Prose Modes, including Experimental options and Retired Prose Modes. These provide granular control for specific chapters or specialized plugin tasks. Here's a concise overview of available advanced models:
+# Experimental AI Models
 
-## Anthropic Models — Claude 3 Suite
+Sudowrite's Experimental selector offers AI models beyond the main Prose Modes. These provide granular control for specific chapters or specialized plugin tasks. Keep in mind these models haven't been extensively optimized for Sudowrite's specific fiction-writing workflows, but you may find their unique voices and capabilities suit your needs.
 
-Sudowrite provides access to Anthropic's Claude 3 family in three flavors. Claude models are known for knowledgeable, thoughtful writing and a large context window, making them great for novelists who feed a lot of story context.
+## Anthropic Models — Claude Family
 
-**Claude 3.0 Opus:** Once the most powerful Claude model (powers the Retired "Best Prose v2"), Opus is still preferred by many. Excels at highly detailed writing with seamless incorporation of Story Bible information and prior chapters. Perfect for complex scenes with callbacks to earlier foreshadowing or intricate settings. Follows sophisticated instructions precisely, producing richly detailed, cohesive output. Drawbacks include slower processing, very high credit usage, and occasional verbosity requiring trimming. Ideal for final polishing or ensuring continuity in complex narratives.
+Anthropic's Claude models are known for knowledgeable, thoughtful writing with large context windows, making them excellent for novelists who feed substantial story context. The Claude family on Sudowrite now spans multiple generations.
 
-**Claude 3.0, 3.5 and 3.7 Sonnet:** Balances speed and quality. Produces high-quality writing with faster turnaround than Opus. Especially strong for action scenes and general chapter drafting with lively, focused descriptions that advance the plot efficiently. More credit-friendly than Opus while maintaining strong output quality requiring minimal editing. Watch for occasional formality in dialogue.
+### Claude 4.x Series (Claude 4 Sonnet, Claude 4.5 Sonnet, Claude 4 Opus, Claude 4.1 Opus, Claude 4.5 Opus, Claude 4.5 Haiku)
 
-**Claude 3.0, and 3.5 Haiku:** The fastest Claude variant, offering a middle ground between speed and detail. Perfect for everyday writing tasks, transitional scenes, and rapid iteration. Follows prompts reliably with coherent output, though style is more straightforward. Benefits include speed and lower credit cost, making it excellent for experimentation. Less nuanced with complex or emotional content.
+The Claude 4 generation introduced hybrid reasoning capabilities, allowing models to switch between fast responses and extended thinking modes.
 
-The Claude models are widely preferred, and work well for standard genre fiction with a thoughtful, mildly stylistic voice. While Claude models typically feature safety filters that avoid certain themes—sexual content, graphic torture, etc.—they are more permissive in the context of fiction writing on Sudowrite. Note that despite our bucketing here, the higher numbers assigned to these models by Anthropic indicate more recent iterations. That means Claude 3.7 Sonnet is the newest (and therefore most powerful) model available from Anthropic.
+**Prose Quality:** Claude 4 models produce polished, coherent prose with strong narrative flow. Sonnet 4.5 in particular is praised for following instructions precisely while maintaining creative flair—it picks up on your writing style and keeps quirks intact rather than smoothing everything into generic prose. Opus variants offer richer detail and deeper world-feel, though at higher cost.
 
-## OpenAI Models — GPT-4o and 4.1 Suites
+**Instruction Following:** Exceptional across the Claude 4 family. These models excel at adhering to complex outlines, maintaining character consistency, and respecting story constraints. Sonnet 4.5 rewards specific prompting—give it clear examples and direction, and it will match your voice closely.
 
-Sudowrite integrates OpenAI's GPT-4 Omni models, which are the evolution of GPT-4 with multimodal capabilities—though in the context of Sudowrite, they are text-only. GPT-4o models are extremely capable in terms of language understanding and generation. They are especially known for factual accuracy, logical coherence, and adherence to instructions, which can be very useful for certain writing scenarios.
+**Content Filter Level:** Moderate. More permissive than OpenAI models but maintains boundaries. Claude 4 models handle typical novel content well, including violence and mature themes, though they may soften extremely explicit scenes.
 
-### GPT-4o Suite
+**Credit Usage:** Varies by tier. Haiku 4.5 is the most economical option for everyday tasks. Sonnet 4.5 offers strong value as the balanced workhorse. Opus variants (4, 4.1, 4.5) are premium-priced—reserve them for complex scenes requiring maximum intelligence and nuance.
 
-**GPT-4o (Full):** One of the most versatile AI models available, GPT-4o excels at creating vivid, sensory-rich descriptions and detailed settings. It is particularly good at structured tasks, closely following outlines and maintaining consistency throughout long passages. It's also strong for analytical or complex narrative tasks. The downside includes relatively high credit costs and firm content restrictions—though these are somewhat relaxed within Sudowrite. GPT-4o tends to be cautious with mature content, and authors may need to explicitly prompt deeper emotional nuance. Ideal for scenes requiring precision, final consistency checks, or polished literary prose.
+**Best Use Cases:**
 
-**GPT-4o Mini:** A streamlined, cost-effective variant that powers Sudowrite's Basic mode. GPT-4o Mini delivers impressive quality at reduced cost, producing reliable and clear descriptions without the lush details of its larger counterpart. It maintains strong obedience to instructions and handles large context windows well, ensuring narrative consistency. Particularly useful for general writing tasks, drafting, and plugins, offering a dependable balance of quality and economy.
+-   **Sonnet 4.5:** General drafting, style mimicry, dialogue-heavy scenes, long-form content generation
+    
+-   **Opus variants:** Complex multi-character scenes, intricate plotting, final polishing passes, scenes requiring deep reasoning
+    
+-   **Haiku 4.5:** Rapid iteration, transitional scenes, brainstorming, cost-conscious bulk generation
+    
 
-### GPT-4.1 Suite (New!)
+**Weaknesses:** Can occasionally be wordy—Sonnet 4.5 sometimes doubles word counts during rewrites. Watch for AI-isms like em-dash overuse. Opus variants are slow and expensive, best reserved for critical work.
 
-**GPT-4.1 (Full):** GPT-4.1 stands out for its superior ability to follow intricate instructions right from the first draft, making it especially beneficial for authors who need precise adherence to complex plot details. Its remarkable one-million-token context window greatly improves consistency, allowing detailed story continuity across extended narratives—far beyond typical novel lengths. The model's robust story understanding results in fewer required edits and tighter adherence to your vision. GPT-4.1 offers excellent value, often outperforming GPT-4 Turbo (Balanced) in terms of cost-effectiveness and quality, making it suitable for detailed, long-form writing tasks and critical scenes demanding precision.
+### Claude 3.x Series (Claude 3.0 Haiku, Claude 3.5 Haiku, Claude 3.7 Sonnet)
 
-**GPT-4.1 Mini:** The "brainy" younger sibling of GPT-4.1, this model provides substantial quality at roughly twice the cost of GPT-4o Mini but with notably improved instruction-following and context retention. It's ideal for scenes or chapters requiring a careful balance of creativity and fidelity to detailed outlines or story elements. GPT-4.1 Mini delivers reliable, consistent outputs at an appealing price point for authors who want quality without the full cost of the premium models.
+The previous Claude generation remains available and still performs admirably for many tasks. Claude 3.7 Sonnet powers the Excellent Prose Mode and offers a proven balance of quality and economy. The Haiku variants are fast and affordable options for quick drafts or iterative work.
 
-**GPT-4.1 Nano:** GPT-4.1 Nano is remarkably cost-effective—approximately 30% cheaper than GPT-4o Mini—yet still benefits from the GPT-4.1 suite's enhanced instruction-following and memory capabilities. It's perfect for high-volume drafting, brainstorming, and preliminary scene-building, where authors can generate large amounts of text affordably before refining it with a higher-tier model. Though output is simpler and less detailed than its bigger siblings, its economy and improved narrative coherence make it an exceptional value for authors on tighter budgets.
+## OpenAI Models — GPT-4o, GPT-4.1, and GPT-5 Suites
 
-Both GPT-4o and GPT-4.1 suites generally produce precise, grammatically polished text, though the tone may sometimes feel formal or academic. They respond exceptionally well to stylistic guidance, quickly adapting when provided with clear examples of the desired voice or tone.
+OpenAI's model families offer different balances of capability, speed, and cost. These models are known for factual accuracy, logical coherence, and strong instruction-following.
 
-## DeepSeek Models — Open-Source
+### GPT-5 Suite (Full, Mini, Nano)
 
-DeepSeek is a family of cutting-edge open-source models that Sudowrite has added, especially appealing to those looking for cost-effective alternatives to the big-name APIs. DeepSeek models are trained with novel techniques emphasizing reasoning and economy. They are relatively new (introduced in 2025) and have quickly become popular for certain use cases.
+OpenAI's 2025 flagship family represents their most advanced offering.
 
-**DeepSeek V3:** Optimized for maximum value—offering performance comparable to larger models at a significantly lower cost. Provides competent, "serviceable" prose with solid grammar and basic creativity. Functions as a blank stylistic canvas you can shape. Even cheaper than GPT-4o Mini, making it among Sudowrite's most credit-efficient options for long-form content. Ideal for quick brainstorming, rough drafts of entire novels on limited budgets, or generating large volumes of content for later enhancement. Output may occasionally contain awkward phrasing but nothing Quick Edit can't fix.
+**Prose Quality:** GPT-5 Full excels at generating high-quality dialogue and mimicking your writing style—authors report it's particularly strong at matching fragmented, punchy voices. However, it tends toward dialogue-heavy output with less descriptive prose, which can be an asset or limitation depending on your style. Produces imaginative, detailed prose for storytelling and world-building.
 
-**DeepSeek R1:** Specializes in reasoning power with an internal "thinking" phase before writing. Excels with complex narrative problems, convoluted plots, mysteries with numerous clues, or maintaining character consistency. Produces coherent, logically consistent chapters where characters stay in character and plot threads.
+**Instruction Following:** Strong, with improved ability to maintain narrative consistency across long passages. GPT-5's massive context window supports extended narratives without losing track of earlier details. The model benefits from clear, specific prompting.
 
-## Other Niche Models
+**Content Filter Level:** Strict. Inherits OpenAI's content policies, though somewhat relaxed within Sudowrite. May avoid or soften explicit content.
 
-Sudowrite also includes a few other models that cater to specific needs or user preferences. These might not be the top choices for most, but they can be useful in specific scenarios or for experimentation.
+**Credit Usage:**
 
-**Mythomax 13B:** A 13-billion-parameter open-source model fine-tuned for storytelling. Valued for speed and decent dialogue capabilities. Perfect for quickly generating scene drafts to overcome writer's block. Output is adequate but not deeply polished—expect to rewrite portions. Excellent for casual brainstorming and character dialogue exploration. Sometimes provides creative, unconventional ideas mainstream models might avoid.
+-   **GPT-5 Full:** Premium cost, best for important scenes and final drafts
+    
+-   **GPT-5 Mini:** Mid-tier, solid for general work
+    
+-   **GPT-5 Nano:** Budget option, though notably weaker for prose—optimized more for agentic/tool tasks than creative writing
+    
 
-**Mistral 7B (Mixtral):** A very small, extremely fast model described as "well-rounded" for new users. Limited to basic tasks like sentence completion or simple rewrites. Produces flat, sometimes repetitive prose over longer passages—not recommended for actual chapter writing. Useful for quick sentence rephrasing or testing continuations without consuming significant credits. Its smaller size means less bias but also less knowledge. Consider it an experimental option, as serious fiction work typically requires larger models.
+**Best Use Cases:**
 
-**Goliath 120B:** A legacy 120-billion parameter model formerly used as Sudowrite's "Unfiltered" Prose Mode before Muse. Creates lengthy, coherent text with a permissive approach to content. Known for natural, conversational tone and potential for humor. Computationally heavy (slower) and less finely tuned than newer models. Sometimes produces shorter outputs requiring extra prompting to continue. With Muse now available, Goliath serves mainly as an alternative voice—its straightforward pulp-fiction style might suit certain scenes, but Muse or DeepSeek V3 typically outperform it on quality and cost.
+-   **Full:** Dialogue-heavy scenes, style mimicry, world-building, complex plot development
+    
+-   **Mini:** General drafting when budget matters
+    
+-   **Nano:** Utility tasks outside of prose generation (summarizing, quick edits)
+    
 
-**(Others):** Sudowrite's model lineup continues evolving. You may see additions like Google's Gemini Pro or other open-source options in the future. Check Sudowrite's changelog for new additions, which typically include usage notes. Models labeled "Experimental" have been implemented and tested, but not exhaustively and results may still vary in different contexts.
+**Weaknesses:** GPT-5 can try to "take over" stories rather than collaboratively continue them—it sometimes veers off-plot toward its own conclusions. Nano performs poorly for actual prose writing. The model may feel "clean" but lacks the raw creative spark some authors prefer.
+
+### GPT-4.1 Suite (Full, Mini, Nano)
+
+A strong mid-tier option with excellent instruction-following and a massive one-million-token context window.
+
+**Prose Quality:** Produces precise, grammatically polished text. GPT-4.1 follows intricate instructions well from the first draft, making it valuable for authors who need tight adherence to complex plot details. Tone can feel somewhat formal.
+
+**Instruction Following:** Standout capability. Superior at following complex, multi-part instructions and maintaining story continuity across very long narratives.
+
+**Credit Usage:**
+
+-   **Full:** Good value, often outperforming older premium models at lower cost
+    
+-   **Mini:** Roughly twice GPT-4o Mini cost with notably improved instruction-following
+    
+-   **Nano:** Extremely economical—approximately 30% cheaper than GPT-4o Mini
+    
+
+**Best Use Cases:** Detailed long-form writing, maintaining continuity in series, scenes requiring precise adherence to outlines.
+
+**Weaknesses:** Prose can feel "academic" without stylistic guidance. Responds well to tone direction, so provide clear examples.
+
+### GPT-4o Suite (Full, Mini)
+
+The established workhorse of the OpenAI lineup.
+
+**Prose Quality:** Versatile, producing vivid sensory-rich descriptions and detailed settings. Particularly strong for structured tasks and maintaining consistency. GPT-4o Mini delivers impressive quality at low cost.
+
+**Best Use Cases:** General drafting, plugins, scenes requiring precision, consistency checks.
+
+## Google Models — Gemini Family
+
+Google's Gemini models have emerged as strong contenders, particularly excelling at long-context understanding and deep reasoning.
+
+### Gemini 3 (Pro, Flash)
+
+Google's latest generation, released November 2025.
+
+**Prose Quality:** Gemini 3 Pro produces smart, concise, direct responses—less prone to AI clichés and flattery than predecessors. Prose feels cleaner and more measured. Flash prioritizes speed while maintaining reasonable quality.
+
+**Instruction Following:** Strong reasoning capabilities. Gemini 3 Pro handles complex problems with depth and nuance, grasping context and intent with less prompting needed. Flash is more straightforward but reliable.
+
+**Content Filter Level:** Variable. Generally cautious with mature content, though users report it's less preachy than some alternatives.
+
+**Credit Usage:**
+
+-   **Flash:** Extremely credit-efficient with 1M-token context window—ideal for plugins that scan entire manuscripts
+    
+-   **Pro:** Higher cost, reserved for complex reasoning tasks
+    
+
+**Best Use Cases:**
+
+-   **Flash:** High-speed drafting, manuscript analysis via plugins, brainstorming, cost-conscious bulk work
+    
+-   **Pro:** Complex narrative problems, world-building requiring logical consistency, deep analysis
+    
+
+**Weaknesses:** Creative writing can feel "safe" compared to models specifically tuned for fiction. Better for scaffolding than polished final prose.
+
+### Gemini 2.5 (Pro, Flash Thinking)
+
+Previous generation, still available and praised for creative writing. Gemini 2.5 Pro developed a following for its handling of nuanced creative tasks and emotional depth. Flash Thinking adds deliberate reasoning for complex tasks.
+
+## DeepSeek Models — Open-Source Alternatives
+
+DeepSeek offers cost-effective alternatives with strong reasoning capabilities, appealing for budget-conscious authors or high-volume work.
+
+### DeepSeek V3 / V3.1
+
+**Prose Quality:** Competent, "serviceable" prose with solid grammar and basic creativity. Functions as a stylistic blank canvas you can shape. V3.1 represents iterative improvements over V3.
+
+**Credit Usage:** Among Sudowrite's most credit-efficient options—even cheaper than GPT-4o Mini.
+
+**Best Use Cases:** Quick brainstorming, rough drafts on tight budgets, generating large volumes of content for later enhancement. Output may need polishing but Quick Edit handles most issues.
+
+**Weaknesses:** Occasionally awkward phrasing. Lacks sophisticated stylistic elements.
+
+### DeepSeek R1
+
+**Prose Quality:** Specializes in reasoning power with an internal "thinking" phase before writing. Produces coherent, logically consistent output.
+
+**Best Use Cases:** Complex narrative problems, convoluted plots, mysteries requiring many clues to track, maintaining character consistency across intricate scenarios.
+
+**Weaknesses:** The reasoning focus doesn't always translate to beautiful prose—strong on logic, less so on lyrical quality.
+
+## Other Models
+
+### Grok 4
+
+xAI's model offers unique personality and strong emotional intelligence.
+
+**Prose Quality:** Grok 4 can feel surprisingly human and empathetic in conversation. Strong at brainstorming, world-building, and maintaining logical consistency across complex scenarios. However, base prose generation tends toward the literal and robotic—several users describe it as "terrible at creative writing" without careful prompting.
+
+**Instruction Following:** Good for structured tasks. Benefits from prompting that frames creative tasks as system-building rather than pure storytelling.
+
+**Content Filter Level:** More permissive, with a "rebellious" personality that can generate unexpected ideas.
+
+**Best Use Cases:** Pre-writing tasks (outlining, character development, world-building), research assistance for historical fiction, brainstorming unconventional ideas. Better as a planning partner than a prose generator.
+
+**Weaknesses:** Prose is often flat and literal. May produce unintentionally humorous results when instructions are taken too literally. Use other models for actual scene writing.
+
+### Kimi K2
+
+Moonshot AI's model features massive scale (1 trillion parameters) with strong reasoning and extended context capabilities.
+
+**Prose Quality:** Mixed reports. Kimi K2 topped benchmarks for creative writing and emotional intelligence, producing prose some describe as "high-literary" and character-bound. However, others find it weaker for actual fiction prose over longer passages—excellent at reasoning doesn't always mean excellent at beautiful sentences.
+
+**Instruction Following:** Strong long-context memory. Can process enormous documents without forgetting earlier details.
+
+**Content Filter Level:** Variable—API and web interfaces may behave differently.
+
+**Best Use Cases:** Complex plot tracking, manuscript analysis, scenarios requiring extensive context retention, experimental work. May excel at generating thought-provoking literary work with thematic depth.
+
+**Weaknesses:** Can "overthink" on simple tasks. Some users find prose quality inconsistent, particularly over 3,000+ words. Better for reasoning-heavy work than pure prose generation.
+
+### Mistral Large 2
+
+Open-source model offering enterprise-grade capabilities with high instruction obedience.
+
+**Prose Quality:** Clear, well-structured prose that follows constraints precisely. Excels at argumentative essays, explainers, and technical writing. Creative fiction can feel procedural and "safe"—less inventive than models tuned specifically for storytelling.
+
+**Instruction Following:** Exceptional. Among the most obedient models for executing precise, constraint-based outputs.
+
+**Best Use Cases:** Structured content, technical writing within fiction (in-world documents, etc.), SEO-style content, tasks requiring tight format control. Works well for first drafts that you'll polish with a more creative model.
+
+**Weaknesses:** Fiction prose lacks emotional nuance. Not the best choice for lyrical or character-driven scenes. Consider pairing with Claude for creative passes.
+
+* * *
 
 ## Final Thoughts
 
@@ -129,7 +273,18 @@ Choosing the right AI model in Sudowrite significantly impacts your writing expe
 -   **Basic:** For fast, economical drafting when quantity matters
     
 
-As you grow comfortable with the platform, explore Advanced models for specific needs—Claude 3.7 Sonnet for intricate chapters requiring detail and continuity, DeepSeek Instant for breaking through creative blocks, or Mythomax for quick scene drafts.
+As you grow comfortable with the platform, explore Experimental models for specific needs:
+
+-   **Claude Sonnet 4.5** for polished prose that matches your style
+    
+-   **GPT-5 Full** for dialogue-heavy scenes and style mimicry
+    
+-   **Gemini 3 Flash** for blazing-fast manuscript analysis plugins
+    
+-   **DeepSeek V3** for budget-friendly bulk generation
+    
+-   **DeepSeek R1** for complex mysteries and intricate plotting
+    
 
 Remember that these models serve as collaborators, not replacements. Your voice, editing skill, and creative vision remain irreplaceable. The key is matching the right model to each specific task:
 

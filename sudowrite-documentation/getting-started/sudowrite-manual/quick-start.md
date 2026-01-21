@@ -4,8 +4,8 @@ slug: 1283278-quick-start
 category: '6149413'
 collection_name: Sudowrite Manual
 featurebase_id: '1283278'
-last_updated: '2025-09-03T15:23:13.695Z'
-synced_at: '2026-01-15T23:11:01.062Z'
+last_updated: '2026-01-21T15:23:06.235Z'
+synced_at: '2026-01-21T19:06:16.666Z'
 source: featurebase
 ---
 ## Looking to get up and running fast?
@@ -22,13 +22,15 @@ We also have a full **Quick Start** video series available on YouTube. [**You ca
 
 When you first sign up for Sudowrite you’re dropped directly into a product tour that offers a guided walkthrough of some core features. If you breezed through that, or it’s just been a while and you’d like a refresher, you can always take that tour again.
 
-To do so, just click on the gear icon (⚙️) up in the top right corner of the interface to access your **Account Settings**, then select **Start Tour**.
+To do so, just click on the question mark icon (❓) up in the top right corner of the interface to access your **Resources**, then select **Quickstart Tour**.
 
-![The upper right corner of Sudowrite when you’re inside a project. The gear icon is your Account Settings.](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6817df8d39c440bbcaf4/0198aeaf-851c-7761-9847-90229b3baa25/b64u-MDE5OGFlYWYtODRmNC03YTdiLWE5NzAtMjI3NDM1MWE3Y2Jm.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=f645949ed4cf605089e1a8a8fe4145e2c6be11676324d157ed87f73da45f2145)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6817df8d39c440bbcaf4/019be11b-48ff-7512-9ccf-ae3edb10f89c/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=46713f1e663cfd17290eb4989d3a6a57035723c353f0afaabbfedf0b4f80c2ff)
 
-The upper right corner of Sudowrite when you’re inside a project. The gear icon is your Account Settings.
+The upper right corner of Sudowrite on your homepage. The question mark icon reveals resources, and the gear icon is your Account Settings.
 
-**Sudowrite Simplified transcript**
+* * *
+
+📓 **Sudowrite Simplified transcript**
 
 While the visuals in the video above are _sort of_ essential, a full transcript is available by expanding this toggle.
 
@@ -78,7 +80,7 @@ Finally, when it comes to staying organized on SudoWrite, there are two main way
 
 The other way to stay organized is called Story Bible, and it’s one of Sudowrite’s more advanced features. Story Bible is a place for structured notes— it’s where you can put all of the details you know for sure about your story. So you'll see Braindump, Genre, Style, Synopsis, Characters, and Outline. The idea is everything you know for sure can go here, but anything you don't know or want a little help with can be generated with some help from AI.
 
-So once you've added a Braindump and a Genre and a Style, you could generate a Synopsis. If the generation doesn't map to your vision, you can manually change that before proceeding to the next step. You have the option to generate something like a characters list (which would pull in any characters you’ve already mentioned, while generating some new ones)... but you can also bring your own character list entirely.
+So once you've added a Braindump and a Genre and a Style, you could generate a Synopsis. If the generation doesn't map to your vision, you can manually change that before proceeding to the next step. You have the option to generate something like a characters list (which would pull in any characters you’ve already mentioned, while generating some new ones)... but you can also bring your own character list entirely
 
 The goal is to fill out your entire Story Bible and gather those essential storytelling components in one place. If you complete your Story Bible, you even have the option to generate chapter-by-chapter prose… you would do that using the Chapter Generator in a document. The best part is, with a full Story Bible, tools like Write get smarter—they’ll refer to your genre, tone, and character list to make sure they’re sticking to the project parameters you’ve defined.
 

@@ -4,8 +4,8 @@ slug: 0052666-exporting-files
 category: '5279540'
 collection_name: Workflows
 featurebase_id: '0052666'
-last_updated: '2025-09-03T17:58:12.183Z'
-synced_at: '2026-01-15T23:11:00.931Z'
+last_updated: '2026-01-21T16:52:34.569Z'
+synced_at: '2026-01-21T19:06:16.386Z'
 source: featurebase
 ---
 Sudowrite offers a few different ways to export your work, allowing you to easily save individual files, projects, or Story Bible sections.
@@ -14,15 +14,15 @@ Sudowrite offers a few different ways to export your work, allowing you to easil
 
 Need to backup your entire project or share all of the documents with a collaborator? The Project Export feature is perfect for these scenarios. It allows you to export all of your documents at once as a bundled .zip file.
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/0198aebe-6043-752f-9493-5a597dbfac57/b64u-MDE5OGFlYmUtNWMzMS03NjhmLWExMTMtYTlkMWJjYWJiNzYy.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=6eaba181a93c48fee6ff101a784fc5fc1820dc521d5e1919be02b65d4f419a3f)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be176-9b23-76b4-9eed-c7b0a079678d/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=dedc620d167abd24cb5c364280cd4a5259062361847a45cf12302bd23ce1a92f)
 
 **Project Export Purpose:** Export every document in a project at once.
 
 **How to use:**
 
-1.  On the Sudowrite home page ([sudowrite.com](http://sudowrite.com/)) or within the appropriate folder, locate the project card you want to export.
+1.  On the Sudowrite home page ([sudowrite.com](http://sudowrite.com)) or within the appropriate folder, locate the project card you want to export.
     
-2.  Click the three dot (•••) menu in the upper right corner of the project card.
+2.  Click the More menu (•••) in the upper right corner of the project card.
     
 3.  Select "Export (.zip)" from the dropdown menu.
     
@@ -43,11 +43,21 @@ Need to backup your entire project or share all of the documents with a collabor
 -   Sharing your complete work with collaborators or editors
     
 
+## Export Project as One Document
+
+We added the ability to export your entire project as a single document rather than a .zip file of every document.
+
+Now when you click the **More menu (•••)** on your project, you have the option to export all of that project’s documents _either_ as a bundled .zip _or_ as one merged document.
+
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be176-fa87-7f21-919e-9843287dc3c7/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=454290e2c4780c1aa5c7965b97df2a0904d2280de54c0dfaf0b652dbfcdeaaea)
+
+If you choose **Export as 1 doc**, the resulting .docx file will include all of your documents in the order that they appear in your project’s left bar (from top to bottom). Documents inside of folders and subfolders are included too, following that sequence. As with the .zip-based export, your Story Bible is not included in the resulting file.
+
 ## Document Export
 
 Sometimes you only need to export a specific chapter or single document from your project. The Document Export option allows you to do just that, giving you flexibility in sharing or backing up individual pieces of your work.
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/0198aebe-6097-72e8-a4ff-eb521c5a3316/b64u-MDE5OGFlYmUtNWMxZS03ZjJhLThmNDAtYjI5NDU3YzFiOWYw.png?X-Amz-Expires=3600&X-Amz-Date=20260115T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260115%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=339991462ccbd46b00a3915bd38ad11303122ffbef64be4be9a656eaecad8f49)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be177-526d-7797-ba77-ab46f4fb4d6e/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260121T190000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=a32f18f7809187880df10ab3952c0fcbfd0c6dd4088d785eda92c59c55e05dea)
 
 **Document Export Purpose:** Export a single document or chapter from your project.
 
@@ -78,15 +88,15 @@ Sometimes you only need to export a specific chapter or single document from you
 -   Creating a standalone copy of a document for offline editing
     
 
-Note that if you’re primarily looking to export a document in order to share it with a collaborator, you may be better served by using Sudowrite’s Document Sharing functionality. Details on Document Sharing, and the collaboration feature we call Clean Copy, are available here: [Collaboration Options](/1a07975fa0ec8074a65dc02f25d4540e)
+🤲 Note that if you’re primarily looking to export a document in order to share it with a collaborator, you may be better served by using Sudowrite’s Document Sharing functionality. Details on Document Sharing, and the collaboration feature we call Clean Copy, are available here: [Collaboration Options](https://www.notion.so/Collaboration-Options-1a07975fa0ec8074a65dc02f25d4540e?pvs=21)
 
 ## Story Bible Export
 
-Neither Project Export nor Document Export include your Story Bible contents by default. Some authors choose to copy and paste those fields into a document manually in order to export them, but two sections of the Story Bible have their own Export functionalities.
+Neither Project Export nor Document Export include your Story Bible contents by default. Some authors choose to copy and paste those fields into a document manually in order to export them, but three sections of the Story Bible each have their own Export functionalities.
 
 **Outline Export:**
 
--   Click the three dot (•••) menu option in the Outline section header of your Story Bible
+-   Click the **More menu (•••)** option in the Outline section header of your Story Bible
     
 -   You’ll be presented an Export option
     
@@ -95,7 +105,7 @@ Neither Project Export nor Document Export include your Story Bible contents by 
 
 **Characters Export:**
 
--   Click the three dot (•••) menu option in the Characters section header of your Story Bible
+-   Click the **More menu (•••)** option in the Characters section header of your Story Bible
     
 -   You’ll be presented an Export option
     
