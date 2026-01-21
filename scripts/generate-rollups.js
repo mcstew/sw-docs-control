@@ -130,11 +130,8 @@ This documentation covers:
       }
 
       for (const article of subArticles) {
-        // Extract featurebase ID from slug (format: "1234567-article-name")
-        const featurebaseId = article.slug?.split('-')[0];
-        const url = featurebaseId
-          ? `${baseUrl}/${featurebaseId}`
-          : `${baseUrl}/${article.slug}`;
+        // Featurebase URL format: /help/articles/{full-slug}
+        const url = `${baseUrl}/articles/${article.slug}`;
         content += `- [${article.title}](${url}): ${getArticleDescription(article)}\n`;
       }
       content += '\n';
