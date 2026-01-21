@@ -479,3 +479,40 @@ See [ARCHITECTURE-DECISIONS.md](ARCHITECTURE-DECISIONS.md) for full details.
 - Review ARCHITECTURE-DECISIONS.md for context
 - Check TODO items in each phase section
 - Follow established patterns and conventions
+
+---
+
+## 📋 Future Migrations & Planned Changes
+
+### Documentation URL Migration
+
+**When Featurebase docs move to docs.sudowrite.com:**
+
+1. Update base URL in `scripts/generate-rollups.js` (line 61):
+   ```javascript
+   // Change from:
+   const baseUrl = 'https://feedback.sudowrite.com/help';
+   
+   // To:
+   const baseUrl = 'https://docs.sudowrite.com';
+   ```
+
+2. Regenerate knowledge files:
+   ```bash
+   npm run generate:rollups
+   ```
+
+3. Commit and push the updated files:
+   ```bash
+   git add llms.txt docs-rollup.md scripts/generate-rollups.js
+   git commit -m "Update documentation URLs to docs.sudowrite.com"
+   git push origin main
+   ```
+
+**Current state (as of 2026-01-21):**
+- Featurebase docs currently live at: `https://feedback.sudowrite.com/help`
+- llms.txt URLs point to this location
+- Helpkit (Notion-based) docs still at: `https://docs.sudowrite.com`
+- When migration complete, update baseUrl to point to new Featurebase location
+
+---
