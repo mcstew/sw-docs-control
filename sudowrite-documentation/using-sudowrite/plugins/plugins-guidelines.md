@@ -4,8 +4,8 @@ slug: 5603490-plugins-guidelines
 category: '2165317'
 collection_name: Plugins
 featurebase_id: '5603490'
-last_updated: '2025-09-03T17:27:58.490Z'
-synced_at: '2026-01-15T23:11:00.864Z'
+last_updated: '2026-01-21T01:53:02.748Z'
+synced_at: '2026-01-21T01:59:49.317Z'
 source: featurebase
 ---
 Plugins unlock custom functionality on Sudowrite, empowering our writer community to build and share totally custom tools. With great power comes great responsibility though, so here are some guidelines as to what we expect from our community when it comes to building and sharing Plugins.

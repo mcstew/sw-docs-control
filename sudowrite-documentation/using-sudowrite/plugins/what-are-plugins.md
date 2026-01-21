@@ -4,8 +4,8 @@ slug: 0953803-what-are-plugins
 category: '2165317'
 collection_name: Plugins
 featurebase_id: 0953803
-last_updated: '2025-09-03T17:27:58.490Z'
-synced_at: '2026-01-15T23:11:00.876Z'
+last_updated: '2026-01-21T01:53:02.748Z'
+synced_at: '2026-01-21T01:59:49.342Z'
 source: featurebase
 ---
 Sudowrite Plugins allow you to create powerful, custom AI functions for anyone on Sudowrite to use. Here’s a brief video introduction to Plugins.

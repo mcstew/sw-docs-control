@@ -4,8 +4,8 @@ slug: 1671769-how-do-i-build-plugins
 category: '2165317'
 collection_name: Plugins
 featurebase_id: '1671769'
-last_updated: '2026-01-16T18:25:26.355Z'
-synced_at: '2026-01-20T23:14:47.898Z'
+last_updated: '2026-01-21T01:53:02.748Z'
+synced_at: '2026-01-21T01:59:49.328Z'
 source: featurebase
 ---
 ## Creating Plugins
@@ -18,7 +18,7 @@ To get started, click on the Create Plugin button in the top right corner of the
 
 ### The Basic Editor
 
-![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f175-8a50-7fea-b315-a89ada15d547/b64u-MDE5OGYxNzUtODk5OC03Y2Q1LTliZjAtYWRhODM2Y2ViNzVk.png?X-Amz-Expires=3600&X-Amz-Date=20260120T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260120%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=33ce1a7cc665e2184829f5a2ef1d0ffa2183a039aea3065c308b95d65b7a35fa)
+![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f175-8a50-7fea-b315-a89ada15d547/b64u-MDE5OGYxNzUtODk5OC03Y2Q1LTliZjAtYWRhODM2Y2ViNzVk.png?X-Amz-Expires=3600&X-Amz-Date=20260121T020000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=c3213d120f4b2e829ce4aadbed44d0a6c857ab906671ebaf85dfe856dafe2093)
 
 The Basic Editor is the quickest way to build a Plugin, and you can do so with something as simple as a single prompt.
 
@@ -68,7 +68,7 @@ _The Categories currently available are:_
 
 If you need more control over the prompts, the Advanced Editor gives you precise control over the prompt formatting and various Large Language Model options. You can also create multi-stage prompts (currently up to 2)!
 
-![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f175-e857-7597-8eed-43565203174d/b64u-MDE5OGYxNzUtZTc3YS03NGY3LThmMWYtN2QyY2RkNTg0ODcy.png?X-Amz-Expires=3600&X-Amz-Date=20260120T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260120%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=b2563a736e2868b21baec4dedf88eedf2da802f553879eb13c86bce9b20d99e7)
+![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f175-e857-7597-8eed-43565203174d/b64u-MDE5OGYxNzUtZTc3YS03NGY3LThmMWYtN2QyY2RkNTg0ODcy.png?X-Amz-Expires=3600&X-Amz-Date=20260121T020000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=3602605b102c29e71b3962e9b909e3e41fd6d89f62b99fe850cefd20480d623d)
 
 The Advanced Editor begins to look different from the Basic Editor once you scroll past the visibility and category options.
 
@@ -80,7 +80,7 @@ Here’s what each of the areas in the screenshot above controls:
     
 3.  **User Text Input** - If you toggle on _Allow Users to Give Instructions_, you also enable the `{{ user_text_input }}` variable. With this feature enabled, your Plugin users will get a popup window before the Plugin is actually run, prompting them for input according to instructions you’ve defined. Inserting this variable in your Plugin instructions is a way to directly pass in end user input.
     
-    ![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f177-f932-77b7-8803-4d6762c4035c/b64u-MDE5OGYxNzctZjg3NS03ZDYzLTg0YjAtYzJmM2ViMDk1ZmY0.png?X-Amz-Expires=3600&X-Amz-Date=20260120T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260120%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=11338ba4e09504b26caa8401f5c19db9045d88b241afff92fb897bb1ee32e5f9)
+    ![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f177-f932-77b7-8803-4d6762c4035c/b64u-MDE5OGYxNzctZjg3NS03ZDYzLTg0YjAtYzJmM2ViMDk1ZmY0.png?X-Amz-Expires=3600&X-Amz-Date=20260121T020000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=0e9cd28ef48e790b1b372f7ccaf4145691c3080a7a4ba650d0401b049f316103)
 
 **Available Variables** \- In addition to those discussed above (which have their own configurator inside of the Advanced Plugin builder) there are a bunch of additional variables available to enrich your custom Plugins.
 
@@ -157,7 +157,7 @@ Here’s what each of the areas in the screenshot above controls:
 
 At the bottom of the Plugin creation page, you will see a testing area:
 
-![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f17d-7f32-71ce-8b0e-c47e75fb936e/b64u-MDE5OGYxN2QtN2VmMi03YjhjLThkNjctN2NhM2VlYWEzMzkw.png?X-Amz-Expires=3600&X-Amz-Date=20260120T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260120%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=552e63c5d5c88a09c18a2dd694a487824dc157752509234b01ca652ff359caf1)
+![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f17d-7f32-71ce-8b0e-c47e75fb936e/b64u-MDE5OGYxN2QtN2VmMi03YjhjLThkNjctN2NhM2VlYWEzMzkw.png?X-Amz-Expires=3600&X-Amz-Date=20260121T020000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=e15a079c174512af1da166b0d79f82cc60c941ace624b669bdb22b9bce9bf68a)
 
 This lets you easily and quickly test your Plugin without publishing it. It’s essential that you test your plugin to make sure it works with a diverse set of inputs—and that you’re getting the results you want out of it. We suggest that you have a bank of inputs along with an idea what your expected output is. This way, as you iterate on the design of your plugin, you can make sure that the functionality matches your expectations.
 
@@ -167,7 +167,7 @@ Toggling Additional Variables exposes fields to populate Preceding Text as well 
 
 You can edit what name shows up for your Plugins by clicking on the small “Edit” link in the Settings (⚙️) menu in top right of your Sudowrite interface:
 
-![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f17d-f4a7-7d85-818b-02fe918e4d56/b64u-MDE5OGYxN2QtZjQxOS03ZjdlLWI4NzQtZmFiYjBkZGYzMjBm.png?X-Amz-Expires=3600&X-Amz-Date=20260120T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260120%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=5dc88496c2ad04d2f62039de0a86af6e737dcda32c2f7ef8ea97f7ec59023c6b)
+![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/0198f17d-f4a7-7d85-818b-02fe918e4d56/b64u-MDE5OGYxN2QtZjQxOS03ZjdlLWI4NzQtZmFiYjBkZGYzMjBm.png?X-Amz-Expires=3600&X-Amz-Date=20260121T020000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260121%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=0f7a3139790f253ec2095e31fc20ff7208023d814cdeff6d72eeab92ca795dd1)
 
 By default, if you’ve logged in via Google, that will be set to your Google display name.
 
