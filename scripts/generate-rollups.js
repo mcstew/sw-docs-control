@@ -58,7 +58,7 @@ function groupArticles(articles) {
 async function generateLlmsTxt(articles) {
   console.log('📄 Generating llms.txt...');
 
-  const baseUrl = 'https://help.sudowrite.com'; // Featurebase help center
+  const baseUrl = 'https://feedback.sudowrite.com/help'; // Featurebase help center (current location)
 
   let content = `# Sudowrite Documentation
 
