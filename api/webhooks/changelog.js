@@ -3,7 +3,7 @@
  * Receives changelog entry webhooks and triggers documentation audit
  */
 
-import { runAudit } from '../../lib/audit-engine.js';
+import { runAudit } from '../../lib/audit-engine-v3.js';
 
 export const config = {
   runtime: 'nodejs',
