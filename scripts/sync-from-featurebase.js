@@ -255,6 +255,22 @@ async function main() {
   console.log('💾 Sync state saved to docs-source/sync-state.json');
   console.log('');
 
+  // Regenerate AI knowledge files if any articles were pulled or created
+  if (results.pulled.length > 0 || results.created.length > 0) {
+    console.log('🤖 Regenerating AI knowledge files...');
+    const { execSync } = await import('child_process');
+    try {
+      execSync('node scripts/generate-rollups.js', {
+        cwd: process.cwd(),
+        stdio: 'inherit'
+      });
+      console.log('');
+    } catch (error) {
+      console.error('⚠️  Warning: Failed to regenerate knowledge files');
+      console.error(error.message);
+    }
+  }
+
   // Exit with error code if there were errors
   if (results.errors.length > 0) {
     process.exit(1);
