@@ -58,7 +58,7 @@ function groupArticles(articles) {
 async function generateLlmsTxt(articles) {
   console.log('📄 Generating llms.txt...');
 
-  const baseUrl = 'https://docs.sudowrite.com'; // Update with your actual docs URL
+  const baseUrl = 'https://help.sudowrite.com'; // Featurebase help center
 
   let content = `# Sudowrite Documentation
 
@@ -130,8 +130,10 @@ This documentation covers:
       }
 
       for (const article of subArticles) {
-        const url = article.id
-          ? `${baseUrl}/articles/${article.id}`
+        // Extract featurebase ID from slug (format: "1234567-article-name")
+        const featurebaseId = article.slug?.split('-')[0];
+        const url = featurebaseId
+          ? `${baseUrl}/${featurebaseId}`
           : `${baseUrl}/${article.slug}`;
         content += `- [${article.title}](${url}): ${getArticleDescription(article)}\n`;
       }
