@@ -65,7 +65,7 @@ Two-Stage Audit (async):
   Stage 2: Claude Haiku 4.5 → Deep analysis
         ↓
 Results:
-  - Audit log saved to docs-source/audits/
+  - Audit log saved to sudowrite-documentation/.audits/
   - GitHub issues created (optional)
   - Affected articles identified with edit links
 ```
@@ -125,12 +125,12 @@ Results:
 
 **ADR-006: Conflict Resolution**
 - Last-write-wins based on timestamps
-- Both versions saved to `docs-source/conflicts/`
+- Both versions saved to `sudowrite-documentation/.conflicts/`
 - User can manually merge if needed
 - All conflicts logged in sync state
 
 **ADR-007: Sync Tracking**
-- Track sync state in `docs-source/sync-state.json`
+- Track sync state in `sudowrite-documentation/.sync-state.json`
 - Store content hashes for change detection
 - Record sync history per article
 - Log all conflicts with timestamps

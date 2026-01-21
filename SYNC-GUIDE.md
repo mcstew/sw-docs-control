@@ -24,12 +24,21 @@ FEATUREBASE_HELP_CENTER_ID=your-help-center-id
 
 ### 2. Article Format
 
-Local articles must be in this format:
+Local articles are organized in nested collection/subcollection folders:
 
 ```
-docs-source/articles/
-└── article-title-{featurebase-id}/
-    └── article.md
+sudowrite-documentation/
+├── getting-started/
+│   ├── introduction/
+│   │   └── the-basics.md
+│   └── sudowrite-manual/
+│       └── quick-start.md
+├── using-sudowrite/
+│   ├── features/
+│   │   └── write.md
+│   └── sudowrite-mobile-app/
+│       └── mobile-app-overview.md
+└── ... (other collections)
 ```
 
 **Article frontmatter:**
@@ -38,8 +47,11 @@ docs-source/articles/
 title: "Article Title"
 slug: article-slug
 category: collection-id
+collection_name: Collection Name
 featurebase_id: article-uuid
 last_updated: 2026-01-15T12:00:00Z
+synced_at: 2026-01-15T12:00:00Z
+source: local|remote
 ---
 
 # Article Content
@@ -152,12 +164,12 @@ A conflict happens when:
 **Automatic Resolution:**
 1. Compare timestamps (local `last_updated` vs remote `updatedAt`)
 2. Use newer version (last-write-wins)
-3. Save both versions to `docs-source/conflicts/`
+3. Save both versions to `sudowrite-documentation/.conflicts/`
 4. Log conflict in sync state
 
 **Conflict Files:**
 ```
-docs-source/conflicts/
+sudowrite-documentation/.conflicts/
 ├── article-id-local-2026-01-15T12-00-00.md
 └── article-id-remote-2026-01-15T12-30-00.md
 ```
@@ -172,8 +184,8 @@ Remote updated: 2026-01-15 11:30:00
 Resolution: Using remote (newer timestamp)
 
 Conflict files saved:
-  Local:  docs-source/conflicts/abc-123-local-2026-01-15T11-00-00.md
-  Remote: docs-source/conflicts/abc-123-remote-2026-01-15T11-30-00.md
+  Local:  sudowrite-documentation/.conflicts/abc-123-local-2026-01-15T11-00-00.md
+  Remote: sudowrite-documentation/.conflicts/abc-123-remote-2026-01-15T11-30-00.md
 
 💡 Review and merge manually if needed
 ============================================================
@@ -183,7 +195,7 @@ Conflict files saved:
 
 1. **Review conflict files:**
    ```bash
-   cd docs-source/conflicts
+   cd sudowrite-documentation/.conflicts
    ls -la
    ```
 
@@ -204,14 +216,14 @@ Conflict files saved:
 
 5. **Clean up:**
    ```bash
-   rm docs-source/conflicts/abc-123-*
+   rm sudowrite-documentation/.conflicts/abc-123-*
    ```
 
 ## Sync State
 
 ### Sync State File
 
-Location: `docs-source/sync-state.json`
+Location: `sudowrite-documentation/.sync-state.json`
 
 **Format:**
 ```json
@@ -219,7 +231,7 @@ Location: `docs-source/sync-state.json`
   "last_sync": "2026-01-15T12:00:00Z",
   "articles": {
     "article-id-123": {
-      "local_path": "docs-source/articles/title-id/article.md",
+      "local_path": "sudowrite-documentation/title-id/article.md",
       "remote_id": "article-id-123",
       "last_synced_at": "2026-01-15T12:00:00Z",
       "last_synced_hash": "abc123def456...",
@@ -254,7 +266,7 @@ Location: `docs-source/sync-state.json`
 ### Viewing Sync State
 
 ```bash
-cat docs-source/sync-state.json | jq .
+cat sudowrite-documentation/.sync-state.json | jq .
 ```
 
 ## Workflows
@@ -268,7 +280,7 @@ First time syncing:
 npm run sync:from-featurebase
 
 # Review downloaded articles
-ls docs-source/articles/
+ls sudowrite-documentation/
 
 # Make local changes
 # ... edit some files ...
@@ -319,7 +331,7 @@ npm run sync:from-featurebase
 git diff
 
 # Commit to git
-git add docs-source/
+git add sudowrite-documentation/
 git commit -m "Sync from Featurebase: Quick typo fix"
 ```
 
@@ -342,7 +354,7 @@ npm run sync:to-featurebase
 Commit sync state and articles to git:
 
 ```bash
-git add docs-source/
+git add sudowrite-documentation/
 git commit -m "Sync with Featurebase"
 ```
 
@@ -366,7 +378,7 @@ node scripts/sync-to-featurebase.js 2>&1 | head -50
 
 ```bash
 # Backup local articles
-tar -czf articles-backup-$(date +%Y%m%d).tar.gz docs-source/articles/
+tar -czf articles-backup-$(date +%Y%m%d).tar.gz sudowrite-documentation/
 
 # Or commit to git
 git add -A && git commit -m "Backup before first sync"
@@ -412,7 +424,7 @@ npm run sync:to-featurebase
 2. Ensure it updates when you edit
 3. Clear sync state and resync:
    ```bash
-   rm docs-source/sync-state.json
+   rm sudowrite-documentation/.sync-state.json
    npm run sync:from-featurebase  # Fresh sync
    ```
 
@@ -420,7 +432,7 @@ npm run sync:to-featurebase
 
 **Check:**
 1. File has correct format (frontmatter with `featurebase_id`)
-2. File is in `docs-source/articles/` directory
+2. File is in `sudowrite-documentation/` directory
 3. File ends in `.md` or is in a directory with `article.md`
 
 **Debug:**
@@ -436,10 +448,10 @@ node -e "import('./lib/featurebase-sync.js').then(m => m.scanLocalArticles().the
 **Solution**:
 ```bash
 # Backup current sync state
-cp docs-source/sync-state.json docs-source/sync-state-backup.json
+cp sudowrite-documentation/.sync-state.json sudowrite-documentation/sync-state-backup.json
 
 # Delete and resync
-rm docs-source/sync-state.json
+rm sudowrite-documentation/.sync-state.json
 npm run sync:from-featurebase  # Rebuild state
 ```
 
@@ -519,7 +531,7 @@ npm run sync:to-featurebase  ← Push to Featurebase
 
 ```bash
 # Daily backup
-tar -czf docs-backup-$(date +%Y%m%d).tar.gz docs-source/
+tar -czf docs-backup-$(date +%Y%m%d).tar.gz sudowrite-documentation/
 
 # Or use git
 git add -A && git commit -m "Daily backup"
@@ -532,7 +544,7 @@ git add -A && git commit -m "Daily backup"
 1. Check this guide
 2. Review `SYNC-ARCHITECTURE.md` for design details
 3. Check sync state file for debugging
-4. Review conflict files in `docs-source/conflicts/`
+4. Review conflict files in `sudowrite-documentation/.conflicts/`
 
 ### Common Questions
 
@@ -549,7 +561,7 @@ A: Not recommended. Conflicts will occur. Use git workflow instead.
 A: Check git diff after sync:
 ```bash
 npm run sync:from-featurebase
-git diff docs-source/
+git diff sudowrite-documentation/
 ```
 
 ## Next Steps

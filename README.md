@@ -123,22 +123,45 @@ Both files auto-regenerate after any sync operation and are committed to git.
 ## Architecture
 
 ```
-doc-orchestration-system/
-├── docs-source/
-│   ├── articles/           # Markdown articles with frontmatter
-│   ├── exports/            # Generated full-scroll.md
-│   └── audits/             # Audit logs (JSON)
+sw-docs-control/
+├── sudowrite-documentation/       # Main documentation folder (nested structure)
+│   ├── getting-started/
+│   │   ├── introduction/
+│   │   └── sudowrite-manual/
+│   ├── plans-and-account/
+│   │   ├── sudowrite-plans/
+│   │   ├── credits/
+│   │   └── your-account/
+│   ├── using-sudowrite/
+│   │   ├── features/
+│   │   ├── workflows/
+│   │   ├── story-bible/
+│   │   ├── story-smarts/
+│   │   ├── plugins/
+│   │   └── sudowrite-mobile-app/
+│   ├── resources/
+│   ├── frequently-asked-questions/
+│   ├── legal-stuff/
+│   ├── about-sudowrite/
+│   ├── .sync-state.json      # Sync tracking (gitignored)
+│   └── .conflicts/            # Conflict backups (gitignored)
 ├── lib/
-│   ├── audit-engine-v3.js      # Two-stage audit (default)
+│   ├── audit-engine-v3.js      # Two-stage audit (ACTIVE)
 │   ├── keyword-filter.js       # Stage 1: keyword filtering
 │   ├── featurebase-client.js   # Featurebase API wrapper
+│   ├── featurebase-sync.js     # Bidirectional sync utilities
+│   ├── collection-hierarchy.js # Collection ID mapping
 │   └── github-client.js        # GitHub issue creation
 ├── scripts/
-│   ├── test-audit-v3.js        # Test two-stage audit
-│   └── import-from-notion.js   # Import from Notion export
-└── api/
-    └── webhooks/
-        └── changelog.js        # Vercel webhook receiver
+│   ├── sync-to-featurebase.js    # Push local changes
+│   ├── sync-from-featurebase.js  # Pull remote changes
+│   ├── generate-rollups.js       # Create AI knowledge files
+│   └── test-audit-v3.js          # Test two-stage audit
+├── api/
+│   └── webhooks/
+│       └── changelog.js        # Vercel webhook receiver (DEPLOYED)
+├── llms.txt                    # AI-optimized index (156 lines)
+└── docs-rollup.md              # Complete knowledge base (4,155 lines)
 ```
 
 ## Audit Output Example

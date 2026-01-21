@@ -97,7 +97,7 @@ npm run audit
    ```bash
    npm run sync:from-featurebase
    ```
-3. Changes appear in `docs-source/articles/`
+3. Changes appear in `sudowrite-documentation/`
 4. Review changes with git diff
 5. Commit to GitHub:
    ```bash
@@ -108,7 +108,7 @@ npm run audit
 
 ### Edit Locally → Sync to Featurebase
 
-1. Edit article in `docs-source/articles/`
+1. Edit article in `sudowrite-documentation/`
 2. Run audit to check for issues (optional):
    ```bash
    npm run audit

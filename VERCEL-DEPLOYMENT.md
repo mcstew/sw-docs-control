@@ -210,7 +210,7 @@ After successful deployment:
 2. ✅ Configure Featurebase to send webhooks
 3. ✅ Monitor first real changelog audit
 4. ✅ Review audit results in GitHub issues (if configured)
-5. ✅ Check audit logs in `docs-source/audits/`
+5. ✅ Check audit logs in `sudowrite-documentation/.audits/`
 
 ## Support
 

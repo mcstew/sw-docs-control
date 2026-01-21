@@ -16,7 +16,7 @@
   - Confidence scores (high/medium/low)
   - Suggested changes
   - Change types (update/addition/removal)
-- Saves audit logs to `docs-source/audits/`
+- Saves audit logs to `sudowrite-documentation/.audits/`
 - Over-flags intentionally (catches everything)
 
 ### 3. GitHub Integration (`lib/github-client.js`)
@@ -57,7 +57,7 @@ This will:
 2. Analyze a sample changelog entry about Story Bible updates
 3. Identify which articles need updates
 4. Show specific passages and suggested changes
-5. Save audit log to `docs-source/audits/`
+5. Save audit log to `sudowrite-documentation/.audits/`
 
 ## 📊 How It Works
 

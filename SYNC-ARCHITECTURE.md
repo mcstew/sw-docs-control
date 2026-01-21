@@ -1,12 +1,12 @@
 # Bidirectional Sync Architecture
 
-**Status**: Design Phase
-**Date**: 2026-01-15
+**Status**: ✅ IMPLEMENTED
+**Date**: Originally designed 2026-01-15, Implemented 2026-01-20
 
 ## Overview
 
 This document defines the architecture for bidirectional synchronization between:
-- **Local**: Git repository with markdown files (`docs-source/articles/`)
+- **Local**: Git repository with markdown files (`sudowrite-documentation/`)
 - **Remote**: Featurebase help center via REST API
 
 ## Goals
@@ -23,7 +23,7 @@ This document defines the architecture for bidirectional synchronization between
 
 **File Structure**:
 ```
-docs-source/articles/
+sudowrite-documentation/
 ├── getting-started-{id}.md/
 │   └── article.md
 ├── about-sudowrite-{id}.md/
@@ -104,7 +104,7 @@ Article content in markdown...
 **Rules**:
 1. **No Conflict**: If only one side changed → sync wins
 2. **Simple Conflict**: If both changed → use timestamp, flag for review
-3. **Manual Review**: Conflicts saved to `docs-source/conflicts/`
+3. **Manual Review**: Conflicts saved to `sudowrite-documentation/.conflicts/`
 
 **Implementation**:
 ```
@@ -124,13 +124,13 @@ If both > last_sync_time:
 
 **Decision**: Track sync state in local JSON file
 
-**Sync State File** (`docs-source/sync-state.json`):
+**Sync State File** (`sudowrite-documentation/.sync-state.json`):
 ```json
 {
   "last_sync": "2026-01-15T12:00:00Z",
   "articles": {
     "article-id-123": {
-      "local_path": "docs-source/articles/title-id.md",
+      "local_path": "sudowrite-documentation/title-id.md",
       "remote_id": "article-id-123",
       "last_synced_at": "2026-01-15T12:00:00Z",
       "last_synced_hash": "abc123...",
@@ -157,7 +157,7 @@ If both > last_sync_time:
 
 **Current Pattern**:
 ```
-docs-source/articles/article-title-{featurebase-id}.md/
+sudowrite-documentation/article-title-{featurebase-id}.md/
 ```
 
 **Why**:
@@ -337,8 +337,8 @@ Remote updated: 2026-01-15 11:30:00
 Resolution: Used remote (newer timestamp)
 
 Files saved:
-- docs-source/conflicts/abc123-local-2026-01-15T11-00-00.md
-- docs-source/conflicts/abc123-remote-2026-01-15T11-30-00.md
+- sudowrite-documentation/.conflicts/abc123-local-2026-01-15T11-00-00.md
+- sudowrite-documentation/.conflicts/abc123-remote-2026-01-15T11-30-00.md
 
 Action: Review and merge manually if needed
 ```
