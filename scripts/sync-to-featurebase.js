@@ -12,7 +12,8 @@ import {
   saveSyncState,
   hashContent,
   handleConflict,
-  formatForFeaturebase
+  formatForFeaturebaseCreate,
+  formatForFeaturebaseUpdate
 } from '../lib/featurebase-sync.js';
 
 config();
@@ -100,7 +101,7 @@ async function main() {
       if (!articleExists) {
         console.log('  📝 Creating new article on Featurebase...');
 
-        const articleData = formatForFeaturebase(article, helpCenterId);
+        const articleData = formatForFeaturebaseCreate(article, helpCenterId);
 
         const created = await client.createArticle(articleData);
 
@@ -141,7 +142,7 @@ async function main() {
             // If local wins, push it
             if (report.resolution === 'used_local') {
               console.log('  📤 Pushing local version (newer)...');
-              const articleData = formatForFeaturebase(article, helpCenterId);
+              const articleData = formatForFeaturebaseUpdate(article);
               await client.updateArticle(article.id, articleData);
             } else {
               console.log('  ⬇️  Remote version is newer, skipping push');
@@ -166,7 +167,7 @@ async function main() {
       // No conflict - push local changes
       console.log('  📤 Pushing to Featurebase...');
 
-      const articleData = formatForFeaturebase(article, helpCenterId);
+      const articleData = formatForFeaturebaseUpdate(article);
       await client.updateArticle(article.id, articleData);
 
       console.log('  ✅ Pushed');
