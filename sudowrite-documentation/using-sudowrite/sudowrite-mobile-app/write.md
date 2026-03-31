@@ -5,7 +5,7 @@ category: '4553298'
 collection_name: Sudowrite's Mobile App
 featurebase_id: '8173121'
 last_updated: '2026-02-15T19:27:54.298Z'
-synced_at: '2026-03-31T23:18:08.239Z'
+synced_at: '2026-03-31T23:43:51.970Z'
 source: featurebase
 ---
 The mobile app’s Write feature is an intelligent autocomplete that reads words in your current document, linked docs, and Story Bible to continue your story.

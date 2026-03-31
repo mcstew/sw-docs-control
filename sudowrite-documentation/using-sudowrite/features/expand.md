@@ -5,7 +5,7 @@ category: '5442133'
 collection_name: Features
 featurebase_id: '3974925'
 last_updated: '2026-03-31T13:55:45.343Z'
-synced_at: '2026-03-31T23:18:08.416Z'
+synced_at: '2026-03-31T23:43:52.139Z'
 source: featurebase
 ---
 When you have a scene you know would benefit from some added detail, you can use the **Expand** tool. Expand takes the passage you’ve highlighted and draws that out, adding substance and color as organically as possible. Practically speaking, it can turn one sentence into several.

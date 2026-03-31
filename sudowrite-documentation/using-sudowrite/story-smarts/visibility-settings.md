@@ -5,7 +5,7 @@ category: '5566496'
 collection_name: Story Smarts
 featurebase_id: '6550358'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:18:08.341Z'
+synced_at: '2026-03-31T23:43:52.044Z'
 source: featurebase
 ---
 ### **What if I want to hide something from the AI?**
@@ -16,11 +16,11 @@ If you’ve added a character that doesn’t appear until later in your story, a
 
 **When the visibility of a Character, Worldbuilding element, or trait is toggled off, Sudowrite’s AI will ignore it altogether.**
 
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e09266214e17734edfa/0198aec6-2b61-748d-a749-553e39dd4a91/b64u-MDE5OGFlYzYtMmI0My03NzU4LTg1OWYtNjAwOTgyMzdhNWVl.png?X-Amz-Expires=3600&X-Amz-Date=20260331T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260331%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=6b08622f2459184f6083e41692de74d93a45b4e404eb885b3eea8153f8daed35)
+![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e09266214e17734edfa/0198aec6-2b61-748d-a749-553e39dd4a91/b64u-MDE5OGFlYzYtMmI0My03NzU4LTg1OWYtNjAwOTgyMzdhNWVl.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=2ff7e323eae1aab8b138a282db602833fb832de602b2b4ceae713db1ef3ef18c)
 
 Alternatively, lets say you want to include a Motive trait on the Character card for the murderer in your mystery. Saliency Engine _may_ consider a motive relevant to a scene, leading to an AI generation that spills the beans prematurely. To hide the Motive from Sudowrite, toggle the visibility setting within the Motive trait field from the eyeball icon in the upper right.
 
-![Click the eyeball icon from within the trait field to toggle that trait’s visibility. When the icon is set to a struck-through eye, the trait is hidden and Sudowrite will ignore it.](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e09266214e17734edfa/0198aec6-2b89-79b2-a06d-5fa25ba63eaa/b64u-MDE5OGFlYzYtMmIzZC03MmVhLWEzMGYtYTYyOWEzNzNlNjli.png?X-Amz-Expires=3600&X-Amz-Date=20260331T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260331%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=f9da0e209cdf905c5949563dd1b8b0e309773f0575af73c5212822239c7bf6e9)
+![Click the eyeball icon from within the trait field to toggle that trait’s visibility. When the icon is set to a struck-through eye, the trait is hidden and Sudowrite will ignore it.](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e09266214e17734edfa/0198aec6-2b89-79b2-a06d-5fa25ba63eaa/b64u-MDE5OGFlYzYtMmIzZC03MmVhLWEzMGYtYTYyOWEzNzNlNjli.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=4e93d57478591d6060a22e55e3fc3c5caec35020bb68757c5a024c732b377452)
 
 Click the eyeball icon from within the trait field to toggle that trait’s visibility. When the icon is set to a struck-through eye, the trait is hidden and Sudowrite will ignore it.
 

@@ -5,7 +5,7 @@ category: '5445363'
 collection_name: Credits
 featurebase_id: '9958048'
 last_updated: '2026-02-15T19:27:10.154Z'
-synced_at: '2026-03-31T23:18:08.454Z'
+synced_at: '2026-03-31T23:43:52.174Z'
 source: featurebase
 ---
 If you’ve exhausted your monthly credit allotment but would like to keep using Sudowrite’s AI features, you can make one-time purchases of extra credits as necessary. You’ll receive a banner with a link in the event you run out of your monthly credits, but you can also find this option at any time inside of your Settings—just click the (⚙️) gear icon in the upper right, and then select Buy More Credits.

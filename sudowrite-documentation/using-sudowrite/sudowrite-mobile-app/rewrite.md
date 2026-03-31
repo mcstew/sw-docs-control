@@ -5,7 +5,7 @@ category: '4553298'
 collection_name: Sudowrite's Mobile App
 featurebase_id: '2557979'
 last_updated: '2026-02-15T19:27:54.298Z'
-synced_at: '2026-03-31T23:18:08.237Z'
+synced_at: '2026-03-31T23:43:51.960Z'
 source: featurebase
 ---
 The mobile app’s Rewrite allows you to transform any selected text with AI assistance.

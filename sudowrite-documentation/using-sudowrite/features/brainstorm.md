@@ -5,10 +5,10 @@ category: '5442133'
 collection_name: Features
 featurebase_id: '7767950'
 last_updated: '2026-03-31T13:55:45.343Z'
-synced_at: '2026-03-31T23:18:08.419Z'
+synced_at: '2026-03-31T23:43:52.142Z'
 source: featurebase
 ---
-![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6a8875ca99492c59ba6a/0198aeb8-7cc6-7808-8dbf-5813734a7e1d/b64u-MDE5OGFlYjgtN2M5MS03YzljLThkNDQtNjIxYTkyMWEwMWQ4.jpeg?X-Amz-Expires=3600&X-Amz-Date=20260331T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260331%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=8c426cccd76ccff1ce1622a48d97e17331504e86698c72a2a09d221a85d123bd)
+![Notion image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6a8875ca99492c59ba6a/0198aeb8-7cc6-7808-8dbf-5813734a7e1d/b64u-MDE5OGFlYjgtN2M5MS03YzljLThkNDQtNjIxYTkyMWEwMWQ4.jpeg?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=3f4e638dde0dfb3ec4b13461d40109f91100d767b2a353eb4bc72f1f028ea034)
 
 # Brainstorm
 
@@ -41,7 +41,7 @@ To get started, click the Brainstorm button, and choose from:
 
 Then enter your seed. Maybe it’s “Names and descriptions of spaceships”
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6a8875ca99492c59ba6a/019be152-d3b8-7340-98e7-7558ca88b3e8/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260331T230000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260331%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=e4d3d4a04f3c3fa71e03e3021ac2a9948e867644ea076fbff8d5d7edb750f795)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6a8875ca99492c59ba6a/019be152-d3b8-7340-98e7-7558ca88b3e8/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=bccb208a9e59f30a8cdad7fd6c512faa9f6f7986aee6f5e78cec34e9a077d6af)
 
 Click Start and you’ll have a fresh list of spaceship concepts generated for you. You can use the Thumbs Up (👍) to save the ones you like to your Keepers List, and the Thumbs Down (👎) to clear that suggestion from your list (to make space for a new one). When you’re satisfied with your choices, click Save & Exit, and your Keepers List will be saved to a card in your History panel on the right.
 

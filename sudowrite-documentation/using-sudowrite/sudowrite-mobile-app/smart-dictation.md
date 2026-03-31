@@ -5,7 +5,7 @@ category: '4553298'
 collection_name: Sudowrite's Mobile App
 featurebase_id: '1368190'
 last_updated: '2026-02-15T19:27:54.298Z'
-synced_at: '2026-03-31T23:18:08.228Z'
+synced_at: '2026-03-31T23:43:51.955Z'
 source: featurebase
 ---
 Smart Dictation is a unique mobile feature that captures your spoken words and transforms them into properly formatted prose with punctuation, dialogue formatting, and character name recognition.

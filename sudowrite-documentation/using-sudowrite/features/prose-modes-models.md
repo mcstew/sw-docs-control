@@ -5,7 +5,7 @@ category: '5442133'
 collection_name: Features
 featurebase_id: '2549305'
 last_updated: '2026-03-31T13:55:45.343Z'
-synced_at: '2026-03-31T23:18:08.407Z'
+synced_at: '2026-03-31T23:43:52.134Z'
 source: featurebase
 ---
 Sudowrite allows you to select from a wide range of Prose Modes and AI models. Choosing different models effectively changes the AI performing the work, impacting output style, creativity, precision, and credit usage.

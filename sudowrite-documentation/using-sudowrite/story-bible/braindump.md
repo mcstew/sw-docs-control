@@ -5,7 +5,7 @@ category: '9773420'
 collection_name: Story Bible
 featurebase_id: '9784768'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:18:08.378Z'
+synced_at: '2026-03-31T23:43:52.081Z'
 source: featurebase
 ---
 ## Setting up your story

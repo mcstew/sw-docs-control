@@ -5,7 +5,7 @@ category: '5279540'
 collection_name: Workflows
 featurebase_id: '6639290'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:18:08.399Z'
+synced_at: '2026-03-31T23:43:52.104Z'
 source: featurebase
 ---
 Everyone has their own system when it comes to organizing their work, and now you can bring yours to Sudowrite. **Project** **Folders** can be used to track your project status, group your work by series or pen name, or just keep your desktop tidy.

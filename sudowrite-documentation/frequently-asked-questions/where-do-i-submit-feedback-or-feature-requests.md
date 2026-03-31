@@ -5,7 +5,7 @@ category: '4621459'
 collection_name: Frequently Asked Questions
 featurebase_id: '7573110'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:18:08.295Z'
+synced_at: '2026-03-31T23:43:52.003Z'
 source: featurebase
 ---
 Have some feedback for us, or a feature you’d love to see in Sudowrite? You can suggest a feature (or upvote an existing suggestion) at [**our Feedback page here**](https://feedback.sudowrite.com/). That’s also where you can find out changelog.

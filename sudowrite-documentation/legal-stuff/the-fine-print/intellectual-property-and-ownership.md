@@ -5,7 +5,7 @@ category: '4964533'
 collection_name: The Fine Print
 featurebase_id: '4567979'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:18:08.285Z'
+synced_at: '2026-03-31T23:43:51.998Z'
 source: featurebase
 ---
 ### Ownership Rights
