@@ -13,7 +13,7 @@ const getClient = async () => {
   return mod.FeaturebaseClient;
 };
 
-const getSync = async () => {
+const getSync = async (): Promise<any> => {
   const mod = await import('@/lib/featurebase-sync.js');
   return mod;
 };
