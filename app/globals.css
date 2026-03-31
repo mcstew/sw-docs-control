@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", "Courier New", monospace;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+@layer utilities {
+  .scanlines {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0) 50%,
+      rgba(0, 0, 0, 0.1) 50%,
+      rgba(0, 0, 0, 0.1)
+    );
+    background-size: 100% 4px;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 8px rgba(165, 243, 252, 0.4);
+  }
+}
+
+@keyframes flow-forward {
+  from { stroke-dashoffset: 24; }
+  to { stroke-dashoffset: 0; }
+}
+
+@keyframes flow-backward {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 24; }
+}
+
+.animate-flow-fast {
+  animation: flow-forward 0.5s linear infinite;
+}
+
+.animate-flow-slow {
+  animation: flow-forward 1.5s linear infinite;
+}
+
+.animate-flow-reverse {
+  animation: flow-backward 1s linear infinite;
+}
