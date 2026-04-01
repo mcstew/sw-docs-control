@@ -1,7 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { Upload, Sparkles, Check, X, ChevronDown, ChevronUp } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Upload, Sparkles, Check, X, ChevronDown, ChevronUp, History, Clock } from 'lucide-react';
 
 interface Proposal {
   id: string;
@@ -37,6 +37,15 @@ export default function ImprovePage() {
   const [summary, setSummary] = useState('');
   const [log, setLog] = useState<string[]>([]);
   const [expandedId, setExpandedId] = useState<string | null>(null);
+  const [history, setHistory] = useState<any[]>([]);
+  const [showHistory, setShowHistory] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/history?type=improve')
+      .then((r) => r.json())
+      .then((data) => { if (data.success) setHistory(data.records); })
+      .catch(() => {});
+  }, [proposals]); // Refresh after new analysis
 
   const addLog = (msg: string) => {
     setLog((prev) => [...prev, `[${new Date().toLocaleTimeString()}] ${msg}`]);
@@ -249,6 +258,67 @@ export default function ImprovePage() {
               </div>
             );
           })}
+        </div>
+      )}
+
+      {/* History */}
+      {history.length > 0 && (
+        <div className="mb-6">
+          <button
+            onClick={() => setShowHistory(!showHistory)}
+            className="flex items-center gap-2 text-slate-400 hover:text-slate-200 text-sm font-medium transition-colors mb-3"
+          >
+            <History className="w-4 h-4" />
+            Past Analyses ({history.length})
+            {showHistory ? <ChevronUp className="w-3 h-3" /> : <ChevronDown className="w-3 h-3" />}
+          </button>
+
+          {showHistory && (
+            <div className="space-y-3">
+              {history.map((record) => (
+                <div
+                  key={record.id}
+                  className="bg-[#0f1923] rounded-lg border border-slate-700 p-4"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-3">
+                      <Clock className="w-3.5 h-3.5 text-slate-500" />
+                      <span className="text-slate-400 text-xs">
+                        {new Date(record.timestamp).toLocaleString()}
+                      </span>
+                      <span className="text-slate-600 text-xs">
+                        by {record.user}
+                      </span>
+                    </div>
+                    <span className="text-xs text-slate-500 bg-slate-800 px-2 py-0.5 rounded">
+                      {record.input?.format || 'unknown'}
+                    </span>
+                  </div>
+                  <p className="text-slate-300 text-sm mb-2">{record.output?.summary}</p>
+                  {record.output?.proposals?.length > 0 && (
+                    <div className="space-y-1">
+                      {record.output.proposals.map((p: any) => (
+                        <div key={p.id} className="flex items-center gap-2 text-xs">
+                          <span className={`w-1.5 h-1.5 rounded-full ${
+                            p.status === 'applied' ? 'bg-green-500' :
+                            p.status === 'approved' ? 'bg-green-500' :
+                            p.status === 'rejected' ? 'bg-red-500' :
+                            'bg-yellow-500'
+                          }`} />
+                          <span className="text-slate-400">
+                            {p.articleTitle}
+                          </span>
+                          <span className="text-slate-600">
+                            {p.editType} · {p.confidence} · {p.status}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 

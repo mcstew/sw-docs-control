@@ -1,11 +1,12 @@
 /**
  * Audit API — triggers AI-powered changelog audit.
  * Accepts { "changelogText": "..." } to run a manual audit.
- * Works on both Vercel and local dev.
+ * Saves results to history.
  */
 
 import { NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
+import { saveAnalysisRecord } from '@/lib/history';
 
 export const maxDuration = 300;
 
@@ -57,17 +58,11 @@ export async function POST(req: Request) {
       tags: [],
     };
 
-    // runAudit tries to write audit logs and create GitHub issues.
-    // On Vercel the audit log write will fail silently — that's fine.
-    // The actual audit result is returned in memory.
     let result;
     try {
       result = await runAudit(changelogEntry);
     } catch (auditError: any) {
-      // If the audit itself fails (not just the log write), check if
-      // it's a filesystem error we can ignore
       if (auditError.code === 'EROFS' || auditError.code === 'ENOENT') {
-        // The audit ran but couldn't save logs — return partial result
         return NextResponse.json({
           success: true,
           message: 'Audit completed (log save skipped on Vercel)',
@@ -77,8 +72,38 @@ export async function POST(req: Request) {
       throw auditError;
     }
 
+    // Save to history
+    const analysisId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+    try {
+      await saveAnalysisRecord({
+        id: analysisId,
+        type: 'audit',
+        timestamp: new Date().toISOString(),
+        user: session?.user?.email || 'dev',
+        input: {
+          changelogTitle: changelogEntry.title,
+          preview: body.changelogText.slice(0, 200),
+        },
+        output: {
+          summary: result.summary || `${result.affected_articles.length} contradiction(s) found`,
+          proposalCount: result.affected_articles.length,
+          proposals: (result.affected_articles || []).map((a: any) => ({
+            id: a.article_slug,
+            articleTitle: a.article_title,
+            editType: a.change_type || 'correction',
+            confidence: a.confidence,
+            status: 'flagged',
+            reasoning: a.contradiction,
+          })),
+        },
+      });
+    } catch {
+      // Non-fatal
+    }
+
     return NextResponse.json({
       success: true,
+      analysisId,
       message: `Audit complete: ${result.affected_articles.length} contradiction(s) found`,
       result,
     });

@@ -1,12 +1,13 @@
 /**
  * Analyze feedback — runs the improve agent to generate edit proposals.
+ * Saves analysis record to history.
  */
 
 import { NextRequest, NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { parseFeedback } from '@/lib/feedback-parser';
 import { runImproveAgent } from '@/lib/improve-agent';
-import { addProposals } from '@/lib/proposals';
+import { saveAnalysisRecord } from '@/lib/history';
 
 export const maxDuration = 300;
 
@@ -30,23 +31,47 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'No feedback data provided' }, { status: 400 });
     }
 
-    const { items, summaries } = parseFeedback(text);
+    const parsed = parseFeedback(text);
 
-    if (items.length === 0 && summaries.length === 0) {
+    if (parsed.items.length === 0 && parsed.summaries.length === 0) {
       return NextResponse.json({ error: 'Could not parse any feedback from the input' }, { status: 400 });
     }
 
-    const { proposals, summary } = await runImproveAgent(items, summaries);
+    const { proposals, summary } = await runImproveAgent(parsed.items, parsed.summaries);
 
-    // Persist proposals (best-effort — may fail on Vercel read-only)
+    // Save to history (persists in repo via GitHub API)
+    const analysisId = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
     try {
-      await addProposals(proposals);
+      await saveAnalysisRecord({
+        id: analysisId,
+        type: 'improve',
+        timestamp: new Date().toISOString(),
+        user: session?.user?.email || 'dev',
+        input: {
+          format: parsed.format,
+          itemCount: parsed.items.length + parsed.summaries.length,
+          preview: text.slice(0, 200),
+        },
+        output: {
+          summary,
+          proposalCount: proposals.length,
+          proposals: proposals.map((p) => ({
+            id: p.id,
+            articleTitle: p.articleTitle,
+            editType: p.editType,
+            confidence: p.confidence,
+            status: p.status,
+            reasoning: p.reasoning,
+          })),
+        },
+      });
     } catch {
-      // On Vercel, proposals live only in the response
+      // Non-fatal
     }
 
     return NextResponse.json({
       success: true,
+      analysisId,
       summary,
       proposalCount: proposals.length,
       autoApprovable: proposals.filter((p) => p.autoApprovable).length,
