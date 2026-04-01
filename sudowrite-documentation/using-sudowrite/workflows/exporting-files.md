@@ -5,7 +5,7 @@ category: '5279540'
 collection_name: Workflows
 featurebase_id: '0052666'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.099Z'
+synced_at: '2026-04-01T15:19:16.725Z'
 source: featurebase
 ---
 Sudowrite offers a few different ways to export your work, allowing you to easily save individual files, projects, or Story Bible sections.
@@ -14,7 +14,7 @@ Sudowrite offers a few different ways to export your work, allowing you to easil
 
 Need to backup your entire project or share all of the documents with a collaborator? The Project Export feature is perfect for these scenarios. It allows you to export all of your documents at once as a bundled .zip file.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be176-9b23-76b4-9eed-c7b0a079678d/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=28d5b23d61b6bbcdf9385c8473248cfce7482c239316d8dd78ab06164d0fdc92)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be176-9b23-76b4-9eed-c7b0a079678d/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=f27d34814b67031b6572fe12f08d7e7f7f5b0dd7c85f7cdd558b744f5fab3933)
 
 **Project Export Purpose:** Export every document in a project at once.
 
@@ -49,7 +49,7 @@ We added the ability to export your entire project as a single document rather t
 
 Now when you click the **More menu (•••)** on your project, you have the option to export all of that project’s documents _either_ as a bundled .zip _or_ as one merged document.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be176-fa87-7f21-919e-9843287dc3c7/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=93ec09133bdbc2d037f604aa3f3416fd913a98cc3f48178b6e679602477f1d09)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be176-fa87-7f21-919e-9843287dc3c7/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=49f54081eb021c4f5e7f512aa2b3ec310c873f69d880a6b680c45ca02c0334a2)
 
 If you choose **Export as 1 doc**, the resulting .docx file will include all of your documents in the order that they appear in your project’s left bar (from top to bottom). Documents inside of folders and subfolders are included too, following that sequence. As with the .zip-based export, your Story Bible is not included in the resulting file.
 
@@ -57,7 +57,7 @@ If you choose **Export as 1 doc**, the resulting .docx file will include all of 
 
 Sometimes you only need to export a specific chapter or single document from your project. The Document Export option allows you to do just that, giving you flexibility in sharing or backing up individual pieces of your work.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be177-526d-7797-ba77-ab46f4fb4d6e/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=ece446b5596a8fd040774780582be9c10cea4ae465d997586b7eef5bf6e51936)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6c07628c454516abf706/019be177-526d-7797-ba77-ab46f4fb4d6e/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=4a1cb799903d5ee9a463ffd14d3d9cc9429cadd8d7e697f9da94e72171354de9)
 
 **Document Export Purpose:** Export a single document or chapter from your project.
 

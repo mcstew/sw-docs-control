@@ -5,12 +5,12 @@ category: '6550900'
 collection_name: Sudowrite Plans
 featurebase_id: '6438230'
 last_updated: '2026-03-31T15:22:59.610Z'
-synced_at: '2026-03-31T23:43:52.176Z'
+synced_at: '2026-04-01T15:19:16.804Z'
 source: featurebase
 ---
 To pause or cancel your account, click on the Settings (⚙️) gear icon in the top right corner of Sudowrite, and select "Manage Membership." From there, you'll find options to either pause or cancel your subscription, manage your billing, or contact us.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6931c3bf18c3d82300a8/019be12c-3711-7b62-aa14-d7b5448c4cb0/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=31b25cd53f9fde1e2a387c7677ede64368ce6494110e68b6dbefc096a0274d90)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6931c3bf18c3d82300a8/019be12c-3711-7b62-aa14-d7b5448c4cb0/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=a80ce0c4c9c37d927e2cc277e2e517e1ed9ab975e138659af7be0bf72d9c6647)
 
 ## **What’s the difference between “pausing” and “canceling”?**
 

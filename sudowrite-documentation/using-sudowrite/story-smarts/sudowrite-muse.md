@@ -5,7 +5,7 @@ category: '5566496'
 collection_name: Story Smarts
 featurebase_id: '6183030'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.041Z'
+synced_at: '2026-04-01T15:19:16.666Z'
 source: featurebase
 ---
 # What sets Muse apart?
@@ -29,17 +29,17 @@ This is what the model selector window looks like. Click “Use Muse” to selec
 
 Open the Draft tool in the text editor’s top toolbar and scroll to the bottom. Click on the dropdown arrow to the right of Generate, and select Muse from the Prose Mode selector that appears.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e3ee290301d501beb42/019be170-7838-71f5-974a-8743f04c5de8/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=d81076ff01f45644aa72a0734ba61d1f32fc8876a69b45b9cd65f873565ef3ec)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e3ee290301d501beb42/019be170-7838-71f5-974a-8743f04c5de8/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=21cfa8ca2e4b3adff98c3345fba77f894e28a01290f3da1a2f0e63cd09cf1563)
 
 ### Here’s how to select Muse in Write
 
 Click the dropdown arrow next to the Write button in your toolbar and select Write Settings from the list that appears. In your Write Settings, select Prose Mode and choose Muse from the available options.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e3ee290301d501beb42/019be171-08f0-7bbb-907c-6b17c60a93a6/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=93500b433829fef789f893f3f95319f131c2935b985ce7588282b65c3aebbfb8)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e3ee290301d501beb42/019be171-08f0-7bbb-907c-6b17c60a93a6/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=6a2465f51c8d80f02223943658b74abcb945edf85db4f56f5a957a5f4efbca5d)
 
 ## Creativity
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e3ee290301d501beb42/019be171-884e-7f61-9c99-d1203c0d1eab/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=fc375cbf03c1bfa6fce6e5ba39098b9e2e215866ddabd4e432f0b592fae02cc6)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e3ee290301d501beb42/019be171-884e-7f61-9c99-d1203c0d1eab/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=8da607bbedc665789f258ba8b1d1c6cb6b825ccc9cd583c212f0f1b842a58e1a)
 
 Sudowrite Muse is different from other Prose Modes and models in that it also has a Creativity setting in the **Draft** tool\*\*.\*\*
 
@@ -56,7 +56,7 @@ Creativity is document-by-document, in case different chapter different settings
 
 Style Examples are an optional tool in **Draft**—exclusive to Muse and Excellent—that makes Muse write more like you. You can enter up to 1,000 words of examples.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e3ee290301d501beb42/019be171-de78-7cf8-9d34-369ddfd03567/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=336c3bcecdc05288aedfb0b66ec3195b15e3a8797c10f402d5840e5f3c8faa61)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6e3ee290301d501beb42/019be171-de78-7cf8-9d34-369ddfd03567/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=0ee1d1ceae806a767e935c96373894f116b30e3c0b6720f5196c6ca2eb1da64e)
 
 For best results, if you include multiple samples from different sources, format them like this:
 

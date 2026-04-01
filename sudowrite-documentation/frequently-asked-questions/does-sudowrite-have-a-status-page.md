@@ -5,7 +5,7 @@ category: '4621459'
 collection_name: Frequently Asked Questions
 featurebase_id: 0904575
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.001Z'
+synced_at: '2026-04-01T15:19:16.625Z'
 source: featurebase
 ---
 Yes! You can keep track of Sudowrite’s current status at [https://status.sudowrite.com/](https://status.sudowrite.com/).

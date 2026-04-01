@@ -5,7 +5,7 @@ category: '2165317'
 collection_name: Plugins
 featurebase_id: '5603490'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.015Z'
+synced_at: '2026-04-01T15:19:16.638Z'
 source: featurebase
 ---
 Plugins unlock custom functionality on Sudowrite, empowering our writer community to build and share totally custom tools. With great power comes great responsibility though, so here are some guidelines as to what we expect from our community when it comes to building and sharing Plugins.
@@ -56,7 +56,7 @@ You can view the list of prohibited uses here.
 
 As you discover and experiment with Plugins, you may encounter Plugins that don’t work as described. If you’re able to find the creator in Discord, let them know so they have the opportunity to fix it up. Otherwise, you can let _us_ know, and we can toggle it to Unlisted until we can get in touch with them.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f2435fa13de851a1465/019be1c7-10c6-7ae1-b25c-f5cd2fbd6949/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=3f2e3dbbc9e82bd4fc4aceb0892bc387240ed9dd357b56b4cd9e00a03c6dd78a)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f2435fa13de851a1465/019be1c7-10c6-7ae1-b25c-f5cd2fbd6949/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=cfdabcd9d67b0587564f5e0e874333094ec49322eff066dad3e00b91944105be)
 
 Meanwhile, if you find a Plugin that you feel weird about—maybe you’re concerned it’s in violation of our rules above—feel free to use the Report button (the little flag icon) on the Plugin description page, or even drop us a note and we’ll give it a look. Contact us at [hi@sudowrite.com](mailto:hi@sudowrite.com) or reach out to our Community Lead, Michael Stewart, on Discord.
 

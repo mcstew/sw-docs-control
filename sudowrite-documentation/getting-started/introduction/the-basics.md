@@ -5,7 +5,7 @@ category: '7475072'
 collection_name: Introduction
 featurebase_id: '8701784'
 last_updated: '2026-02-15T19:27:10.154Z'
-synced_at: '2026-03-31T23:43:52.192Z'
+synced_at: '2026-04-01T15:19:16.820Z'
 source: featurebase
 ---
 The world of AI-assisted writing has come a long way over the past few years. If you’re here, you’re probably wondering, how does this thing work and how can I get the most out of it?

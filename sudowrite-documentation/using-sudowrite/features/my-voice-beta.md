@@ -5,7 +5,7 @@ category: '5442133'
 collection_name: Features
 featurebase_id: '1042041'
 last_updated: '2026-03-31T13:55:45.343Z'
-synced_at: '2026-03-31T23:43:52.114Z'
+synced_at: '2026-04-01T15:19:16.738Z'
 source: featurebase
 ---
 Ever wish it was easier to make prose sound more like _you_?
@@ -32,7 +32,7 @@ Ever wish it was easier to make prose sound more like _you_?
 
 Avoid using AI-generated text as your training data; it can reduce the quality of the resulting model.
 
-![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b8fb7a5382a87e11257/0198f1a0-def8-7b08-a8a4-d32d6a2d96f6/b64u-MDE5OGYxYTAtZGU0Yi03ZDgxLTkzYTQtMzU2NGIxMmFmNTcx.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=e9caebec7c17938ec118c819210be521349159fbb805f38af95b8412c8ad4b84)
+![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b8fb7a5382a87e11257/0198f1a0-def8-7b08-a8a4-d32d6a2d96f6/b64u-MDE5OGYxYTAtZGU0Yi03ZDgxLTkzYTQtMzU2NGIxMmFmNTcx.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=289e23708771d933eb483eb2371b1f55540603b95464fbee5bf3cd80293ebf69)
 
 ## How to train your My Voice model
 
@@ -72,7 +72,7 @@ Think of My Voice primarily as an **editing** tool that helps you take a first d
         
 3.  A card will appear in the History section on the right with your rewritten prose.
     
-    ![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b8fb7a5382a87e11257/0198f1a1-22a8-71c1-9f02-10b94c76b694/b64u-MDE5OGYxYTEtMjBjOS03YzliLTg2ZGItYmZlYWE4ZDdlOTM1.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=fc198585f20b9decdf151cfccc6a4ce9b75701ede878e6c24e4fb824fcd795c2)
+    ![Notion Image](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6b8fb7a5382a87e11257/0198f1a1-22a8-71c1-9f02-10b94c76b694/b64u-MDE5OGYxYTEtMjBjOS03YzliLTg2ZGItYmZlYWE4ZDdlOTM1.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=6db0bf92b88e94653d3b115de1b884f277b686444aad7e67dd8d3ba8032f4f66)
 
 ## Controlling the My Voice intensity
 

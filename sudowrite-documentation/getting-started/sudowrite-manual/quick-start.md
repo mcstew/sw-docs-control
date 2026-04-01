@@ -5,7 +5,7 @@ category: '6149413'
 collection_name: Sudowrite Manual
 featurebase_id: '1283278'
 last_updated: '2026-02-15T19:27:10.154Z'
-synced_at: '2026-03-31T23:43:52.190Z'
+synced_at: '2026-04-01T15:19:16.818Z'
 source: featurebase
 ---
 ## Looking to get up and running fast?
@@ -24,7 +24,7 @@ When you first sign up for Sudowrite you’re dropped directly into a product to
 
 To do so, just click on the question mark icon (❓) up in the top right corner of the interface to access your **Resources**, then select **Quickstart Tour**.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6817df8d39c440bbcaf4/019be11b-48ff-7512-9ccf-ae3edb10f89c/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=8e728731d89e04cbdc6fe51e2dfc76bd8d7ebe59f0c0c69ac5065484e1aa5193)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6817df8d39c440bbcaf4/019be11b-48ff-7512-9ccf-ae3edb10f89c/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=34b67368a78a0e1b2955c6f96594ef5e0d5bca7c89fe52f3b07a75b41ab2abbd)
 
 The upper right corner of Sudowrite on your homepage. The question mark icon reveals resources, and the gear icon is your Account Settings.
 

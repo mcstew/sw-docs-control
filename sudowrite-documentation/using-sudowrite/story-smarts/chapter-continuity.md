@@ -5,7 +5,7 @@ category: '5566496'
 collection_name: Story Smarts
 featurebase_id: '8989228'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.053Z'
+synced_at: '2026-04-01T15:19:16.678Z'
 source: featurebase
 ---
 **Chapter Continuity is a feature that allows you to sequence your documents**, telling Sudowrite which chapter came before which. By linking chapters together, you enable Sudowrite’s AI to treat those separate documents as one continuous story—allowing tools like **Write** and **Draft** to draw on prior context and create smoother transitions, clearer character arcs, and more consistent narratives throughout your work.
@@ -14,7 +14,7 @@ source: featurebase
 
 When you define preceding documents in the document linking tool, those documents will be included as additional context for the AI when using certain AI features. Our AI tools—especially Write and Draft—work best when they can draw on previous events, tone, and story structure. Linking your documents ensures that context from earlier chapters helps shape what comes next.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6dcf04f5d5e47045c14e/019be1a8-64a5-7768-873d-c9fd39de4261/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=dbfd6bb2ac45d31d8420afd7bc450d4103e8fa1d18def1e9776dd52913d411f2)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6dcf04f5d5e47045c14e/019be1a8-64a5-7768-873d-c9fd39de4261/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=7e020714e0a54e6f85e1af68e171ddc2ec09799f76dc6361007cd71686f213d4)
 
 ## How to Link Chapters
 
@@ -31,7 +31,7 @@ Once you’ve made these selections, the relationships are saved and will remain
 
 You can continue a document from any other document in your project, whether or not those documents are linked to your Story Bible’s Outline. That said, linking documents _and_ Outline chapter summaries will give Sudowrite even richer context.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6dcf04f5d5e47045c14e/019be1a8-bd66-7328-948b-03192b92374c/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=787c4ec3134ff04b3bb2153e212dcf255529b7d4e8aeadc1a124ce8ba6319e4c)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6dcf04f5d5e47045c14e/019be1a8-bd66-7328-948b-03192b92374c/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=8795a7dcf292cf049febeb1fc352ad93f66cea2b96f3ff9592568bd8019dfbd9)
 
 ## Automatic Linking from the Outline
 
@@ -49,7 +49,7 @@ Write also pulls in up to 20,000 words from the current document—again, starti
 
 This allows Write to stay grounded in the events, characters, and voice of your earlier chapters, with a bias towards the more recent/relevant developments when there’s too much context. Your Write card will include a set of **chiclets** that shows which documents were included, and how many words of each.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6dcf04f5d5e47045c14e/019be1aa-8418-713a-b8cf-25600d08bdb3/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=8d9738b98fc01e5e4a3d0523370dd07449af1a9c3bcc2ee9e88ba3bcb1227e11)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6dcf04f5d5e47045c14e/019be1aa-8418-713a-b8cf-25600d08bdb3/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=6cd94bbb59bed2f2d15d7702d4e9b82a0f93bddf262d0009adba0bc26ed54bb2)
 
 ## Chapter Continuity in Draft
 

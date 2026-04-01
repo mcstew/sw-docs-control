@@ -5,14 +5,14 @@ category: '4621459'
 collection_name: Frequently Asked Questions
 featurebase_id: '2943388'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.002Z'
+synced_at: '2026-04-01T15:19:16.626Z'
 source: featurebase
 ---
 We think that every writer should be empowered to tell their story, so there are a handful of features on Sudowrite intended to help make that possible.
 
 First, Sudowrite’s Settings (⚙️) include a number of accessibility options. One of those is the OpenDyslexic font which is intended to reduce some of the more common reading errors associated with dyslexia. Another is our Themes, which is how and where you would enable Dark Mode (try _Charcoal_ for that)—but Themes also provide a range of color palettes so you can select something that works best for your vision.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6fa95b069893d402d3d1/019be1cd-d71a-7312-bbb7-2c07a735f4d1/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=ba5bc73a9b7e50d50f24090c0481dbeb6e4b543489dee8f12a36cbf917adac1b)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6fa95b069893d402d3d1/019be1cd-d71a-7312-bbb7-2c07a735f4d1/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=0593bce26863bdf25cb20c06d346e5b1b8427e7eda1167814798b789da6fea6c)
 
 We’ve also recently made some big improvements to the way that Sudowrite works with screen readers—so if you’re a screen reader user, you should now have an easier time navigating Sudowrite
 

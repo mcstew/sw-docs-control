@@ -5,7 +5,7 @@ category: '2165317'
 collection_name: Plugins
 featurebase_id: '1671769'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.024Z'
+synced_at: '2026-04-01T15:19:16.644Z'
 source: featurebase
 ---
 ## **Creating Plugins**
@@ -20,7 +20,7 @@ To get started, click on the **Create Plugin** button in the **More Tools** drop
 
 We’ve simplified the plugin creation flow so that you can just describe what exactly you’d like a plugin to do.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/019be1bc-c65b-76d3-aa84-99000686be31/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=d65806ec32ae795e79a568184ddcfd046d7057c836f3da8959747abeb2617286)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/019be1bc-c65b-76d3-aa84-99000686be31/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=12b01bbe6fdb4c0ac63fa0c1f1eaa189ce818f344c4281696d9efe04929bc58c)
 
 To use it, enter a plain text description of what sort of writing tool you’re looking for and click Generate Plugin. Remember that plugins can do any of three things: generate, analyze, or transform text. (The Magic Plugin Builder won’t create multi-stage plugins by default, but it’s worth noting that you can create a 2-stage plugin in case you’d like to do any of those things in sequence too!)
 
@@ -71,7 +71,7 @@ Here’s a look at some of the essential fields (some of which will be populated
 > 
 > Once you start changing the AI model and experimenting with your own variables, credit costs may vary. Be sure to test your Plugins for a sense of how much they’ll cost to use!
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/019be1c0-da21-7280-80c6-2d9fe92f8048/b64u-Q2xlYW5TaG90IDIwMjUtMDUtMjkgYXQgMTIuNDYuNDQoMykucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=4d3bda287e5cadefa07f74e3d400065c931500936280b7046e9714bc979667ca)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/019be1c0-da21-7280-80c6-2d9fe92f8048/b64u-Q2xlYW5TaG90IDIwMjUtMDUtMjkgYXQgMTIuNDYuNDQoMykucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=37e378b709863175ed861df1d5d09a2a4d99aeba30b2f6112386f70f5a5e2ff2)
 
 Here’s what each of the areas in the screenshot above controls:
 
@@ -158,7 +158,7 @@ Here’s what each of the areas in the screenshot above controls:
 
 At the bottom of the Plugin creation page, you will see a testing area:
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/019be1c2-dd67-720a-ba57-51f1317b3af8/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=9fbe964696c92fdf0056d32543c315958e8e7abb6be59982b49accf40bebe764)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/019be1c2-dd67-720a-ba57-51f1317b3af8/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=26be8b8ebcd09350302b99fd6631121737c51b66d4cc871bc83243aec6ba47c3)
 
 This lets you easily and quickly test your Plugin without publishing it. It’s essential that you test your plugin to make sure it works with a diverse set of inputs—and that you’re getting the results you want out of it. We suggest that you have a bank of inputs along with an idea what your expected output is. This way, as you iterate on the design of your plugin, you can make sure that the functionality matches your expectations.
 
@@ -168,7 +168,7 @@ Toggling Additional Variables exposes fields to populate Preceding Text as well 
 
 You can edit what name shows up for your Plugins by clicking on the small “Edit” link in the Settings (⚙️) menu in top right of your Sudowrite interface:
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/019be1c3-1db8-74dd-9099-141561098fc6/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=b9d15c63ac3b7bbc72d6dae42509320b37994b041ec220b6c82266a42637e761)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6f0e94da8fb2bf6c0296/019be1c3-1db8-74dd-9099-141561098fc6/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=234fb071eaeb03ea88c4a9d502c9574002915cefcd08a60e1d5a93a7c2abcbed)
 
 By default, if you’ve logged in via Google, that will be set to your Google display name.
 

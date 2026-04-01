@@ -5,7 +5,7 @@ category: '9773420'
 collection_name: Story Bible
 featurebase_id: '1761456'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.061Z'
+synced_at: '2026-04-01T15:19:16.689Z'
 source: featurebase
 ---
 ### The Outline is where you tell Story Bible about the structure of your story.
@@ -38,7 +38,7 @@ Once you have a generated outline that you’re happy with, make sure the detail
 
 At any point in the Outlining process, you can also Add individual chapter summaries. This can be helpful if you want to insert a chapter after-the-fact or extend your Outline. Click the **\+ Add Chapter** button in the section header to create a new blank chapter summary field—then just drag it into place. Alternatively, you can just hover _between_ the chapters where you’d like to insert the new chapter summary and an + Add button will appear.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d1f04f5d5e47043fcfc/019be199-09ab-7bb3-a255-11e5d39065af/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=a979722e68471fa6724db48abadd3493a669ee72094f3202ddb0428555676397)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d1f04f5d5e47043fcfc/019be199-09ab-7bb3-a255-11e5d39065af/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=7060c745c275869ae6cc9effe6f41034f7b8706b246b96c8cea62b3cea31d0b0)
 
 Your chapters can be named anything you’d like—“Chapter 1, Epilogue, Scene” etc.
 

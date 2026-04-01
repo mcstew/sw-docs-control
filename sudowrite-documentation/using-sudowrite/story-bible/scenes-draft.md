@@ -5,7 +5,7 @@ category: '9773420'
 collection_name: Story Bible
 featurebase_id: '2475330'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.059Z'
+synced_at: '2026-04-01T15:19:16.687Z'
 source: featurebase
 ---
 ### Generating Chapter Prose
@@ -22,7 +22,7 @@ Scenes let you guide Sudowrite to write your chapter exactly the way you imagine
 
 Think of Scenes as the natural atomic units of storytelling—aligned with how writers already plan and think about narrative flow.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d37b929a1bb6c0a2689/019be1a5-4efe-7d6d-ad55-bf186ee744b7/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=cdb58c1dec82231cfb2a23efde364045fe042f7b1038b494be69104232ede28a)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d37b929a1bb6c0a2689/019be1a5-4efe-7d6d-ad55-bf186ee744b7/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=ee916ba25841473e150a52f8bd596a2b83f62293dfdb2c4a843253591057f194)
 
 ### **How do I generate chapter prose from Scenes?**
 

@@ -5,7 +5,7 @@ category: '5566496'
 collection_name: Story Smarts
 featurebase_id: '4257043'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.055Z'
+synced_at: '2026-04-01T15:19:16.681Z'
 source: featurebase
 ---
 ## **Point of View and Tense Settings**
@@ -14,7 +14,7 @@ Defining the Point of View and Tense of your story helps make sure that assistan
 
 **The POV and Tense settings are located in Outline section of Story Bible.** They also appear in (and can be changed from) the Draft tool when opened.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d8cc3bf18c3d82dcb28/019be1ad-d6b0-7dbd-9363-4c2a226f9cc5/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=f78795eb209eee69897ba05ae1db7e46229cd5494d0db9544a71e1fc6f9ce096)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d8cc3bf18c3d82dcb28/019be1ad-d6b0-7dbd-9363-4c2a226f9cc5/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=6bbba0a7c8902794de69f0e07d9b32eae7a3baa287ea5836b8f8b4339ee3ea54)
 
 These settings tell the AI how it should write in the Draft tool, Write button (both Auto and Guided), and Expand, helping to ensure consistency in narrative voice and tense. You have the option of setting a global POV and Tense for your entire novel, or defining them on a per-chapter basis.
 
@@ -52,7 +52,7 @@ If you disagree with an AI-defined POV and Tense you can just change it. Once yo
 
 If you want your story to be written in first person from your protagonist’s perspective, you can select that character from the Characters section of the POV dropdown menu. All named characters from the Characters section of your project’s Story Bible will automatically appear there.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d8cc3bf18c3d82dcb28/019be1ae-bbb7-7b64-9d00-ac108fea7d68/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=b1db0b5a7fd0b5d34e5abae63abe5d28f97597afae280903429309bef0e5abb6)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d8cc3bf18c3d82dcb28/019be1ae-bbb7-7b64-9d00-ac108fea7d68/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=be4fc106aa96ae0172cefc5b2e4a81f3a8028c2c2c451133e86efeb72edc3abc)
 
 You can actually assign more than one character to a chosen narrative perspective. When a single character is selected, the AI will write with _that_ character’s perspective in mind. If multiple characters are selected, the AI will use the context of the scene (Draft) or the highlighted or previous text (Write and Expand buttons) to determine the most appropriate character to use.
 
@@ -60,7 +60,7 @@ You can actually assign more than one character to a chosen narrative perspectiv
 
 You have two options when it comes to setting your POV and Tense.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d8cc3bf18c3d82dcb28/019be1ae-fa54-785b-a056-38b6c1b922aa/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=d777787e6d3a6af1eb6a4288bf38b7905fa8bcc67a7b8cd12ffe9a028b481221)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d8cc3bf18c3d82dcb28/019be1ae-fa54-785b-a056-38b6c1b922aa/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=bf796d6507e51e72aac745de683f83716edcb74164ce98f53a513051c83d642f)
 
 **Same for all chapters (Default):** A single POV and tense setting are applied to the entire novel, ensuring a consistent narrative voice throughout.
 
@@ -72,7 +72,7 @@ Choose your preferred mode in the **Outline section of the Story Bible.**
 
 When you link a document to a chapter in your Outline (or create a linked chapter from it), the POV and Tense settings from the linked Outline’s chapter are automatically synced to the Draft box.
 
-![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d8cc3bf18c3d82dcb28/019be1af-9763-799f-b3f1-e40d22d0abc9/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T000000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=4c036086e30eab7af50af67a54af65bf983dd2a28fb61cde05097d9c0203b9c4)
+![](https://66f2e7f2298c40d9d4eb17c1.featurebase-attachments.com/c/article/689f6d8cc3bf18c3d82dcb28/019be1af-9763-799f-b3f1-e40d22d0abc9/b64u-aW1hZ2UucG5n.png?X-Amz-Expires=3600&X-Amz-Date=20260401T150000Z&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=DO801TYC4FCVNNEKURKM%2F20260401%2Ffra1%2Fs3%2Faws4_request&X-Amz-SignedHeaders=host&X-Amz-Signature=aca359de0ed350663e20a8822b7a0c1302c868f517b7d61d54b6049c810715e0)
 
 Any changes made to the POV or Tense within the Draft section will be automatically synchronized with the corresponding chapter's settings in the Outline, and vice versa. This ensures that your entire project remains consistent.
 

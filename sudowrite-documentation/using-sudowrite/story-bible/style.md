@@ -5,7 +5,7 @@ category: '9773420'
 collection_name: Story Bible
 featurebase_id: '8450925'
 last_updated: '2026-02-15T19:27:10.222Z'
-synced_at: '2026-03-31T23:43:52.079Z'
+synced_at: '2026-04-01T15:19:16.705Z'
 source: featurebase
 ---
 Style affects the tone, word choice, and sentence structure that Sudowrite uses anywhere the Style is included. What you put here has the most significant style influence on Prose written with Draft or the Write button.
