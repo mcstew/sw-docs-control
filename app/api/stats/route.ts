@@ -1,9 +1,10 @@
 /**
  * Stats API — returns live article count and sync status.
- * Works on both Vercel (scans deployed files) and local dev (full sync state).
+ * On Vercel: counts articles via GitHub API, gets last sync from recent commits.
  */
 
 import { NextResponse } from 'next/server';
+import { Octokit } from '@octokit/rest';
 
 const isVercel = !!process.env.VERCEL;
 
@@ -14,24 +15,53 @@ const getSync = async (): Promise<any> => {
 
 export async function GET() {
   try {
-    const sync = await getSync();
-
-    // scanLocalArticles reads the filesystem (works on Vercel — files are deployed read-only)
-    let totalArticles = 0;
-    try {
-      const articles = await sync.scanLocalArticles();
-      totalArticles = articles.length;
-    } catch {
-      totalArticles = 0;
-    }
-
     if (isVercel) {
-      // On Vercel, no .sync-state.json exists — return what we can
+      const token = process.env.GITHUB_TOKEN;
+      if (!token) {
+        return NextResponse.json({ success: true, total_articles: 0, last_sync: null, mode: 'vercel-no-token' });
+      }
+
+      const octokit = new Octokit({ auth: token });
+
+      // Count articles by listing the tree
+      const { data: ref } = await octokit.git.getRef({
+        owner: 'mcstew',
+        repo: 'sw-docs-control',
+        ref: 'heads/main',
+      });
+
+      const { data: tree } = await octokit.git.getTree({
+        owner: 'mcstew',
+        repo: 'sw-docs-control',
+        tree_sha: ref.object.sha,
+        recursive: 'true',
+      });
+
+      const mdFiles = tree.tree.filter(
+        (item) =>
+          item.type === 'blob' &&
+          item.path?.startsWith('sudowrite-documentation/') &&
+          item.path?.endsWith('.md') &&
+          !item.path?.includes('/.') &&
+          !item.path?.endsWith('INDEX.md')
+      );
+
+      // Get last sync time from recent commits
+      const { data: commits } = await octokit.repos.listCommits({
+        owner: 'mcstew',
+        repo: 'sw-docs-control',
+        per_page: 10,
+      });
+
+      const syncCommit = commits.find((c) =>
+        c.commit.message.startsWith('Sync ')
+      );
+
       return NextResponse.json({
         success: true,
-        total_articles: totalArticles,
-        synced_articles: totalArticles,
-        last_sync: null,
+        total_articles: mdFiles.length,
+        synced_articles: mdFiles.length,
+        last_sync: syncCommit?.commit.committer?.date || null,
         conflicts: 0,
         unsynced_articles: 0,
         mode: 'vercel',
@@ -39,6 +69,7 @@ export async function GET() {
     }
 
     // Local dev — full stats from sync state
+    const sync = await getSync();
     const stats = await sync.getSyncStats();
     return NextResponse.json({ success: true, ...stats });
   } catch (error) {

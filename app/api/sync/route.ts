@@ -10,6 +10,7 @@
 import { NextResponse } from 'next/server';
 import { auth } from '@/lib/auth';
 import { commitFiles, buildRepoPath, fetchRepoArticles } from '@/lib/github-sync';
+import { generateLlmsTxt, generateDocsRollup } from '@/lib/generate-rollups';
 import matter from 'gray-matter';
 import crypto from 'crypto';
 
@@ -33,14 +34,18 @@ const getHierarchy = async () => {
 const isVercel = !!process.env.VERCEL;
 
 /**
- * Normalize content before hashing — strip ephemeral S3 signed URL params
- * so that only real content changes trigger updates.
+ * Normalize content before hashing — strip ephemeral parts so that
+ * only real content changes trigger updates.
  */
 function normalizeContent(content: string): string {
-  return content.replace(
-    /\?X-Amz-[^)\s]*/g,
-    ''
-  );
+  return content
+    // Strip S3 signed URL query params (change every request)
+    .replace(/\?X-Amz-[^)\s\]]*/g, '')
+    // Normalize whitespace (Turndown may produce slightly different spacing)
+    .replace(/\r\n/g, '\n')
+    .replace(/[ \t]+$/gm, '')
+    .replace(/\n{3,}/g, '\n\n')
+    .trim();
 }
 
 function hashContent(content: string): string {
@@ -198,6 +203,27 @@ export async function POST() {
       });
     }
 
+    // Regenerate llms.txt and docs-rollup.md with the latest content
+    // Build a complete article list (merge local with changes)
+    const allArticles: { title: string; slug: string; category: string; content: string; last_updated?: string; id?: string }[] = [];
+    for (const remoteArticle of remoteArticles) {
+      const markdown = sync.extractArticleContent(remoteArticle);
+      allArticles.push({
+        title: remoteArticle.title,
+        slug: remoteArticle.slug,
+        category: remoteArticle.parentId || '',
+        content: markdown,
+        last_updated: remoteArticle.updatedAt || remoteArticle.updated_at,
+        id: remoteArticle.id,
+      });
+    }
+
+    const llmsTxt = generateLlmsTxt(allArticles);
+    const docsRollup = generateDocsRollup(allArticles);
+    filesToCommit.push({ path: 'llms.txt', content: llmsTxt });
+    filesToCommit.push({ path: 'docs-rollup.md', content: docsRollup });
+    results.details.push('Regenerated llms.txt and docs-rollup.md');
+
     if (isVercel) {
       const commit = await commitFiles(
         filesToCommit,
@@ -206,7 +232,7 @@ export async function POST() {
 
       return NextResponse.json({
         success: true,
-        message: `Synced ${results.updated} updated + ${results.created} new articles. Committed to GitHub.`,
+        message: `Synced ${results.updated} updated + ${results.created} new articles. Committed to GitHub — redeploy will follow.`,
         results,
         commit: commit.url,
         remoteCount: remoteArticles.length,
