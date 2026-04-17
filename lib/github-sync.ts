@@ -6,8 +6,8 @@
 import { Octokit } from '@octokit/rest';
 import matter from 'gray-matter';
 
-const REPO_OWNER = 'mcstew';
-const REPO_NAME = 'sw-docs-control';
+const REPO_OWNER = 'sudowrite';
+const REPO_NAME = 'docs-control';
 const BRANCH = 'main';
 const DOCS_PREFIX = 'sudowrite-documentation';
 
