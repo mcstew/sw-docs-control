@@ -763,7 +763,7 @@ Chat is **story aware**, which means it can see your existing work in order to b
 
 Specifically, when your Story Bible is turned on and filled in, **Chat can see your Genre, Synopsis, Characters, Worldbuilding, and Outline**. It also sees **the full text of the current document**, and it will focus on anything that you’ve **highlighted** in that document (while still seeing the full doc).
 
-Want to direct Chat’s attention to something or someone in particular? **Chat supports @ mentions** that can provide additional context. You can tag a specific Character or Worldbuilding element by using the @ tag. You can even use the @ tag to reference another document in the same project—for example, if you wanted Chat’s help comparing different versions of a chapter, or creating an interstitial chapter.
+Want to direct Chat’s attention to something or someone in particular? **Chat support # mentions** that can provide additional context. You can tag a specific Character or Worldbuilding element by using the # tag. You can even use the # tag to reference another document in the same project—for example, if you wanted Chat’s help comparing different versions of a chapter, or creating an interstitial chapter.
 
 ### Are there limits?
 
