@@ -23,7 +23,7 @@ export default async function DashboardLayout({
   const user = session?.user ?? { email: 'dev@sudowrite.com', name: 'Dev User' };
 
   return (
-    <div className="min-h-screen bg-[#0a0f14] text-slate-300 font-sans p-4 md:p-8 flex items-center justify-center">
+    <div className="min-h-screen bg-[#0a0f14] text-slate-300 font-sans p-4 md:p-6">
       {children}
     </div>
   );

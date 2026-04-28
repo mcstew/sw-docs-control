@@ -5,6 +5,7 @@ node_modules/
 .next/
 dist/
 build/
+tsconfig.tsbuildinfo
 
 # Environment variables (NEVER COMMIT THESE)
 .env

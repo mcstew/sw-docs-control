@@ -10,6 +10,7 @@ import {
   FileSearch,
   Activity,
 } from 'lucide-react';
+import ChatPanel from '../components/ChatPanel';
 
 interface Stats {
   total_articles: number;
@@ -110,7 +111,8 @@ export default function DashboardPage() {
     : '--';
 
   return (
-    <div className="max-w-4xl w-full bg-[#1a222c] rounded-2xl p-4 md:p-6 shadow-2xl border border-slate-800 relative overflow-hidden">
+    <div className="flex flex-col xl:flex-row gap-6 max-w-[1700px] mx-auto items-start">
+    <div className="flex-1 min-w-0 max-w-4xl w-full bg-[#1a222c] rounded-2xl p-4 md:p-6 shadow-2xl border border-slate-800 relative overflow-hidden">
 
       {/* Header */}
       <div className="flex justify-between items-center mb-6 px-2">
@@ -373,5 +375,11 @@ export default function DashboardPage() {
         </div>
       )}
     </div>
+
+    {/* Agent Chat — sidecar */}
+    <div className="w-full xl:w-[480px] xl:flex-shrink-0 h-[calc(100vh-3rem)] xl:sticky xl:top-6">
+      <ChatPanel />
+    </div>
+  </div>
   );
 }
