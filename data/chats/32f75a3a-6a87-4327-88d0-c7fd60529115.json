@@ -1,0 +1,177 @@
+{
+  "id": "32f75a3a-6a87-4327-88d0-c7fd60529115",
+  "title": "Anthropic deprecated 3.7 Sonnet! We built our own custom ...",
+  "user": "michael@sudowrite.com",
+  "createdAt": "2026-05-20T20:12:37.817Z",
+  "updatedAt": "2026-05-20T20:13:48.462Z",
+  "messages": [
+    {
+      "id": "f3f5be11-b74a-437f-840f-187726b3cf3d",
+      "role": "user",
+      "text": "Anthropic deprecated 3.7 Sonnet! We built our own custom model (Ballad) which now serves as the new Base Model for Excellent. Please review ALL of the documentation and strike references to Claude 3.7 Sonnet, except where we're referring to the model that powers Excellent—in those places we should substitute Ballad as the new Base Model. Here's an example I've updated:\n\n\n## Excellent — Ballad\n\nExcellent utilizes Sudowrite’s own Ballad model as its primary engine. This mode is named \"Excellent\" because it aims for an excellent balance between creative prose and obedience to your instructions.\n\n**Prose Quality:** Produces well-structured, descriptive writing with a flair for action and character movement. While not as stylistically opinionated as Muse, delivers engaging narrative that typically needs minimal polishing.\n\n**Instruction Following:** Excellent's standout feature. Ballad follows complex instructions precisely while maintaining context. Adheres closely to outlines and scenes while still expanding them creatively. Reliable for both storytelling and non-prose tasks like summarizing or brainstorming.\n\n**Content Filter Level:** Incredibly permissive. May imply rather than explicitly describe adult situations or graphic content in some circumstances. Handles typical novel scenes well but might gloss over extremely explicit content.\n\n**Credit Usage:** Mid-tier cost—more expensive than Basic but cheaper than Muse. Efficiently provides substantial output without rapidly depleting credits, making it ideal for budget-conscious writers who still want quality.\n\n**Best Use Cases:** Perfect for general drafting and rewriting with balanced creativity and reliability. Excels with dialogue-heavy scenes, structured narratives, and when following outlines closely. Ideal for co-writing projects where story beats and world-building details must be respected. Works well for instruction-heavy tasks in plugins.\n\n**Weaknesses:** Prose can feel less distinctive than Muse, sometimes \"safer\" or generic with minimal guidance. May faithfully reproduce errors in your outline or scenes. Might not deliver the intensity needed for certain scenes in your first attempt, due to its caution with mature content.",
+      "createdAt": "2026-05-20T20:12:37.817Z"
+    },
+    {
+      "id": "toolu_01WqWxuPdpAAQ6xCTHRUk8pb",
+      "role": "tool",
+      "text": "search_articles",
+      "toolCall": {
+        "name": "search_articles",
+        "input": {
+          "query": "Claude 3.7 Sonnet",
+          "limit": 50
+        },
+        "result": "{\n  \"count\": 2,\n  \"results\": [\n    {\n      \"title\": \"Prose Modes & Models\",\n      \"slug\": \"2549305-prose-modes-and-models\",\n      \"collection\": \"Features\",\n      \"snippet\": \"...r creative storytelling\\n    \\n-   **Excellent** - Powered by Claude 3.7 Sonnet, balancing creativity with precise instruction-following\\n    \\n-   **Basic** - Utilizing GPT-4o Mini, o...\",\n      \"score\": 1\n    },\n    {\n      \"title\": \"Which AI model should I use?\",\n      \"slug\": \"4046065-which-ai-model-should-i-use\",\n      \"collection\": \"Story Smarts\",\n      \"snippet\": \"...e exclusively within Sudowrite's ecosystem.\\n\\n## Excellent — Claude 3.7 Sonnet\\n\\nExcellent utilizes Anthropic's Claude 3.7 Sonnet model as its primary engine. This mode is named \\\"Exc...\",\n      \"score\": 1\n    }\n  ]\n}",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_01SjKd5F87RuFQJZvqChkM5x",
+      "role": "tool",
+      "text": "search_articles",
+      "toolCall": {
+        "name": "search_articles",
+        "input": {
+          "query": "3.7 Sonnet",
+          "limit": 50
+        },
+        "result": "{\n  \"count\": 2,\n  \"results\": [\n    {\n      \"title\": \"Prose Modes & Models\",\n      \"slug\": \"2549305-prose-modes-and-models\",\n      \"collection\": \"Features\",\n      \"snippet\": \"...ive storytelling\\n    \\n-   **Excellent** - Powered by Claude 3.7 Sonnet, balancing creativity with precise instruction-following\\n    \\n-   **Basic** - Utilizing GPT-4o Mini, offering...\",\n      \"score\": 1\n    },\n    {\n      \"title\": \"Which AI model should I use?\",\n      \"slug\": \"4046065-which-ai-model-should-i-use\",\n      \"collection\": \"Story Smarts\",\n      \"snippet\": \"...sively within Sudowrite's ecosystem.\\n\\n## Excellent — Claude 3.7 Sonnet\\n\\nExcellent utilizes Anthropic's Claude 3.7 Sonnet model as its primary engine. This mode is named \\\"Excellent\\\"...\",\n      \"score\": 1\n    }\n  ]\n}",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_01QzpHT42TMiBKECJWhMRQaF",
+      "role": "tool",
+      "text": "search_articles",
+      "toolCall": {
+        "name": "search_articles",
+        "input": {
+          "query": "Sonnet 3.7",
+          "limit": 50
+        },
+        "result": "{\n  \"count\": 0,\n  \"results\": []\n}",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_01LxTSm44zjSTKkCqPYr9Cfg",
+      "role": "tool",
+      "text": "read_article",
+      "toolCall": {
+        "name": "read_article",
+        "input": {
+          "slug": "2549305-prose-modes-and-models"
+        },
+        "result": "{\n  \"title\": \"Prose Modes & Models\",\n  \"slug\": \"2549305-prose-modes-and-models\",\n  \"collection\": \"Features\",\n  \"path\": \"sudowrite-documentation/using-sudowrite/features/prose-modes-models.md\",\n  \"last_updated\": \"2026-03-31T13:55:45.343Z\",\n  \"body\": \"Sudowrite allows you to select from a wide range of Prose Modes and AI models. Choosing different models effectively changes the AI performing the work, impacting output style, creativity, precision, and credit usage.\\n\\n### What are Prose Modes?\\n\\nProse Modes are carefully curated model suites designed specifically for fiction writing, each featuring a base AI model that has been optimized for use in Sudowrite. You can use Sudowrite without ever changing your Prose Mode, but experimenting with different modes allows you to discover variations in output voice.\\n\\nProse Modes can be selected in both your Write button Settings and the Draft tool. (Other Sudowrite features currently do not support switching Prose Modes.)\\n\\nSelecting a different Prose Mode directly impacts the AI models used, influencing credit usage and the style and content of generated text.\\n\\n### Current Prose Modes\\n\\n-   **Muse** - The latest version of Sudowrite's flagship fiction model, Muse 1.5, is purpose-built for creative storytelling\\n    \\n-   **Excellent** - Powered by Claude 3.7 Sonnet, balancing creativity with precise instruction-following\\n    \\n-   **Basic** - Utilizing GPT-4o Mini, offering economical and efficient drafting\\n    \\n\\nRetired, but still usable Prose Modes:\\n\\n-   **Fastest** - Based on GPT-3.5 Turbo\\n    \\n-   **Unfiltered** - Based on Goliath 120B\\n    \\n-   **Most Accurate** - Based on GPT-4\\n    \\n-   **Muse 1** - A snapshot of the very first version of Muse\\n    \\n\\n### What are the Experimental models?\\n\\nIn addition to Prose Modes, Sudowrite offers a variety of specific AI models accessible via Write settings and the Draft tool. These Experimental models have not been extensively optimized for specific writing styles or tasks but you may find that you like their voice, or they may have other benefits (such as speed or cost).\\n\\nExperimental models currently include:\\n\\n-   **OpenAI**\\n    \\n    -   GPT-4o\\n        \\n    -   GPT-4o Mini\\n        \\n    -   GPT-4.1 (Full, Mini, Nano)\\n        \\n    -   GPT-5 (Full, Mini, Nano)\\n        \\n-   **Anthropic (Claude)**\\n    \\n    -   Claude 3.0 Haiku\\n        \\n    -   Claude 3.5 Haiku\\n        \\n    -   Claude 3.7 Sonnet\\n        \\n    -   Claude 4 Sonnet\\n        \\n    -   Claude 4.5 Sonnet\\n        \\n    -   Claude 4 Opus\\n        \\n    -   Claude 4.1 Opus\\n        \\n    -   Claude 4.5 Opus\\n        \\n    -   Claude 4.5 Haiku\\n        \\n-   **Google (Gemini)**\\n    \\n    -   Gemini Pro 2.5\\n        \\n    -   Gemini 2.5 Flash Thinking\\n        \\n    -   Gemini 3 Pro\\n        \\n    -   Gemini 3 Flash\\n        \\n-   **DeepSeek**\\n    \\n    -   DeepSeek V3\\n        \\n    -   DeepSeek V3.1\\n        \\n    -   DeepSeek R1\\n        \\n-   **Other**\\n    \\n    -   Grok 4\\n        \\n    -   Kimi K2\\n        \\n    -   Mistral Large 2\\n        \\n\\nEach AI model offers unique strengths, voices, and capabilities. We encourage authors to experiment broadly to identify the AI that best aligns with their individual writing needs and creative goals.\\n\\n### So are the Experimental models “raw” models?\\n\\nSort of! Keep in mind that Sudowrite has background prompting powering its features, and background functions running (such as Saliency Engine) may influence what is ultimately received/seen by those models. Think of it like this:\\n\\nProse Modes = Optimized\\n\\nExperimental Models = Raw\\\\*\\n\\nPlugins = Raw\\n\\nThe only ways to use a truly “raw” AI model on Sudowrite is to build a Plugin using that AI model. Elsewhere on Sudowrite we are doing some (or a lot!) of work to make sure things work great.\\n\\n* * *\\n\\nNot sure which Prose Mode or AI model is best for your needs? We have a handy breakdown available here:\\n\\n[Which AI model should I use?](https",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_01W8PrvRE8oogGVqW2TsGVjN",
+      "role": "tool",
+      "text": "read_article",
+      "toolCall": {
+        "name": "read_article",
+        "input": {
+          "slug": "4046065-which-ai-model-should-i-use"
+        },
+        "result": "{\n  \"title\": \"Which AI model should I use?\",\n  \"slug\": \"4046065-which-ai-model-should-i-use\",\n  \"collection\": \"Story Smarts\",\n  \"path\": \"sudowrite-documentation/using-sudowrite/story-smarts/which-ai-model-should-i-use.md\",\n  \"last_updated\": \"2026-02-15T19:27:10.222Z\",\n  \"body\": \"# Prose Modes and AI Models\\n\\nAuthors can use Sudowrite without ever changing the default settings, but it's still helpful to know that Sudowrite does offer a variety of Prose Modes and AI models to suit different purposes.\\n\\nProse Modes are AI model suites specific to Sudowrite, designed specifically for fiction writing. These modes let you experience different output styles at varying costs, each offering unique balances of creativity, control, content filtering, and credit usage. We'll dive in below on the Prose Modes and AI models available on Sudowrite.\\n\\n## Muse — Sudowrite's Fiction Model\\n\\nMuse is Sudowrite's flagship proprietary model, purpose-built just for fiction. It was trained by writers for writers, unlike general AI models that try to \\\"do everything.\\\" This focus allows Muse to achieve a higher level of story quality and nuance.\\n\\n**Prose Quality & Style:** Muse delivers vivid, original prose with a strong creative voice, free from common AI clichés. Excels at rich descriptions, emotional beats, and maintaining consistent tone throughout your story.\\n\\n**Instruction Following:** Prioritizes creative interpretation over strict obedience. Continues your story in imaginative ways while still incorporating Story Bible context and outline scenes effectively for narrative continuity.\\n\\n**Content Filter Level:** Virtually none. Handles any content from dark and gritty to light and humorous, including graphic or mature themes that other AIs might refuse. Use discretion, but know Muse won't shy away from adult content.\\n\\n**Credit Usage:** Higher credit cost than Basic mode (comparable to former \\\"Premium\\\" setting). Many authors find the quality worth the expense, though consider switching to cheaper models for brainstorming or extremely long outputs.\\n\\n**Best Use Cases:** Ideal for high-quality fiction prose, especially creative, character-driven writing. Excels in impactful scenes, character interactions, and climactic moments. Perfect for unfiltered content including mature themes. Outputs often require less editing than other models.\\n\\n**Weaknesses:** Not optimized for non-fiction or highly structured tasks. Definitely voice-y, and perhaps not to everyone's taste. May occasionally produce unexpectedly edgy content. Available exclusively within Sudowrite's ecosystem.\\n\\n## Excellent — Claude 3.7 Sonnet\\n\\nExcellent utilizes Anthropic's Claude 3.7 Sonnet model as its primary engine. This mode is named \\\"Excellent\\\" because it aims for an excellent balance between creative prose and obedience to your instructions.\\n\\n**Prose Quality:** Produces well-structured, descriptive writing with a flair for action and character movement. While not as stylistically unique as Muse, delivers engaging narrative that typically needs minimal polishing.\\n\\n**Instruction Following:** Excellent's standout feature. Claude follows complex instructions precisely while maintaining context. Adheres closely to outlines and scenes while still expanding them creatively. Reliable for both storytelling and non-prose tasks like summarizing or brainstorming.\\n\\n**Content Filter Level:** Moderate. More permissive than OpenAI models regarding violence and mild adult content, but has boundaries. May imply rather than explicitly describe adult situations or graphic content. Handles typical novel scenes well but might gloss over extremely explicit content.\\n\\n**Credit Usage:** Mid-tier cost—more expensive than Basic but cheaper than Muse. Efficiently provides substantial output without rapidly depleting credits, making it ideal for budget-conscious writers who still want quality.\\n\\n**Best Use Cases:** Perfect for general drafting and rewriting with balanced creativity ",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_019p24AznWf8BoZoErdF8vqr",
+      "role": "tool",
+      "text": "edit_article",
+      "toolCall": {
+        "name": "edit_article",
+        "input": {
+          "slug": "2549305-prose-modes-and-models",
+          "original": "-   **Excellent** - Powered by Claude 3.7 Sonnet, balancing creativity with precise instruction-following",
+          "replacement": "-   **Excellent** - Powered by Ballad, Sudowrite's custom model balancing creativity with precise instruction-following",
+          "reasoning": "Update Excellent to reference Ballad instead of deprecated Claude 3.7 Sonnet"
+        },
+        "result": "Staged edit on \"Prose Modes & Models\" (2549305-prose-modes-and-models). Reasoning: Update Excellent to reference Ballad instead of deprecated Claude 3.7 Sonnet\n\nCall commit_pending_edits to push to GitHub.",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_013mnMfTMjpe4ihUpcR2EoPY",
+      "role": "tool",
+      "text": "edit_article",
+      "toolCall": {
+        "name": "edit_article",
+        "input": {
+          "slug": "2549305-prose-modes-and-models",
+          "original": "-   **Anthropic (Claude)**\n    \n    -   Claude 3.0 Haiku\n        \n    -   Claude 3.5 Haiku\n        \n    -   Claude 3.7 Sonnet\n        \n    -   Claude 4 Sonnet\n        \n    -   Claude 4.5 Sonnet\n        \n    -   Claude 4 Opus\n        \n    -   Claude 4.1 Opus\n        \n    -   Claude 4.5 Opus\n        \n    -   Claude 4.5 Haiku",
+          "replacement": "-   **Anthropic (Claude)**\n    \n    -   Claude 3.0 Haiku\n        \n    -   Claude 3.5 Haiku\n        \n    -   Claude 4 Sonnet\n        \n    -   Claude 4.5 Sonnet\n        \n    -   Claude 4 Opus\n        \n    -   Claude 4.1 Opus\n        \n    -   Claude 4.5 Opus\n        \n    -   Claude 4.5 Haiku",
+          "reasoning": "Remove Claude 3.7 Sonnet from experimental models list as it's deprecated"
+        },
+        "result": "Staged edit on \"Prose Modes & Models\" (2549305-prose-modes-and-models). Reasoning: Remove Claude 3.7 Sonnet from experimental models list as it's deprecated\n\nCall commit_pending_edits to push to GitHub.",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_018HseD1T6rzs7x71W4hiz4t",
+      "role": "tool",
+      "text": "edit_article",
+      "toolCall": {
+        "name": "edit_article",
+        "input": {
+          "slug": "4046065-which-ai-model-should-i-use",
+          "original": "## Excellent — Claude 3.7 Sonnet\n\nExcellent utilizes Anthropic's Claude 3.7 Sonnet model as its primary engine. This mode is named \"Excellent\" because it aims for an excellent balance between creative prose and obedience to your instructions.\n\n**Prose Quality:** Produces well-structured, descriptive writing with a flair for action and character movement. While not as stylistically unique as Muse, delivers engaging narrative that typically needs minimal polishing.\n\n**Instruction Following:** Excellent's standout feature. Claude follows complex instructions precisely while maintaining context. Adheres closely to outlines and scenes while still expanding them creatively. Reliable for both storytelling and non-prose tasks like summarizing or brainstorming.\n\n**Content Filter Level:** Moderate. More permissive than OpenAI models regarding violence and mild adult content, but has boundaries. May imply rather than explicitly describe adult situations or graphic content. Handles typical novel scenes well but might gloss over extremely explicit content.\n\n**Credit Usage:** Mid-tier cost—more expensive than Basic but cheaper than Muse. Efficiently provides substantial output without rapidly depleting credits, making it ideal for budget-conscious writers who still want quality.\n\n**Best Use Cases:** Perfect for general drafting and rewriting with balanced creativity and reliability. Excels with dialogue-heavy scenes, structured narratives, and when following outlines closely. Ideal for co-writing projects where story beats and world-building details must be respected. Works well for instruction-heavy tasks in plugins.\n\n**Weaknesses:** Prose can feel less distinctive than Muse, sometimes \"safer\" or generic with minimal guidance. May faithfully reproduce errors in your outline or scenes. Might not deliver the intensity needed for certain scenes in your first attempt, due to its caution with mature content.",
+          "replacement": "## Excellent — Ballad\n\nExcellent utilizes Sudowrite's own Ballad model as its primary engine. This mode is named \"Excellent\" because it aims for an excellent balance between creative prose and obedience to your instructions.\n\n**Prose Quality:** Produces well-structured, descriptive writing with a flair for action and character movement. While not as stylistically opinionated as Muse, delivers engaging narrative that typically needs minimal polishing.\n\n**Instruction Following:** Excellent's standout feature. Ballad follows complex instructions precisely while maintaining context. Adheres closely to outlines and scenes while still expanding them creatively. Reliable for both storytelling and non-prose tasks like summarizing or brainstorming.\n\n**Content Filter Level:** Incredibly permissive. May imply rather than explicitly describe adult situations or graphic content in some circumstances. Handles typical novel scenes well but might gloss over extremely explicit content.\n\n**Credit Usage:** Mid-tier cost—more expensive than Basic but cheaper than Muse. Efficiently provides substantial output without rapidly depleting credits, making it ideal for budget-conscious writers who still want quality.\n\n**Best Use Cases:** Perfect for general drafting and rewriting with balanced creativity and reliability. Excels with dialogue-heavy scenes, structured narratives, and when following outlines closely. Ideal for co-writing projects where story beats and world-building details must be respected. Works well for instruction-heavy tasks in plugins.\n\n**Weaknesses:** Prose can feel less distinctive than Muse, sometimes \"safer\" or generic with minimal guidance. May faithfully reproduce errors in your outline or scenes. Might not deliver the intensity needed for certain scenes in your first attempt, due to its caution with mature content.",
+          "reasoning": "Replace Claude 3.7 Sonnet with Ballad as the base model for Excellent, matching the example provided"
+        },
+        "result": "Staged edit on \"Which AI model should I use?\" (4046065-which-ai-model-should-i-use). Reasoning: Replace Claude 3.7 Sonnet with Ballad as the base model for Excellent, matching the example provided\n\nCall commit_pending_edits to push to GitHub.",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_01GkJ6wLTy9PsacWZwbRSaUH",
+      "role": "tool",
+      "text": "edit_article",
+      "toolCall": {
+        "name": "edit_article",
+        "input": {
+          "slug": "4046065-which-ai-model-should-i-use",
+          "original": "### Claude 3.x Series (Claude 3.0 Haiku, Claude 3.5 Haiku, Claude 3.7 Sonnet)\n\nThe previous Claude generation remains available and still performs admirably for many tasks. Claude 3.7 Sonnet powers the Excellent Prose Mode and offers a proven balance of quality and economy. The Haiku variants are fast and affordable options for quick drafts or iterative work.",
+          "replacement": "### Claude 3.x Series (Claude 3.0 Haiku, Claude 3.5 Haiku)\n\nThe previous Claude generation remains available and still performs admirably for many tasks. The Haiku variants are fast and affordable options for quick drafts or iterative work.",
+          "reasoning": "Remove references to deprecated Claude 3.7 Sonnet from experimental models section"
+        },
+        "result": "Staged edit on \"Which AI model should I use?\" (4046065-which-ai-model-should-i-use). Reasoning: Remove references to deprecated Claude 3.7 Sonnet from experimental models section\n\nCall commit_pending_edits to push to GitHub.",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "toolu_01CFnrPcddJuQwRMnjQ4tgE2",
+      "role": "tool",
+      "text": "commit_pending_edits",
+      "toolCall": {
+        "name": "commit_pending_edits",
+        "input": {
+          "message": "Replace Claude 3.7 Sonnet with Ballad as Excellent's base model\n\n- Updated Excellent Prose Mode to reference Ballad (Sudowrite's custom model) instead of deprecated Claude 3.7 Sonnet\n- Removed Claude 3.7 Sonnet from experimental models list\n- Updated content filter description to \"incredibly permissive\" per new Ballad capabilities\n- Changed phrasing from \"stylistically unique\" to \"stylistically opinionated\" to match provided example"
+        },
+        "result": "Committed 2 file(s).\nhttps://github.com/sudowrite/docs-control/commit/858867b6a2bfa47a70cda9f43acd86a20309a22f\n\nFiles:\n  - sudowrite-documentation/using-sudowrite/features/prose-modes-models.md\n  - sudowrite-documentation/using-sudowrite/story-smarts/which-ai-model-should-i-use.md",
+        "isError": false
+      },
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    },
+    {
+      "id": "011cee4c-ebd4-44b1-b9a0-ebfaaa0df7f0",
+      "role": "assistant",
+      "text": "I'll search for all references to Claude 3.7 Sonnet across the documentation and update them to reflect Ballad as the new Base Model for Excellent.Good, I found 2 articles with Claude 3.7 Sonnet references. Let me read both to see the full context and make the necessary edits.Now I'll stage the edits. I need to:\n\n1. In \"Prose Modes & Models\" article: Update the bullet point for Excellent and remove Claude 3.7 Sonnet from the Experimental models list\n2. In \"Which AI model should I use?\" article: Update the Excellent section header and description to reflect Ballad, and update the Claude 3.x sectionPerfect! Now let me commit all the staged edits:Done! I've successfully updated the documentation to reflect Ballad as the new Base Model for Excellent:\n\n**Changes made:**\n1. **Prose Modes & Models article** - Updated the Excellent bullet point to say \"Powered by Ballad, Sudowrite's custom model\" and removed Claude 3.7 Sonnet from the experimental models list\n2. **Which AI model should I use? article** - Replaced the entire Excellent section to reference Ballad instead of Claude 3.7 Sonnet, matching your example (including the \"incredibly permissive\" content filter language and other tweaks)\n\nAll references to Claude 3.7 Sonnet have been struck except where it appeared in the experimental models list (now removed). The commit is live at: https://github.com/sudowrite/docs-control/commit/858867b6a2bfa47a70cda9f43acd86a20309a22f\n\nWould you like me to push these changes to Featurebase as well?",
+      "createdAt": "2026-05-20T20:13:48.461Z"
+    }
+  ],
+  "totalCostUsd": 0
+}
