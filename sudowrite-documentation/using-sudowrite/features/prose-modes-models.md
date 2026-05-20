@@ -4,7 +4,7 @@ slug: 2549305-prose-modes-and-models
 category: '5442133'
 collection_name: Features
 featurebase_id: '2549305'
-last_updated: '2026-03-31T13:55:45.343Z'
+last_updated: '2026-05-20T20:13:39.868Z'
 synced_at: '2026-04-01T15:19:16.754Z'
 source: featurebase
 ---
@@ -22,7 +22,7 @@ Selecting a different Prose Mode directly impacts the AI models used, influencin
 
 -   **Muse** - The latest version of Sudowrite's flagship fiction model, Muse 1.5, is purpose-built for creative storytelling
     
--   **Excellent** - Powered by Claude 3.7 Sonnet, balancing creativity with precise instruction-following
+-   **Excellent** - Powered by Ballad, Sudowrite's custom model balancing creativity with precise instruction-following
     
 -   **Basic** - Utilizing GPT-4o Mini, offering economical and efficient drafting
     
@@ -59,8 +59,6 @@ Experimental models currently include:
     -   Claude 3.0 Haiku
         
     -   Claude 3.5 Haiku
-        
-    -   Claude 3.7 Sonnet
         
     -   Claude 4 Sonnet
         
