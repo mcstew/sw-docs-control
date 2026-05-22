@@ -6,6 +6,9 @@
 import { NextResponse } from 'next/server';
 import { Octokit } from '@octokit/rest';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 const isVercel = !!process.env.VERCEL;
 
 const getSync = async (): Promise<any> => {
@@ -65,6 +68,10 @@ export async function GET() {
         conflicts: 0,
         unsynced_articles: 0,
         mode: 'vercel',
+      }, {
+        headers: {
+          'Cache-Control': 'public, max-age=0, s-maxage=60, stale-while-revalidate=300',
+        },
       });
     }
 

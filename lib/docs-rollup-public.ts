@@ -1,6 +1,10 @@
 import { readFile } from 'fs/promises';
 import path from 'path';
 
+const REPO_OWNER = 'sudowrite';
+const REPO_NAME = 'docs-control';
+const BRANCH = 'main';
+const ROLLUP_PATH = 'docs-rollup.md';
 const SECTION_HEADING = /^# (.+)$/;
 const GENERATED = /^> Generated:\s*(.+)$/m;
 const TOTAL_ARTICLES = /^> Total Articles:\s*(\d+)$/m;
@@ -24,7 +28,41 @@ export type DocsRollupSummary = {
 };
 
 export async function readDocsRollup() {
+  if (process.env.VERCEL || process.env.DOCS_ROLLUP_SOURCE === 'github') {
+    try {
+      return await readGithubDocsRollup();
+    } catch (error) {
+      console.warn('[public-docs] Falling back to bundled docs-rollup.md:', (error as Error).message);
+    }
+  }
+
   return readFile(path.join(process.cwd(), 'docs-rollup.md'), 'utf8');
+}
+
+async function readGithubDocsRollup() {
+  const token = process.env.GITHUB_TOKEN;
+  const res = await fetch(
+    `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${ROLLUP_PATH}?ref=${BRANCH}`,
+    {
+      cache: 'no-store',
+      headers: {
+        Accept: 'application/vnd.github+json',
+        'User-Agent': 'docs-control-public-rollup',
+        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      },
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error(`GitHub ${res.status}: ${await res.text()}`);
+  }
+
+  const data: any = await res.json();
+  if (!data?.content) {
+    throw new Error('GitHub response did not include file content');
+  }
+
+  return Buffer.from(String(data.content), 'base64').toString('utf8');
 }
 
 export function parseDocsRollup(markdown: string): DocsRollupSummary {
