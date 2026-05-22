@@ -4,6 +4,7 @@
 
 import { commitFiles, fetchRepoArticles } from './github-sync';
 import { FeaturebaseClient } from './featurebase-client.js';
+import { generateLlmsTxt, generateDocsRollup } from './generate-rollups';
 import matter from 'gray-matter';
 import type { EditProposal } from './improve-agent';
 
@@ -48,26 +49,10 @@ export async function applyProposal(proposal: EditProposal): Promise<ApplyResult
 
   const updatedContent = originalContent.replace(proposal.original, proposal.replacement);
 
-  // 3. Rebuild the full file with frontmatter
-  const updatedFile = matter.stringify(updatedContent, {
-    ...articleEntry.frontmatter,
-    last_updated: new Date().toISOString(),
-    synced_at: new Date().toISOString(),
-  });
+  const timestamp = new Date().toISOString();
 
-  // 4. Commit to GitHub
-  try {
-    const commit = await commitFiles(
-      [{ path: articleEntry.path, content: updatedFile }],
-      `Improve: ${proposal.editType} in "${proposal.articleTitle}"\n\n${proposal.reasoning}`
-    );
-    result.github = true;
-    result.githubUrl = commit.url;
-  } catch (err) {
-    result.errors.push(`GitHub commit failed: ${(err as Error).message}`);
-  }
-
-  // 5. Push to Featurebase
+  // 3. Push to Featurebase first; the repo commit records synced_at only if
+  // the live write succeeded.
   const apiKey = process.env.FEATUREBASE_API_KEY;
   if (apiKey && featurebaseId) {
     try {
@@ -75,6 +60,8 @@ export async function applyProposal(proposal: EditProposal): Promise<ApplyResult
       await client.updateArticle(featurebaseId, {
         title: articleEntry.frontmatter.title,
         body: updatedContent, // Featurebase accepts markdown in body
+        formatter: 'ai',
+        state: 'live',
       });
       result.featurebase = true;
     } catch (err) {
@@ -82,6 +69,42 @@ export async function applyProposal(proposal: EditProposal): Promise<ApplyResult
     }
   } else {
     result.errors.push('FEATUREBASE_API_KEY not configured — skipped Featurebase update');
+  }
+
+  const updatedFrontmatter = {
+    ...articleEntry.frontmatter,
+    last_updated: timestamp,
+    ...(result.featurebase ? { synced_at: timestamp, source: 'featurebase' } : {}),
+  };
+
+  const updatedFile = matter.stringify(updatedContent, updatedFrontmatter);
+
+  const rollupArticles = Array.from(articles.entries()).map(([id, a]) => {
+    const fm = id === featurebaseId ? updatedFrontmatter : a.frontmatter;
+    return {
+      title: fm.title || 'Untitled',
+      slug: fm.slug || '',
+      category: fm.category || '',
+      content: id === featurebaseId ? updatedContent : a.content,
+      last_updated: fm.last_updated,
+      id,
+    };
+  });
+
+  // 4. Commit article + generated agent files to GitHub.
+  try {
+    const commit = await commitFiles(
+      [
+        { path: articleEntry.path, content: updatedFile },
+        { path: 'llms.txt', content: generateLlmsTxt(rollupArticles) },
+        { path: 'docs-rollup.md', content: generateDocsRollup(rollupArticles) },
+      ],
+      `Improve: ${proposal.editType} in "${proposal.articleTitle}"\n\n${proposal.reasoning}`
+    );
+    result.github = true;
+    result.githubUrl = commit.url;
+  } catch (err) {
+    result.errors.push(`GitHub commit failed: ${(err as Error).message}`);
   }
 
   return result;

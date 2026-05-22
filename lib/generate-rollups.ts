@@ -57,6 +57,10 @@ function getDescription(content: string): string {
   return 'Documentation article';
 }
 
+function cleanArticleContent(content: string): string {
+  return content.replace(/\r\n/g, '\n').replace(/[ \t]+$/gm, '').trim();
+}
+
 function groupBySection(articles: Article[]) {
   const grouped = new Map<string, Map<string, Article[]>>();
 
@@ -132,7 +136,7 @@ export function generateDocsRollup(articles: Article[]): string {
         content += `**Slug:** ${article.slug}\n`;
         if (article.id) content += `**ID:** ${article.id}\n`;
         content += `**Last Updated:** ${article.last_updated || 'Unknown'}\n\n`;
-        content += article.content;
+        content += cleanArticleContent(article.content);
         content += '\n\n---\n\n';
       }
     }

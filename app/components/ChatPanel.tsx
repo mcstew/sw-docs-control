@@ -361,14 +361,14 @@ function EmptyState() {
     'List all articles that mention the Muse model',
     'Compare the local "Story Bible" article against what is live in Featurebase',
     'Audit our docs against this changelog: ...',
-    'Find articles older than 6 months that may be stale',
+    'Update every article that still calls Excellent Claude 3.7 Sonnet',
   ];
   return (
     <div className="text-center py-8 px-4">
       <Sparkles className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
       <h3 className="text-slate-200 font-medium text-sm mb-1">Ask the agent</h3>
       <p className="text-slate-500 text-xs mb-4">
-        It can read the repo, hit Featurebase, run audits, and commit edits.
+        It can read the repo, hit Featurebase, run audits, publish edits, and refresh rollups.
       </p>
       <div className="space-y-1.5 text-left">
         {examples.map((ex, i) => (

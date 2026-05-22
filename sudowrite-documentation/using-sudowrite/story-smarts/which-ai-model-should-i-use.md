@@ -4,8 +4,8 @@ slug: 4046065-which-ai-model-should-i-use
 category: '5566496'
 collection_name: Story Smarts
 featurebase_id: '4046065'
-last_updated: '2026-04-17T17:16:10.030Z'
-synced_at: '2026-05-21T17:28:40.649Z'
+last_updated: '2026-05-21T20:53:00.000Z'
+synced_at: '2026-05-22T13:21:41.000Z'
 source: featurebase
 ---
 # Prose Modes and AI Models
@@ -30,15 +30,15 @@ Muse is Sudowrite's flagship proprietary model, purpose-built just for fiction. 
 
 **Weaknesses:** Not optimized for non-fiction or highly structured tasks. Definitely voice-y, and perhaps not to everyone's taste. May occasionally produce unexpectedly edgy content. Available exclusively within Sudowrite's ecosystem.
 
-## Excellent — Claude 3.7 Sonnet
+## Excellent — Ballad
 
-Excellent utilizes Anthropic's Claude 3.7 Sonnet model as its primary engine. This mode is named "Excellent" because it aims for an excellent balance between creative prose and obedience to your instructions.
+Excellent utilizes Sudowrite's own Ballad model as its primary engine. This mode is named "Excellent" because it aims for an excellent balance between creative prose and obedience to your instructions.
 
-**Prose Quality:** Produces well-structured, descriptive writing with a flair for action and character movement. While not as stylistically unique as Muse, delivers engaging narrative that typically needs minimal polishing.
+**Prose Quality:** Produces well-structured, descriptive writing with a flair for action and character movement. While not as stylistically opinionated as Muse, delivers engaging narrative that typically needs minimal polishing.
 
-**Instruction Following:** Excellent's standout feature. Claude follows complex instructions precisely while maintaining context. Adheres closely to outlines and scenes while still expanding them creatively. Reliable for both storytelling and non-prose tasks like summarizing or brainstorming.
+**Instruction Following:** Excellent's standout feature. Ballad follows complex instructions precisely while maintaining context. Adheres closely to outlines and scenes while still expanding them creatively. Reliable for both storytelling and non-prose tasks like summarizing or brainstorming.
 
-**Content Filter Level:** Moderate. More permissive than OpenAI models regarding violence and mild adult content, but has boundaries. May imply rather than explicitly describe adult situations or graphic content. Handles typical novel scenes well but might gloss over extremely explicit content.
+**Content Filter Level:** Incredibly permissive. May imply rather than explicitly describe adult situations or graphic content in some circumstances. Handles typical novel scenes well but might gloss over extremely explicit content.
 
 **Credit Usage:** Mid-tier cost—more expensive than Basic but cheaper than Muse. Efficiently provides substantial output without rapidly depleting credits, making it ideal for budget-conscious writers who still want quality.
 
@@ -95,9 +95,9 @@ The Claude 4 generation introduced hybrid reasoning capabilities, allowing model
 
 **Weaknesses:** Can occasionally be wordy—Sonnet 4.5 sometimes doubles word counts during rewrites. Watch for AI-isms like em-dash overuse. Opus variants are slow and expensive, best reserved for critical work.
 
-### Claude 3.x Series (Claude 3.0 Haiku, Claude 3.5 Haiku, Claude 3.7 Sonnet)
+### Claude 3.x Series (Claude 3.0 Haiku, Claude 3.5 Haiku)
 
-The previous Claude generation remains available and still performs admirably for many tasks. Claude 3.7 Sonnet powers the Excellent Prose Mode and offers a proven balance of quality and economy. The Haiku variants are fast and affordable options for quick drafts or iterative work.
+The previous Claude generation remains available and still performs admirably for many tasks. The Haiku variants are fast and affordable options for quick drafts or iterative work.
 
 ## OpenAI Models — GPT-4o, GPT-4.1, and GPT-5 Suites
 

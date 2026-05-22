@@ -16,6 +16,7 @@ import {
   fetchRepoArticles,
   commitFiles,
 } from './github-sync';
+import { generateLlmsTxt, generateDocsRollup } from './generate-rollups';
 
 const MODEL = 'claude-sonnet-4-5';
 const MAX_TOOL_ITERATIONS = 20;
@@ -88,7 +89,7 @@ export const TOOLS: Anthropic.Messages.Tool[] = [
   {
     name: 'commit_pending_edits',
     description:
-      'Commit all staged article edits to the GitHub repo as a single commit. Returns the commit URL. No-op if nothing is staged.',
+      'Publish all staged article edits: push them to Featurebase when configured, regenerate llms.txt and docs-rollup.md, then commit the article and rollup changes to GitHub as a single commit. Returns the commit URL. No-op if nothing is staged.',
     input_schema: {
       type: 'object',
       properties: {
@@ -253,6 +254,38 @@ const findArticle = (rt: AgentRuntime, slugOrTitle: string): CachedArticle | nul
 const ok = (text: string) => text;
 const err = (text: string) => `ERROR: ${text}`;
 
+async function publishArticleToFeaturebase(article: CachedArticle): Promise<string | null> {
+  const apiKey = process.env.FEATUREBASE_API_KEY;
+  if (!apiKey) return 'FEATUREBASE_API_KEY not configured';
+
+  const res = await fetch(`${FB_BASE_URL}/v2/help_center/articles/${article.id}`, {
+    method: 'PATCH',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Content-Type': 'application/json',
+      'Featurebase-Version': FB_API_VERSION,
+    },
+    body: JSON.stringify({ title: article.title, body: article.body, formatter: 'ai', state: 'live' }),
+  });
+
+  if (!res.ok) {
+    return `Featurebase ${res.status}: ${await res.text()}`;
+  }
+
+  return null;
+}
+
+function rollupArticlesFromRuntime(rt: AgentRuntime) {
+  return [...rt.articles.values()].map((a) => ({
+    title: a.title,
+    slug: a.slug,
+    category: a.frontmatter.category || '',
+    content: a.body,
+    last_updated: a.frontmatter.last_updated,
+    id: a.id,
+  }));
+}
+
 const handlers: Record<string, ToolHandler> = {
   list_articles: async (_input, rt) => {
     const items = [...rt.articles.values()].map((a) => ({
@@ -328,13 +361,42 @@ const handlers: Record<string, ToolHandler> = {
     const dirty = [...rt.articles.values()].filter((a) => a.dirty);
     if (dirty.length === 0) return ok('No staged edits — nothing to commit.');
 
-    const files = dirty.map((a) => ({
-      path: a.path,
-      content: matter.stringify(a.body, {
+    const timestamp = new Date().toISOString();
+    const published: string[] = [];
+    const publishedIds = new Set<string>();
+    const publishErrors: string[] = [];
+
+    for (const article of dirty) {
+      try {
+        const error = await publishArticleToFeaturebase(article);
+        if (error) {
+          publishErrors.push(`${article.title}: ${error}`);
+        } else {
+          published.push(article.title);
+          publishedIds.add(article.id);
+        }
+      } catch (e) {
+        publishErrors.push(`${article.title}: ${(e as Error).message}`);
+      }
+    }
+
+    const files = dirty.map((a) => {
+      const wasPublished = publishedIds.has(a.id);
+      a.frontmatter = {
         ...a.frontmatter,
-        last_updated: new Date().toISOString(),
-      }),
-    }));
+        last_updated: timestamp,
+        ...(wasPublished ? { synced_at: timestamp, source: 'featurebase' } : {}),
+      };
+      return {
+        path: a.path,
+        content: matter.stringify(a.body, a.frontmatter),
+      };
+    });
+
+    const rollupArticles = rollupArticlesFromRuntime(rt);
+    files.push({ path: 'llms.txt', content: generateLlmsTxt(rollupArticles) });
+    files.push({ path: 'docs-rollup.md', content: generateDocsRollup(rollupArticles) });
+
     try {
       const commit = await commitFiles(files, `agent: ${message}`);
       // Mark clean post-commit
@@ -342,8 +404,12 @@ const handlers: Record<string, ToolHandler> = {
         a.originalBody = a.body;
         a.dirty = false;
       }
+      const publishSummary =
+        publishErrors.length === 0
+          ? `Published ${published.length} article(s) to Featurebase.`
+          : `Featurebase publish was incomplete:\n${publishErrors.map((e) => `  - ${e}`).join('\n')}`;
       return ok(
-        `Committed ${dirty.length} file(s).\n${commit.url}\n\nFiles:\n${dirty.map((a) => `  - ${a.path}`).join('\n')}`
+        `${publishSummary}\nCommitted ${dirty.length} article file(s) plus llms.txt and docs-rollup.md.\n${commit.url}\n\nFiles:\n${files.map((f) => `  - ${f.path}`).join('\n')}`
       );
     } catch (e) {
       return err(`Commit failed: ${(e as Error).message}`);
@@ -408,7 +474,7 @@ const handlers: Record<string, ToolHandler> = {
           'Content-Type': 'application/json',
           'Featurebase-Version': FB_API_VERSION,
         },
-        body: JSON.stringify({ title, body }),
+        body: JSON.stringify({ title, body, formatter: 'ai', state: 'live' }),
       });
       if (!res.ok) return err(`Featurebase ${res.status}: ${await res.text()}`);
       return ok(`Updated Featurebase article ${id} ("${title}")`);
@@ -609,7 +675,7 @@ When the operator asks you to update an article:
 1. read_article to confirm you understand current content
 2. edit_article with verbatim original text + replacement
 3. Only call commit_pending_edits once you have all edits staged for that turn
-4. After committing, optionally call featurebase_update_article to push to live
+4. Treat commit_pending_edits as the publish step: it pushes Featurebase when possible, regenerates llms.txt/docs-rollup.md, and commits the full update
 
 # Style
 - Concise. The operator is technical and busy.

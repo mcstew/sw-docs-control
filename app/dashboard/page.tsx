@@ -63,6 +63,12 @@ export default function DashboardPage() {
         fetchStats(); // Refresh stats after sync
       } else {
         addLog(`Sync failed: ${data.error}`);
+        if (data.results?.details) {
+          data.results.details.forEach((d: string) => addLog(`  ${d}`));
+        }
+        if (data.results?.errors) {
+          data.results.errors.forEach((d: string) => addLog(`  Error: ${d}`));
+        }
       }
     } catch (err) {
       addLog(`Sync error: ${err}`);

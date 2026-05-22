@@ -5,6 +5,8 @@
  */
 
 import { config } from 'dotenv';
+import fs from 'fs/promises';
+import matter from 'gray-matter';
 import { FeaturebaseClient } from '../lib/featurebase-client.js';
 import {
   scanLocalArticles,
@@ -17,6 +19,15 @@ import {
 } from '../lib/featurebase-sync.js';
 
 config();
+
+async function markArticleSynced(article, syncedAt) {
+  article.frontmatter = {
+    ...article.frontmatter,
+    synced_at: syncedAt,
+    source: 'featurebase'
+  };
+  await fs.writeFile(article.path, matter.stringify(article.content, article.frontmatter), 'utf-8');
+}
 
 async function main() {
   console.log('🚀 Syncing TO Featurebase...\n');
@@ -104,14 +115,16 @@ async function main() {
         const articleData = formatForFeaturebaseCreate(article, helpCenterId);
 
         const created = await client.createArticle(articleData);
+        const syncedAt = new Date().toISOString();
 
         console.log(`  ✅ Created: ${created.title || article.title}`);
+        await markArticleSynced(article, syncedAt);
 
         // Update sync state
         syncState.articles[article.id] = {
           local_path: article.path,
           remote_id: created.id,
-          last_synced_at: new Date().toISOString(),
+          last_synced_at: syncedAt,
           last_synced_hash: localHash,
           sync_direction: 'push',
           status: 'synced'
@@ -144,6 +157,7 @@ async function main() {
               console.log('  📤 Pushing local version (newer)...');
               const articleData = formatForFeaturebaseUpdate(article);
               await client.updateArticle(article.id, articleData);
+              await markArticleSynced(article, new Date().toISOString());
             } else {
               console.log('  ⬇️  Remote version is newer, skipping push');
             }
@@ -169,14 +183,16 @@ async function main() {
 
       const articleData = formatForFeaturebaseUpdate(article);
       await client.updateArticle(article.id, articleData);
+      const syncedAt = new Date().toISOString();
 
       console.log('  ✅ Pushed');
+      await markArticleSynced(article, syncedAt);
 
       // Update sync state
       syncState.articles[article.id] = {
         local_path: article.path,
         remote_id: article.id,
-        last_synced_at: new Date().toISOString(),
+        last_synced_at: syncedAt,
         last_synced_hash: localHash,
         sync_direction: 'push',
         status: 'synced'
