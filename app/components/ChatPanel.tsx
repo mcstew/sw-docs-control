@@ -333,7 +333,7 @@ export default function ChatPanel() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Ask the agent to audit, edit, research, or compare docs..."
+              placeholder="Ask the agent to audit, create, publish, or compare docs..."
               rows={2}
               className="w-full bg-[#0f1923] border border-slate-700 focus:border-cyan-500 rounded-lg px-3 py-2 pr-12 text-sm text-slate-200 placeholder-slate-600 resize-none focus:outline-none"
               disabled={state.busy}
@@ -360,7 +360,7 @@ function EmptyState() {
   const examples = [
     'List all articles that mention the Muse model',
     'Compare the local "Story Bible" article against what is live in Featurebase',
-    'Audit our docs against this changelog: ...',
+    'Turn this changelog post into a new docs article: ...',
     'Update every article that still calls Excellent Claude 3.7 Sonnet',
   ];
   return (
@@ -368,7 +368,7 @@ function EmptyState() {
       <Sparkles className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
       <h3 className="text-slate-200 font-medium text-sm mb-1">Ask the agent</h3>
       <p className="text-slate-500 text-xs mb-4">
-        It can read the repo, hit Featurebase, run audits, publish edits, and refresh rollups.
+        It can read the repo, hit Featurebase, run audits, create articles, publish edits, and refresh rollups.
       </p>
       <div className="space-y-1.5 text-left">
         {examples.map((ex, i) => (

@@ -15,8 +15,10 @@ import matter from 'gray-matter';
 import {
   fetchRepoArticles,
   commitFiles,
+  buildRepoPath,
 } from './github-sync';
 import { generateLlmsTxt, generateDocsRollup } from './generate-rollups';
+import { COLLECTION_HIERARCHY } from './collection-hierarchy.js';
 
 const MODEL = 'claude-sonnet-4-5';
 const MAX_TOOL_ITERATIONS = 20;
@@ -87,6 +89,46 @@ export const TOOLS: Anthropic.Messages.Tool[] = [
     },
   },
   {
+    name: 'create_article',
+    description:
+      'Create a brand-new documentation article from a drafted markdown body. Use this after reading a changelog, announcement, or other source when the right outcome is a new docs article rather than editing an existing one. This publishes the article live to Featurebase, writes the matching markdown file with Featurebase metadata, regenerates llms.txt/docs-rollup.md, and commits the full bundle to GitHub. You must pass either collection_id or collection_name.',
+    input_schema: {
+      type: 'object',
+      properties: {
+        title: { type: 'string', description: 'Article title' },
+        body: {
+          type: 'string',
+          description: 'Full article body in markdown, without YAML frontmatter',
+        },
+        collection_id: {
+          type: 'string',
+          description:
+            'Featurebase collection id. Prefer this when known; otherwise pass collection_name.',
+        },
+        collection_name: {
+          type: 'string',
+          description:
+            'Featurebase collection name, such as Features, Story Bible, Story Smarts, FAQ, Credits, etc.',
+        },
+        slug: {
+          type: 'string',
+          description:
+            'Optional preferred slug. Usually omit this and let Featurebase assign the canonical slug.',
+        },
+        source_url: {
+          type: 'string',
+          description:
+            'Optional source URL, such as the changelog post this article was derived from.',
+        },
+        commit_message: {
+          type: 'string',
+          description: 'Optional commit message. Defaults to a concise article creation message.',
+        },
+      },
+      required: ['title', 'body'],
+    },
+  },
+  {
     name: 'commit_pending_edits',
     description:
       'Publish all staged article edits: push them to Featurebase when configured, regenerate llms.txt and docs-rollup.md, then commit the article and rollup changes to GitHub as a single commit. Returns the commit URL. No-op if nothing is staged.',
@@ -122,7 +164,7 @@ export const TOOLS: Anthropic.Messages.Tool[] = [
   {
     name: 'featurebase_update_article',
     description:
-      'Push an updated article body to Featurebase. The body must be markdown. Call this after committing the local edit, so repo and live stay in sync.',
+      'Push an updated article body to Featurebase. The body must be markdown. Prefer edit_article + commit_pending_edits for repo-backed docs changes so Featurebase, markdown, and rollups stay in sync.',
     input_schema: {
       type: 'object',
       properties: {
@@ -286,6 +328,197 @@ function rollupArticlesFromRuntime(rt: AgentRuntime) {
   }));
 }
 
+function slugifyTitle(value: string): string {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .replace(/-+/g, '-');
+}
+
+function normalizeLookup(value: string): string {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/&/g, 'and')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function uniqueRepoPath(basePath: string, rt: AgentRuntime): string {
+  if (!rt.byPath.has(basePath)) return basePath;
+
+  let index = 2;
+  let candidate = basePath;
+  while (rt.byPath.has(candidate)) {
+    candidate = basePath.replace(/\.md$/, `-${index}.md`);
+    index += 1;
+  }
+  return candidate;
+}
+
+function addArticleToRuntime(rt: AgentRuntime, article: CachedArticle) {
+  if (article.slug) rt.articles.set(article.slug.toLowerCase(), article);
+  rt.byId.set(article.id, article);
+  rt.byPath.set(article.path, article);
+}
+
+function removeArticleFromRuntime(rt: AgentRuntime, article: CachedArticle) {
+  if (article.slug) rt.articles.delete(article.slug.toLowerCase());
+  rt.byId.delete(article.id);
+  rt.byPath.delete(article.path);
+}
+
+type FeaturebaseCollectionRef = { id: string; name: string };
+
+function runtimeCollections(rt: AgentRuntime): FeaturebaseCollectionRef[] {
+  const byId = new Map<string, FeaturebaseCollectionRef>();
+  for (const article of rt.articles.values()) {
+    const id = String(article.frontmatter.category || '').trim();
+    if (!id || byId.has(id)) continue;
+    byId.set(id, {
+      id,
+      name: article.collection || article.frontmatter.collection_name || id,
+    });
+  }
+  return [...byId.values()];
+}
+
+async function fetchFeaturebaseCollections(
+  apiKey: string,
+  helpCenterId: string
+): Promise<FeaturebaseCollectionRef[]> {
+  const res = await fetch(
+    `${FB_BASE_URL}/v2/help_center/collections?help_center_id=${encodeURIComponent(
+      helpCenterId
+    )}&limit=200`,
+    {
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Featurebase-Version': FB_API_VERSION,
+      },
+    }
+  );
+  if (!res.ok) throw new Error(`Featurebase collections ${res.status}: ${await res.text()}`);
+
+  const data: any = await res.json();
+  return (data?.data || [])
+    .map((collection: any) => ({
+      id: String(collection.id || ''),
+      name:
+        collection.name ||
+        collection.title ||
+        collection.translations?.en?.name ||
+        collection.translations?.en?.title ||
+        '',
+    }))
+    .filter((collection: FeaturebaseCollectionRef) => collection.id && collection.name);
+}
+
+async function resolveCollection(
+  input: { collection_id?: string; collection_name?: string },
+  rt: AgentRuntime,
+  apiKey: string,
+  helpCenterId: string
+): Promise<FeaturebaseCollectionRef> {
+  const collections = runtimeCollections(rt);
+  try {
+    const remoteCollections = await fetchFeaturebaseCollections(apiKey, helpCenterId);
+    for (const collection of remoteCollections) {
+      if (!collections.some((existing) => existing.id === collection.id)) {
+        collections.push(collection);
+      }
+    }
+  } catch {
+    // Runtime article metadata is usually enough; do not block creation if the
+    // collection list endpoint is temporarily unhappy.
+  }
+
+  const byId = new Map(collections.map((collection) => [collection.id, collection]));
+  const byName = new Map<string, FeaturebaseCollectionRef[]>();
+  for (const collection of collections) {
+    const key = normalizeLookup(collection.name);
+    byName.set(key, [...(byName.get(key) || []), collection]);
+  }
+
+  const collectionId = String(input.collection_id || '').trim();
+  if (collectionId) {
+    return {
+      id: collectionId,
+      name: String(input.collection_name || byId.get(collectionId)?.name || 'Uncategorized'),
+    };
+  }
+
+  const collectionName = String(input.collection_name || '').trim();
+  if (collectionName) {
+    const matches = byName.get(normalizeLookup(collectionName)) || [];
+    if (matches.length === 1) return matches[0];
+    if (matches.length > 1) {
+      throw new Error(
+        `Collection name "${collectionName}" is ambiguous. Pass collection_id instead. Matches: ${matches
+          .map((collection) => `${collection.name} (${collection.id})`)
+          .join(', ')}`
+      );
+    }
+  }
+
+  const known = collections
+    .sort((a, b) => a.name.localeCompare(b.name))
+    .map((collection) => `${collection.name} (${collection.id})`)
+    .join(', ');
+  throw new Error(
+    collectionName
+      ? `Unknown collection "${collectionName}". Known collections: ${known}`
+      : `Pass collection_id or collection_name. Known collections: ${known}`
+  );
+}
+
+async function createFeaturebaseArticle(input: {
+  apiKey: string;
+  helpCenterId: string;
+  title: string;
+  body: string;
+  collectionId: string;
+  slug?: string;
+}): Promise<any> {
+  const payload = {
+    title: input.title,
+    ...(input.slug ? { slug: input.slug } : {}),
+    content: input.body,
+    content_markdown: input.body,
+    help_center_id: input.helpCenterId,
+    collection_id: input.collectionId,
+    formatter: 'ai',
+    state: 'live',
+    is_public: true,
+  };
+
+  const res = await fetch(`${FB_BASE_URL}/v2/help_center/articles`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${input.apiKey}`,
+      'Content-Type': 'application/json',
+      'Featurebase-Version': FB_API_VERSION,
+    },
+    body: JSON.stringify(payload),
+  });
+  if (!res.ok) throw new Error(`Featurebase ${res.status}: ${await res.text()}`);
+
+  const data: any = await res.json();
+  return data?.data || data;
+}
+
+async function deleteFeaturebaseArticle(apiKey: string, articleId: string): Promise<string | null> {
+  const res = await fetch(`${FB_BASE_URL}/v2/help_center/articles/${articleId}`, {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Featurebase-Version': FB_API_VERSION,
+    },
+  });
+  if (res.ok) return null;
+  return `Featurebase ${res.status}: ${await res.text()}`;
+}
+
 const handlers: Record<string, ToolHandler> = {
   list_articles: async (_input, rt) => {
     const items = [...rt.articles.values()].map((a) => ({
@@ -355,6 +588,133 @@ const handlers: Record<string, ToolHandler> = {
     return ok(
       `Staged edit on "${article.title}" (${article.slug}). Reasoning: ${reasoning}\n\nCall commit_pending_edits to push to GitHub.`
     );
+  },
+
+  create_article: async (
+    { title, body, collection_id, collection_name, slug, source_url, commit_message },
+    rt
+  ) => {
+    const apiKey = process.env.FEATUREBASE_API_KEY;
+    const helpCenterId = process.env.FEATUREBASE_HELP_CENTER_ID;
+    if (!apiKey || !helpCenterId) return err('Featurebase API not configured');
+
+    const articleTitle = String(title || '').trim();
+    const articleBody = String(body || '').trim();
+    const sourceUrl = String(source_url || '').trim();
+    if (!articleTitle) return err('Article title is required');
+    if (!articleBody) return err('Article body is required');
+
+    const duplicate = [...rt.articles.values()].find(
+      (article) => normalizeLookup(article.title) === normalizeLookup(articleTitle)
+    );
+    if (duplicate) {
+      return err(
+        `An article titled "${duplicate.title}" already exists at ${duplicate.path}. Update that article instead, or choose a distinct title.`
+      );
+    }
+
+    const preferredSlug = slug ? slugifyTitle(String(slug)) : '';
+    if (preferredSlug && rt.articles.has(preferredSlug.toLowerCase())) {
+      return err(`An article with slug "${preferredSlug}" already exists. Omit slug or choose another.`);
+    }
+
+    let collection: FeaturebaseCollectionRef;
+    try {
+      collection = await resolveCollection(
+        { collection_id, collection_name },
+        rt,
+        apiKey,
+        helpCenterId
+      );
+    } catch (e) {
+      return err((e as Error).message);
+    }
+
+    let created: any;
+    try {
+      created = await createFeaturebaseArticle({
+        apiKey,
+        helpCenterId,
+        title: articleTitle,
+        body: articleBody,
+        collectionId: collection.id,
+        slug: preferredSlug || undefined,
+      });
+    } catch (e) {
+      return err(`Featurebase create failed: ${(e as Error).message}`);
+    }
+
+    const featurebaseId = String(created?.id || '').trim();
+    if (!featurebaseId) {
+      return err(`Featurebase create returned no article id: ${JSON.stringify(created).slice(0, 1000)}`);
+    }
+
+    const createdTitle = String(created?.title || articleTitle).trim();
+    const createdSlug = String(created?.slug || `${featurebaseId}-${slugifyTitle(createdTitle)}`).trim();
+    const timestamp = new Date().toISOString();
+    const lastUpdated = created?.updatedAt || created?.updated_at || timestamp;
+    const repoPath = uniqueRepoPath(
+      buildRepoPath(
+        COLLECTION_HIERARCHY as Record<string, { main: string; sub: string | null }>,
+        collection.id,
+        createdTitle
+      ),
+      rt
+    );
+
+    const frontmatter = {
+      title: createdTitle,
+      slug: createdSlug,
+      category: collection.id,
+      collection_name: collection.name,
+      featurebase_id: featurebaseId,
+      last_updated: lastUpdated,
+      synced_at: timestamp,
+      source: 'featurebase',
+      ...(sourceUrl ? { source_url: sourceUrl } : {}),
+    };
+
+    const cached: CachedArticle = {
+      id: featurebaseId,
+      title: createdTitle,
+      slug: createdSlug,
+      collection: collection.name,
+      path: repoPath,
+      frontmatter,
+      body: articleBody,
+      originalBody: articleBody,
+      dirty: false,
+    };
+    addArticleToRuntime(rt, cached);
+
+    const rollupArticles = rollupArticlesFromRuntime(rt);
+    const files = [
+      { path: repoPath, content: matter.stringify(articleBody, frontmatter) },
+      { path: 'llms.txt', content: generateLlmsTxt(rollupArticles) },
+      { path: 'docs-rollup.md', content: generateDocsRollup(rollupArticles) },
+    ];
+
+    try {
+      const message = String(commit_message || `create ${createdTitle} documentation article`).trim();
+      const commit = await commitFiles(files, `agent: ${message}`);
+      return ok(
+        `Created "${createdTitle}" in Featurebase (${featurebaseId}) and committed the repo article plus llms.txt/docs-rollup.md.\n${commit.url}\n\nFiles:\n${files.map((f) => `  - ${f.path}`).join('\n')}`
+      );
+    } catch (e) {
+      removeArticleFromRuntime(rt, cached);
+      let rollbackMessage = 'I also could not confirm rollback of the created Featurebase article.';
+      try {
+        const rollbackError = await deleteFeaturebaseArticle(apiKey, featurebaseId);
+        rollbackMessage = rollbackError
+          ? `Rollback delete failed: ${rollbackError}`
+          : 'Rolled back the created Featurebase article.';
+      } catch (rollback) {
+        rollbackMessage = `Rollback delete failed: ${(rollback as Error).message}`;
+      }
+      return err(
+        `Featurebase article ${featurebaseId} was created, but the GitHub commit failed: ${(e as Error).message}. ${rollbackMessage}`
+      );
+    }
   },
 
   commit_pending_edits: async ({ message }, rt) => {
@@ -662,9 +1022,9 @@ const SYSTEM_PROMPT = `You are the docs-control agent for Sudowrite — an AI-as
 You help the operator review, audit, and edit the Sudowrite documentation. You're a chat partner first: respond conversationally, ask clarifying questions when needed, and only reach for tools when you actually need them. Don't run tools just to look busy.
 
 # What you have access to
-- The full local documentation repo (~85 markdown articles), via list_articles, read_article, search_articles
+- The full local documentation repo, via list_articles, read_article, search_articles
 - Live Featurebase published state, via featurebase_list_articles / get_article / update_article
-- Edit + commit: edit_article (stages edits in memory), commit_pending_edits (pushes to GitHub as one commit)
+- Create, edit, and commit: create_article publishes a new Featurebase article and repo markdown in one commit; edit_article stages edits in memory; commit_pending_edits publishes staged edits and refreshes rollups
 - The two-stage changelog audit, via run_changelog_audit
 - Web access, via web_fetch
 - Subagents: spawn_subagent (focused, read-only, returns text). Use multiple parallel calls in one turn for big multi-part tasks
@@ -676,6 +1036,13 @@ When the operator asks you to update an article:
 2. edit_article with verbatim original text + replacement
 3. Only call commit_pending_edits once you have all edits staged for that turn
 4. Treat commit_pending_edits as the publish step: it pushes Featurebase when possible, regenerates llms.txt/docs-rollup.md, and commits the full update
+
+# Working from changelog links
+When the operator links a public changelog post and asks you to document it:
+1. web_fetch the URL and read the changelog content
+2. search/read existing docs to decide whether to update an existing article or create a new one
+3. If creating a new article, draft concise customer-facing markdown and call create_article with the best collection_name or collection_id plus source_url
+4. If updating existing docs, use edit_article and commit_pending_edits
 
 # Style
 - Concise. The operator is technical and busy.
