@@ -26,6 +26,67 @@ const SUBAGENT_MODEL = 'claude-haiku-4-5';
 
 const FB_BASE_URL = 'https://do.featurebase.app';
 const FB_API_VERSION = '2026-01-01.nova';
+const FB_PAGE_LIMIT = 100;
+
+type FeaturebaseQueryValue = string | number | boolean | null | undefined;
+
+function featurebaseUrl(pathname: string, params: Record<string, FeaturebaseQueryValue> = {}) {
+  const url = new URL(pathname, FB_BASE_URL);
+  for (const [key, value] of Object.entries(params)) {
+    if (value === undefined || value === null || value === '') continue;
+    url.searchParams.set(key, String(value));
+  }
+  return url.toString();
+}
+
+async function fetchFeaturebasePage<T>(
+  apiKey: string,
+  pathname: string,
+  params: Record<string, FeaturebaseQueryValue>
+): Promise<{ data: T[]; nextCursor: string | null }> {
+  const res = await fetch(featurebaseUrl(pathname, params), {
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      'Featurebase-Version': FB_API_VERSION,
+    },
+  });
+  if (!res.ok) throw new Error(`Featurebase ${res.status}: ${await res.text()}`);
+
+  const payload: any = await res.json();
+  return {
+    data: Array.isArray(payload?.data) ? payload.data : [],
+    nextCursor: payload?.nextCursor || payload?.next_cursor || null,
+  };
+}
+
+async function fetchAllFeaturebasePages<T>(
+  apiKey: string,
+  pathname: string,
+  params: Record<string, FeaturebaseQueryValue> = {}
+): Promise<T[]> {
+  const items: T[] = [];
+  const seenCursors = new Set<string>();
+  let cursor: string | null = null;
+
+  for (let page = 0; page < 100; page += 1) {
+    const response: { data: T[]; nextCursor: string | null } =
+      await fetchFeaturebasePage<T>(apiKey, pathname, {
+        ...params,
+        limit: FB_PAGE_LIMIT,
+        cursor,
+      });
+    items.push(...response.data);
+
+    cursor = response.nextCursor;
+    if (!cursor) return items;
+    if (seenCursors.has(cursor)) {
+      throw new Error('Featurebase pagination returned a repeated cursor');
+    }
+    seenCursors.add(cursor);
+  }
+
+  throw new Error('Featurebase pagination exceeded 100 pages');
+}
 
 // ---------------------------------------------------------------------------
 // Tool definitions
@@ -387,21 +448,13 @@ async function fetchFeaturebaseCollections(
   apiKey: string,
   helpCenterId: string
 ): Promise<FeaturebaseCollectionRef[]> {
-  const res = await fetch(
-    `${FB_BASE_URL}/v2/help_center/collections?help_center_id=${encodeURIComponent(
-      helpCenterId
-    )}&limit=200`,
-    {
-      headers: {
-        Authorization: `Bearer ${apiKey}`,
-        'Featurebase-Version': FB_API_VERSION,
-      },
-    }
+  const collections = await fetchAllFeaturebasePages<any>(
+    apiKey,
+    '/v2/help_center/collections',
+    { help_center_id: helpCenterId }
   );
-  if (!res.ok) throw new Error(`Featurebase collections ${res.status}: ${await res.text()}`);
 
-  const data: any = await res.json();
-  return (data?.data || [])
+  return collections
     .map((collection: any) => ({
       id: String(collection.id || ''),
       name:
@@ -781,18 +834,12 @@ const handlers: Record<string, ToolHandler> = {
     const helpCenterId = process.env.FEATUREBASE_HELP_CENTER_ID;
     if (!apiKey || !helpCenterId) return err('Featurebase API not configured');
     try {
-      const res = await fetch(
-        `${FB_BASE_URL}/v2/help_center/articles?help_center_id=${helpCenterId}&limit=200`,
-        {
-          headers: {
-            Authorization: `Bearer ${apiKey}`,
-            'Featurebase-Version': FB_API_VERSION,
-          },
-        }
+      const remoteArticles = await fetchAllFeaturebasePages<any>(
+        apiKey,
+        '/v2/help_center/articles',
+        { help_center_id: helpCenterId }
       );
-      if (!res.ok) return err(`Featurebase ${res.status}: ${await res.text()}`);
-      const data: any = await res.json();
-      const articles = (data?.data || []).map((a: any) => ({
+      const articles = remoteArticles.map((a: any) => ({
         id: a.id,
         title: a.title,
         slug: a.slug,
